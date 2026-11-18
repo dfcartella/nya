@@ -1,0 +1,221 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>NYA On Set</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<style>
+* { box-sizing:border-box; } html,body { margin:0; background:#141414; color:#141414; font-family:Inter,sans-serif; }
+header { position:sticky; top:0; z-index:5; background:#141414; color:#fff; padding:12px 16px; display:flex; flex-wrap:wrap; gap:10px 16px; align-items:center; }
+header img { height:28px; filter:brightness(0) invert(1); } header h1 { margin:0; font-size:20px; font-weight:900; letter-spacing:-.02em; }
+.tot { font-size:20px; font-weight:900; margin-left:auto; } .tot small { font-size:12px; opacity:.6; font-weight:700; }
+.bar { width:100%; height:6px; background:#333; border-radius:3px; overflow:hidden; } .bar i { display:block; height:100%; width:0; background:#C6FF6B; transition:width .2s; }
+.tools { display:flex; gap:8px; flex-wrap:wrap; }
+.tools button { font:inherit; font-size:12px; font-weight:900; letter-spacing:.08em; border:2px solid #fff; background:none; color:#fff; border-radius:20px; padding:6px 12px; cursor:pointer; }
+.tools button.on { background:#fff; color:#141414; }
+.band { background:var(--bg); color:var(--fg); padding:14px 0 16px; }
+.bh { display:flex; align-items:baseline; justify-content:space-between; padding:0 16px 10px; }
+.bh h2 { margin:0; font-size:28px; font-weight:900; letter-spacing:-.03em; line-height:1; } .cnt { font-size:18px; font-weight:900; }
+.strip { display:flex; gap:10px; overflow-x:auto; padding:0 16px 4px; scroll-snap-type:x proximity; -webkit-overflow-scrolling:touch; }
+.card { flex:none; width:150px; scroll-snap-align:start; background:#fff; color:#141414; border:0; border-radius:10px; padding:6px; text-align:left; font:inherit; cursor:pointer; }
+.card.hide { display:none; }
+.pic { position:relative; height:190px; background:#f2f2f2; border-radius:6px; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+.pic img { width:100%; height:100%; object-fit:cover; }
+.noref { padding:10px; text-align:center; font-weight:900; font-size:14px; line-height:1.15; color:#555; }
+.done { position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(20,20,20,.72); color:#C6FF6B; font-size:22px; font-weight:900; letter-spacing:.04em; }
+.card[aria-pressed="true"] .done { display:flex; } .card[aria-pressed="true"] { outline:3px solid #141414; }
+.meta { display:flex; justify-content:space-between; align-items:center; margin-top:6px; }
+.code { font-size:17px; font-weight:900; letter-spacing:-.02em; }
+.tag { font-size:10px; font-weight:900; letter-spacing:.1em; border:1.5px solid #141414; border-radius:10px; padding:1px 6px; }
+.typ { font-size:12px; font-weight:700; color:#555; margin-top:3px; line-height:1.2; min-height:29px; }
+@media (min-width:900px) { .card { width:180px; } .pic { height:230px; } }
+</style></head><body>
+<header><img src="img/logo.png" alt="NYA"><h1>ON SET</h1><span class="tot" id="tot">0/56 <small>DONE</small></span>
+<div class="bar"><i id="bar"></i></div>
+<div class="tools"><button data-f="ALL" class="on">ALL</button><button data-f="PHOTO">PHOTO</button><button data-f="VIDEO">VIDEO</button><button data-f="TODO">TO DO</button><button id="reset">RESET</button></div></header>
+<section class="band" style="--bg:#FF3DA8;--fg:#141414"><div class="bh"><h2>STEVIE</h2><span class="cnt" data-g="0">0/7</span></div><div class="strip" data-g="0"><button class="card" data-code="ST1" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/76b.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">ST1</span><span class="tag">PHOTO</span></div>
+<div class="typ">Cover portrait</div></button><button class="card" data-code="ST2" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/62.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">ST2</span><span class="tag">PHOTO</span></div>
+<div class="typ">Close-up</div></button><button class="card" data-code="ST3" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/64.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">ST3</span><span class="tag">PHOTO</span></div>
+<div class="typ">Full length</div></button><button class="card" data-code="ST4" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/b-clones.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">ST4</span><span class="tag">PHOTO</span></div>
+<div class="typ">Second pose · phone call</div></button><button class="card" data-code="ST5" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">PUTTING IT ON</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">ST5</span><span class="tag">VIDEO</span></div>
+<div class="typ">Putting it on</div></button><button class="card" data-code="ST6" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">IN MOTION</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">ST6</span><span class="tag">VIDEO</span></div>
+<div class="typ">In motion</div></button><button class="card" data-code="ST7" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><div class="noref">STILL LIFE</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">ST7</span><span class="tag">PHOTO</span></div>
+<div class="typ">Still life</div></button></div></section><section class="band" style="--bg:#9B3BE6;--fg:#fff"><div class="bh"><h2>LOLA</h2><span class="cnt" data-g="1">0/7</span></div><div class="strip" data-g="1"><button class="card" data-code="LO1" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/w-bella.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">LO1</span><span class="tag">PHOTO</span></div>
+<div class="typ">Cover portrait</div></button><button class="card" data-code="LO2" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/59.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">LO2</span><span class="tag">PHOTO</span></div>
+<div class="typ">Close-up</div></button><button class="card" data-code="LO3" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/58.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">LO3</span><span class="tag">PHOTO</span></div>
+<div class="typ">Full length</div></button><button class="card" data-code="LO4" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/w-mouth.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">LO4</span><span class="tag">PHOTO</span></div>
+<div class="typ">Second pose · phone call</div></button><button class="card" data-code="LO5" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">PUTTING IT ON</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">LO5</span><span class="tag">VIDEO</span></div>
+<div class="typ">Putting it on</div></button><button class="card" data-code="LO6" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">IN MOTION</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">LO6</span><span class="tag">VIDEO</span></div>
+<div class="typ">In motion</div></button><button class="card" data-code="LO7" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><div class="noref">STILL LIFE</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">LO7</span><span class="tag">PHOTO</span></div>
+<div class="typ">Still life</div></button></div></section><section class="band" style="--bg:#1BB7FF;--fg:#141414"><div class="bh"><h2>RAFA</h2><span class="cnt" data-g="2">0/7</span></div><div class="strip" data-g="2"><button class="card" data-code="RA1" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/w-shades.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RA1</span><span class="tag">PHOTO</span></div>
+<div class="typ">Cover portrait</div></button><button class="card" data-code="RA2" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/38.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RA2</span><span class="tag">PHOTO</span></div>
+<div class="typ">Close-up</div></button><button class="card" data-code="RA3" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/70.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RA3</span><span class="tag">PHOTO</span></div>
+<div class="typ">Full length</div></button><button class="card" data-code="RA4" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/71.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RA4</span><span class="tag">PHOTO</span></div>
+<div class="typ">Second pose · phone call</div></button><button class="card" data-code="RA5" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">PUTTING IT ON</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RA5</span><span class="tag">VIDEO</span></div>
+<div class="typ">Putting it on</div></button><button class="card" data-code="RA6" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">IN MOTION</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RA6</span><span class="tag">VIDEO</span></div>
+<div class="typ">In motion</div></button><button class="card" data-code="RA7" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><div class="noref">STILL LIFE</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RA7</span><span class="tag">PHOTO</span></div>
+<div class="typ">Still life</div></button></div></section><section class="band" style="--bg:#2FE3C6;--fg:#141414"><div class="bh"><h2>STEVIE + LOLA + RAFA</h2><span class="cnt" data-g="3">0/3</span></div><div class="strip" data-g="3"><button class="card" data-code="ST·LO·RA1" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/73.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">ST·LO·RA1</span><span class="tag">PHOTO</span></div>
+<div class="typ">Trio cover</div></button><button class="card" data-code="ST·LO·RA2" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/17a.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">ST·LO·RA2</span><span class="tag">PHOTO</span></div>
+<div class="typ">Trio photo booth</div></button><button class="card" data-code="ST·LO·RA3" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><img src="img/75.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">ST·LO·RA3</span><span class="tag">VIDEO</span></div>
+<div class="typ">Walk-in / paparazzi</div></button></div></section><section class="band" style="--bg:#FFE93B;--fg:#141414"><div class="bh"><h2>JADE</h2><span class="cnt" data-g="4">0/7</span></div><div class="strip" data-g="4"><button class="card" data-code="JA1" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/w-bend.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">JA1</span><span class="tag">PHOTO</span></div>
+<div class="typ">Cover portrait</div></button><button class="card" data-code="JA2" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/22.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">JA2</span><span class="tag">PHOTO</span></div>
+<div class="typ">Close-up</div></button><button class="card" data-code="JA3" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/b-ed2.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">JA3</span><span class="tag">PHOTO</span></div>
+<div class="typ">Full length</div></button><button class="card" data-code="JA4" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/69.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">JA4</span><span class="tag">PHOTO</span></div>
+<div class="typ">Second pose</div></button><button class="card" data-code="JA5" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">PUTTING IT ON</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">JA5</span><span class="tag">VIDEO</span></div>
+<div class="typ">Putting it on</div></button><button class="card" data-code="JA6" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">IN MOTION</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">JA6</span><span class="tag">VIDEO</span></div>
+<div class="typ">In motion</div></button><button class="card" data-code="JA7" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><div class="noref">STILL LIFE</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">JA7</span><span class="tag">PHOTO</span></div>
+<div class="typ">Still life</div></button></div></section><section class="band" style="--bg:#C6FF6B;--fg:#141414"><div class="bh"><h2>RUBY</h2><span class="cnt" data-g="5">0/7</span></div><div class="strip" data-g="5"><button class="card" data-code="RU1" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/47.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RU1</span><span class="tag">PHOTO</span></div>
+<div class="typ">Cover portrait</div></button><button class="card" data-code="RU2" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/48.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RU2</span><span class="tag">PHOTO</span></div>
+<div class="typ">Close-up</div></button><button class="card" data-code="RU3" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/45.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RU3</span><span class="tag">PHOTO</span></div>
+<div class="typ">Full length</div></button><button class="card" data-code="RU4" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/37.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RU4</span><span class="tag">PHOTO</span></div>
+<div class="typ">Second pose · Penny Lane</div></button><button class="card" data-code="RU5" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">PUTTING IT ON</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RU5</span><span class="tag">VIDEO</span></div>
+<div class="typ">Putting it on</div></button><button class="card" data-code="RU6" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">IN MOTION</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RU6</span><span class="tag">VIDEO</span></div>
+<div class="typ">In motion</div></button><button class="card" data-code="RU7" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><div class="noref">STILL LIFE</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">RU7</span><span class="tag">PHOTO</span></div>
+<div class="typ">Still life</div></button></div></section><section class="band" style="--bg:#FF3DA8;--fg:#141414"><div class="bh"><h2>NAÏMA</h2><span class="cnt" data-g="6">0/7</span></div><div class="strip" data-g="6"><button class="card" data-code="NA1" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/w-gum.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">NA1</span><span class="tag">PHOTO</span></div>
+<div class="typ">Cover portrait</div></button><button class="card" data-code="NA2" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/30.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">NA2</span><span class="tag">PHOTO</span></div>
+<div class="typ">Close-up</div></button><button class="card" data-code="NA3" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/w-tyla.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">NA3</span><span class="tag">PHOTO</span></div>
+<div class="typ">Full length</div></button><button class="card" data-code="NA4" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/b-ed3.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">NA4</span><span class="tag">PHOTO</span></div>
+<div class="typ">Second pose · Titanic</div></button><button class="card" data-code="NA5" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">PUTTING IT ON</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">NA5</span><span class="tag">VIDEO</span></div>
+<div class="typ">Putting it on</div></button><button class="card" data-code="NA6" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">IN MOTION</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">NA6</span><span class="tag">VIDEO</span></div>
+<div class="typ">In motion</div></button><button class="card" data-code="NA7" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><div class="noref">STILL LIFE</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">NA7</span><span class="tag">PHOTO</span></div>
+<div class="typ">Still life</div></button></div></section><section class="band" style="--bg:#9B3BE6;--fg:#fff"><div class="bh"><h2>JADE + RUBY</h2><span class="cnt" data-g="7">0/2</span></div><div class="strip" data-g="7"><button class="card" data-code="JA·RU1" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/b-grp2.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">JA·RU1</span><span class="tag">PHOTO</span></div>
+<div class="typ">Pair cover</div></button><button class="card" data-code="JA·RU2" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><img src="img/b-grp1.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">JA·RU2</span><span class="tag">VIDEO</span></div>
+<div class="typ">Getting ready at the mirror</div></button></div></section><section class="band" style="--bg:#1BB7FF;--fg:#141414"><div class="bh"><h2>IRIS + NAÏMA</h2><span class="cnt" data-g="8">0/2</span></div><div class="strip" data-g="8"><button class="card" data-code="IR·NA1" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/17b.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">IR·NA1</span><span class="tag">PHOTO</span></div>
+<div class="typ">Pair cover</div></button><button class="card" data-code="IR·NA2" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><img src="img/17c.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">IR·NA2</span><span class="tag">VIDEO</span></div>
+<div class="typ">Putting it on together</div></button></div></section><section class="band" style="--bg:#2FE3C6;--fg:#141414"><div class="bh"><h2>IRIS</h2><span class="cnt" data-g="9">0/7</span></div><div class="strip" data-g="9"><button class="card" data-code="IR1" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/78a.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">IR1</span><span class="tag">PHOTO</span></div>
+<div class="typ">Cover portrait</div></button><button class="card" data-code="IR2" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/24.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">IR2</span><span class="tag">PHOTO</span></div>
+<div class="typ">Close-up</div></button><button class="card" data-code="IR3" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/53.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">IR3</span><span class="tag">PHOTO</span></div>
+<div class="typ">Full length</div></button><button class="card" data-code="IR4" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><img src="img/w-nice.jpg" alt="" loading="lazy"><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">IR4</span><span class="tag">PHOTO</span></div>
+<div class="typ">Second pose</div></button><button class="card" data-code="IR5" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">PUTTING IT ON</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">IR5</span><span class="tag">VIDEO</span></div>
+<div class="typ">Putting it on</div></button><button class="card" data-code="IR6" data-kind="VIDEO" aria-pressed="false">
+<div class="pic"><div class="noref">IN MOTION</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">IR6</span><span class="tag">VIDEO</span></div>
+<div class="typ">In motion</div></button><button class="card" data-code="IR7" data-kind="PHOTO" aria-pressed="false">
+<div class="pic"><div class="noref">STILL LIFE</div><div class="done">✓ DONE</div></div>
+<div class="meta"><span class="code">IR7</span><span class="tag">PHOTO</span></div>
+<div class="typ">Still life</div></button></div></section>
+<script>
+(function(){
+  var KEY='nya-set-v1', st={};
+  try { st=JSON.parse(localStorage.getItem(KEY))||{}; } catch(e) {}
+  var cards=[].slice.call(document.querySelectorAll('.card')), f='ALL';
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(st)); } catch(e) {} }
+  function render(){
+    var d=0;
+    cards.forEach(function(c){ var on=!!st[c.dataset.code]; c.setAttribute('aria-pressed', on); if(on) d++;
+      c.classList.toggle('hide', !(f==='ALL' || f===c.dataset.kind || (f==='TODO' && !on))); });
+    document.getElementById('tot').innerHTML=d+'/'+cards.length+' <small>DONE</small>';
+    document.getElementById('bar').style.width=(100*d/cards.length)+'%';
+    [].forEach.call(document.querySelectorAll('.strip'), function(s){ var cs=s.querySelectorAll('.card'), n=0; [].forEach.call(cs,function(c){ if(st[c.dataset.code]) n++; });
+      document.querySelector('.cnt[data-g="'+s.dataset.g+'"]').textContent=n+'/'+cs.length; s.parentNode.style.display = [].some.call(cs,function(c){return !c.classList.contains('hide');}) ? '' : 'none'; });
+  }
+  cards.forEach(function(c){ c.addEventListener('click', function(){ var k=c.dataset.code; if(st[k]) delete st[k]; else st[k]=1; save(); render(); }); });
+  [].forEach.call(document.querySelectorAll('[data-f]'), function(b){ b.addEventListener('click', function(){ f=b.dataset.f; [].forEach.call(document.querySelectorAll('[data-f]'),function(x){x.classList.toggle('on',x===b);}); render(); }); });
+  document.getElementById('reset').addEventListener('click', function(){ if(confirm('Reset all? Every shot goes back to TO DO.')){ st={}; save(); render(); } });
+  render();
+})();
+</script></body></html>
