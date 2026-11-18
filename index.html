@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><title>NYA Shot List</title><style>
+<!doctype html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"><meta charset="utf-8"><title>NYA Shooting</title><style>
 @page { size:A4 landscape; margin:0; } * { box-sizing:border-box; }
 body { margin:0; font-family:'Inter', 'Helvetica Neue', Arial, sans-serif; color:#141414; }
 b { font-weight:900; }
@@ -43,132 +43,128 @@ tr.pev td { background:#141414; color:#fff; font-weight:900; text-align:center; 
 .c5 { font-size:10pt; font-weight:700; line-height:1.3; } .c5 b { font-weight:900; font-size:11.5pt; } .c5 .sm { font-size:9pt; color:#444; font-weight:600; }
 .capt { margin:1.6mm 0 0; font-style:italic; font-weight:700; color:#444; font-size:9.5pt; }
 
-@media screen {
- html,body { background:#141414; }
- .page.pg { width:auto; height:auto; min-height:0; max-width:1240px; margin:0 auto; padding:28px 32px 36px; overflow:visible; page-break-after:auto; }
- .cover.page { min-height:100vh; justify-content:center; }
- .row { height:auto !important; min-height:0; }
- .ri { height:auto !important; aspect-ratio:1/1; }
- .ri img { width:100%; height:100%; object-fit:contain; }
- .tt,.pn { font-size:34px; }
- .cover h1 { font-size:clamp(64px,14vw,170px); }
- .nums b { font-size:clamp(44px,8vw,90px); }
- .c5 { font-size:15px; } .c5 b { font-size:17px; } .c5 .sm { font-size:13px; } .capt { font-size:14px; }
- .c3 { font-size:20px; } .c4 b { font-size:15px; } .fr { font-size:14px; } .ang { font-size:12px; }
- table.pl { font-size:13px; } .leg { font-size:12px; }
- .bh { height:auto; min-height:44px; flex-wrap:wrap; padding:8px 12px; font-size:13px; }
- .ev { height:auto; padding:10px; font-size:13px; }
-}
-@media screen and (max-width:760px){
- .page.pg { padding:20px 16px; }
- .thead { display:none; }
- .row, .slg .row { grid-template-columns:1fr 1fr; gap:8px; }
- .row .c2 { grid-column:1 / -1; order:-1; }
- .row .c5 { grid-column:1 / -1; }
- .ri { width:100%; }
- .slg { grid-template-columns:1fr; }
+html { scroll-snap-type:y mandatory; }
+html, body { margin:0; background:#141414; }
+.screen { height:100vh; height:100dvh; width:100%; scroll-snap-align:start; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.fit { width:297mm; height:210mm; flex:none; transform-origin:center center; }
+.fit > .page { page-break-after:auto; }
+.dots { position:fixed; right:14px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:7px; z-index:5; }
+.dots a { width:8px; height:8px; border-radius:50%; background:rgba(20,20,20,.25); display:block; }
+.dots a.on { background:#141414; transform:scale(1.4); }
+@media (max-width:760px) and (orientation:portrait) {
+ html { scroll-snap-type:none; }
+ .screen { height:auto; display:block; }
+ .fit { width:auto; height:auto; transform:none !important; }
+ .dots { display:none; }
+ .page.pg { width:auto; height:auto; min-height:0; padding:20px 16px; overflow:visible; }
+ .cover.page { min-height:100vh; }
+ .row { height:auto !important; grid-template-columns:1fr 1fr !important; gap:8px; }
+ .row .c2 { grid-column:1 / -1; order:-1; } .row .c5 { grid-column:1 / -1; }
+ .ri { width:100% !important; height:auto !important; aspect-ratio:1/1; } .ri img { width:100%; height:100%; object-fit:contain; }
+ .thead { display:none; } .slg { grid-template-columns:1fr; }
+ .bh { height:auto; flex-wrap:wrap; padding:8px 12px; } .ev { height:auto; padding:10px; }
  .card { overflow-x:auto; } table.pl { min-width:620px; }
- .nums { flex-wrap:wrap; gap:18px; }
- .top { flex-wrap:wrap; height:auto; gap:6px; }
+ .cover h1 { font-size:68px; } .nums { flex-wrap:wrap; gap:18px; } .nums b { font-size:48px; }
+ .c5 { font-size:15px; } .c5 b { font-size:17px; } .c5 .sm { font-size:13px; } .capt { font-size:14px; } .c3 { font-size:20px; }
 }
-</style></head><body><section class="page pg cover" style="background:#FF3DA8">
+</style></head><body><div class="screen" style="background:#FF3DA8"><div class="fit"><section class="page pg cover" style="background:#FF3DA8">
 <img class="logo" src="img/logo.png"><h1>SHOOTING</h1>
 <div class="nums"><div><b>39</b>PHOTOS</div><div><b>17</b>VIDEOS</div><div><b>4</b>MODELS</div><div><b>1</b>STORE</div></div>
-<span class="pnc">01<span>/18</span></span></section><section class="page pg" style="background:#9B3BE6;color:#ffffff;--fg:#ffffff">
+<span class="pnc">01<span>/18</span></span></section></div></div><div class="screen" style="background:#9B3BE6"><div class="fit"><section class="page pg" style="background:#9B3BE6;color:#ffffff;--fg:#ffffff">
 <div class="top"><span class="tt">THE DAY · STATION PLAN</span><span class="pn">02<span>/18</span></span></div><div class="card"><table class="pl"><thead><tr><th>STEP</th><th>MAKEUP &amp; HAIR</th><th>PHOTO</th><th>VIDEO</th><th>NOTE</th></tr></thead><tbody><tr><td class="psn">1</td><td>→ <b>STEVIE</b></td><td><span class="pause">PAUSE</span></td><td><span class="pause">PAUSE</span></td><td class="pnt">Start: the first girl in makeup</td></tr><tr><td class="psn">2</td><td>→ <b>LOLA</b></td><td><b>STEVIE</b></td><td><span class="pause">PAUSE</span></td><td class="pnt"></td></tr><tr><td class="psn">3</td><td>→ <b>RAFA</b></td><td><b>LOLA</b></td><td><b>STEVIE</b></td><td class="pnt"></td></tr><tr><td class="psn">4</td><td><span class="soft">TOUCH-UPS</span></td><td><b>RAFA</b></td><td><b>LOLA</b></td><td class="pnt"></td></tr><tr><td class="psn">5</td><td><span class="soft">TOUCH-UPS</span></td><td><span class="pause">PAUSE</span></td><td><b>RAFA</b></td><td class="pnt"></td></tr><tr><td class="psn">6</td><td><span class="pause">—</span></td><td><b>STEVIE + LOLA + RAFA</b></td><td><span class="pause">PAUSE</span></td><td class="pnt">Group</td></tr><tr><td class="psn">7</td><td><span class="pause">—</span></td><td><span class="pause">PAUSE</span></td><td><b>STEVIE + LOLA + RAFA</b></td><td class="pnt">Group</td></tr><tr><td class="psn">8</td><td>→ <b>JADE</b></td><td><span class="pause">PAUSE</span></td><td><span class="pause">PAUSE</span></td><td class="pnt"></td></tr><tr><td class="psn">9</td><td>→ <b>RUBY</b></td><td><b>JADE</b></td><td><span class="pause">PAUSE</span></td><td class="pnt"></td></tr><tr><td class="psn">10</td><td>→ <b>NAÏMA</b></td><td><b>RUBY</b></td><td><b>JADE</b></td><td class="pnt"></td></tr><tr><td class="psn">11</td><td><span class="soft">TOUCH-UPS</span></td><td><b>NAÏMA</b></td><td><b>RUBY</b></td><td class="pnt"></td></tr><tr><td class="psn">12</td><td><span class="pause">—</span></td><td><b>JADE + RUBY</b></td><td><b>NAÏMA</b></td><td class="pnt">Group at photo, NAÏMA on video</td></tr><tr><td class="psn">13</td><td><span class="pause">—</span></td><td><span class="pause">PAUSE</span></td><td><b>JADE + RUBY</b></td><td class="pnt">Group</td></tr><tr class="pev"><td colspan="5">RUBY and JADE go home</td></tr><tr class="pev"><td colspan="5">Lunch · IRIS arrives</td></tr><tr><td class="psn">14</td><td>→ <b>IRIS</b></td><td><span class="pause">PAUSE</span></td><td><span class="pause">PAUSE</span></td><td class="pnt"></td></tr><tr><td class="psn">15</td><td><span class="pause">—</span></td><td><b>IRIS + NAÏMA</b></td><td><span class="pause">PAUSE</span></td><td class="pnt">Group</td></tr><tr><td class="psn">16</td><td><span class="pause">—</span></td><td><span class="pause">PAUSE</span></td><td><b>IRIS + NAÏMA</b></td><td class="pnt">Group</td></tr><tr class="pev"><td colspan="5">NAÏMA goes home</td></tr><tr><td class="psn">17</td><td><span class="pause">—</span></td><td><b>IRIS</b></td><td><span class="pause">PAUSE</span></td><td class="pnt"></td></tr><tr><td class="psn">18</td><td><span class="pause">—</span></td><td><span class="pause">PAUSE</span></td><td><b>IRIS</b></td><td class="pnt"></td></tr><tr class="pev"><td colspan="5">IRIS goes home</td></tr><tr><td class="psn">19</td><td><span class="pause">—</span></td><td>STILL LIFES · all seven headbands <span class="mn">(product, no model)</span></td><td><span class="pause">PAUSE</span></td><td class="pnt">Still lifes, all seven together, no model</td></tr><tr class="pev"><td colspan="5">Wrap</td></tr></tbody></table>
-<p class="leg"><b>CODES</b> ST STEVIE · LO LOLA · RA RAFA · JA JADE · RU RUBY · NA NAÏMA · IR IRIS — 1–4 PHOTOS · 5–6 VIDEOS · 7 STILL LIFE &nbsp;·&nbsp; <b>FRAMING</b> CU CLOSE-UP · MCU MEDIUM CLOSE-UP · FL FULL LENGTH · MS MEDIUM SHOT</p></div></section><section class="page pg" style="background:#1BB7FF;color:#141414;--fg:#141414">
+<p class="leg"><b>CODES</b> ST STEVIE · LO LOLA · RA RAFA · JA JADE · RU RUBY · NA NAÏMA · IR IRIS — 1–4 PHOTOS · 5–6 VIDEOS · 7 STILL LIFE &nbsp;·&nbsp; <b>FRAMING</b> CU CLOSE-UP · MCU MEDIUM CLOSE-UP · FL FULL LENGTH · MS MEDIUM SHOT</p></div></section></div></div><div class="screen" style="background:#1BB7FF"><div class="fit"><section class="page pg" style="background:#1BB7FF;color:#141414;--fg:#141414">
 <div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">03<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 1</span>
 <span class="lab">MAKEUP</span><span class="val">→ <b>STEVIE</b></span>
 <span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
 <span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="bh"><span class="sn">STEP 2</span>
 <span class="lab">MAKEUP</span><span class="val">→ <b>LOLA</b></span>
 <span class="lab">PHOTO</span><span class="val"><b>STEVIE</b></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">ST1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/76b.jpg"></div><div class="rn">REF 76b</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/76b.jpg"></div><div class="rn">REF 76b</div></div>
 <div class="c3"><b>STEVIE</b></div>
 <div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span></div>
-<div class="c5"><b>30 Mar</b> The Cover<br><span class="sm">also in: 31 Mar Meet Stevie · 19 Apr Stevie’s Voice Note · 23 Apr The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" >
+<div class="c5"><b>30 Mar</b> The Cover<br><span class="sm">also in: 31 Mar Meet Stevie · 19 Apr Stevie’s Voice Note · 23 Apr The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">ST2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/62.jpg"></div><div class="rn">REF 62</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/62.jpg"></div><div class="rn">REF 62</div></div>
 <div class="c3"><b>STEVIE</b></div>
 <div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>31 Mar</b> Meet Stevie<p class="capt">“STEVIE. Pink was always the plan.”</p></div></div><div class="row" >
+<div class="c5"><b>31 Mar</b> Meet Stevie<p class="capt">“STEVIE. Pink was always the plan.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">ST3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/64.jpg"></div><div class="rn">REF 64</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/64.jpg"></div><div class="rn">REF 64</div></div>
 <div class="c3"><b>STEVIE</b></div>
 <div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span></div>
-<div class="c5"><b>31 Mar</b> Meet Stevie<br><span class="sm">also in: 21 Apr The Style File · 25 Apr NYA’s Angels</span><p class="capt">“STEVIE. Pink was always the plan.”</p></div></div></div></section><section class="page pg" style="background:#2FE3C6;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">04<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" >
+<div class="c5"><b>31 Mar</b> Meet Stevie<br><span class="sm">also in: 21 Apr The Style File · 25 Apr NYA’s Angels</span><p class="capt">“STEVIE. Pink was always the plan.”</p></div></div></div></section></div></div><div class="screen" style="background:#2FE3C6"><div class="fit"><section class="page pg" style="background:#2FE3C6;color:#141414;--fg:#141414">
+<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">04<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
 <div class="c1"><span class="code">ST4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/b-clones.jpg"></div><div class="rn">REF b-clones</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/b-clones.jpg"></div><div class="rn">REF b-clones</div></div>
 <div class="c3"><b>STEVIE</b></div>
 <div class="c4"><b>SECOND POSE · PHONE CALL</b><span class="fr">FL</span></div>
 <div class="c5"><b>21 Apr</b> The Style File<br><span class="sm">also in: 11 Apr The Phone Call</span><p class="capt">“The finishing touch is already sorted.”</p></div></div><div class="bh"><span class="sn">STEP 3</span>
 <span class="lab">MAKEUP</span><span class="val">→ <b>RAFA</b></span>
 <span class="lab">PHOTO</span><span class="val"><b>LOLA</b></span>
-<span class="lab">VIDEO</span><span class="val"><b>STEVIE</b></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><b>STEVIE</b></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">LO1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/w-bella.jpg"></div><div class="rn">REF w-bella</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-bella.jpg"></div><div class="rn">REF w-bella</div></div>
 <div class="c3"><b>LOLA</b></div>
 <div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span></div>
-<div class="c5"><b>30 Mar</b> The Cover<br><span class="sm">also in: 2 Apr Meet Lola · 23 Apr The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" >
+<div class="c5"><b>30 Mar</b> The Cover<br><span class="sm">also in: 2 Apr Meet Lola · 23 Apr The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">LO2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/59.jpg"></div><div class="rn">REF 59</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/59.jpg"></div><div class="rn">REF 59</div></div>
 <div class="c3"><b>LOLA</b></div>
 <div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>2 Apr</b> Meet Lola<p class="capt">“LOLA. The outfit was planned. The rest wasn’t.”</p></div></div></div></section><section class="page pg" style="background:#FFE93B;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">05<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" >
+<div class="c5"><b>2 Apr</b> Meet Lola<p class="capt">“LOLA. The outfit was planned. The rest wasn’t.”</p></div></div></div></section></div></div><div class="screen" style="background:#FFE93B"><div class="fit"><section class="page pg" style="background:#FFE93B;color:#141414;--fg:#141414">
+<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">05<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
 <div class="c1"><span class="code">LO3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/58.jpg"></div><div class="rn">REF 58</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/58.jpg"></div><div class="rn">REF 58</div></div>
 <div class="c3"><b>LOLA</b></div>
 <div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span></div>
-<div class="c5"><b>2 Apr</b> Meet Lola<br><span class="sm">also in: 21 Apr The Style File · 25 Apr NYA’s Angels</span><p class="capt">“LOLA. The outfit was planned. The rest wasn’t.”</p></div></div><div class="row" >
+<div class="c5"><b>2 Apr</b> Meet Lola<br><span class="sm">also in: 21 Apr The Style File · 25 Apr NYA’s Angels</span><p class="capt">“LOLA. The outfit was planned. The rest wasn’t.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">LO4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/w-mouth.jpg"></div><div class="rn">REF w-mouth</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-mouth.jpg"></div><div class="rn">REF w-mouth</div></div>
 <div class="c3"><b>LOLA</b></div>
 <div class="c4"><b>SECOND POSE · PHONE CALL</b><span class="fr">FL</span></div>
-<div class="c5"><b>21 Apr</b> The Style File<br><span class="sm">also in: 11 Apr The Phone Call</span><p class="capt">“The finishing touch is already sorted.”</p></div></div><div class="row" >
+<div class="c5"><b>21 Apr</b> The Style File<br><span class="sm">also in: 11 Apr The Phone Call</span><p class="capt">“The finishing touch is already sorted.”</p></div></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">ST5</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>STEVIE</b></div>
 <div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>31 Mar</b> Meet Stevie<p class="capt">“STEVIE. Pink was always the plan.”</p></div></div><div class="row" >
+<div class="c5"><b>31 Mar</b> Meet Stevie<p class="capt">“STEVIE. Pink was always the plan.”</p></div></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">ST6</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>STEVIE</b></div>
 <div class="c4"><b>IN MOTION</b><span class="fr">FL → CU</span></div>
-<div class="c5"><b>19 Apr</b> Stevie’s Voice Note<p class="capt">“Stevie has an update.”</p></div></div></div></section><section class="page pg" style="background:#C6FF6B;color:#141414;--fg:#141414">
+<div class="c5"><b>19 Apr</b> Stevie’s Voice Note<p class="capt">“Stevie has an update.”</p></div></div></div></section></div></div><div class="screen" style="background:#C6FF6B"><div class="fit"><section class="page pg" style="background:#C6FF6B;color:#141414;--fg:#141414">
 <div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">06<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 4</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="soft">TOUCH-UPS</span></span>
 <span class="lab">PHOTO</span><span class="val"><b>RAFA</b></span>
-<span class="lab">VIDEO</span><span class="val"><b>LOLA</b></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><b>LOLA</b></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">RA1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/w-shades.jpg"></div><div class="rn">REF w-shades</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-shades.jpg"></div><div class="rn">REF w-shades</div></div>
 <div class="c3"><b>RAFA</b></div>
 <div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span><span class="ang">from above</span></div>
-<div class="c5"><b>30 Mar</b> The Cover<br><span class="sm">also in: 4 Apr Meet Rafa · 23 Apr The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" >
+<div class="c5"><b>30 Mar</b> The Cover<br><span class="sm">also in: 4 Apr Meet Rafa · 23 Apr The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">RA2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/38.jpg"></div><div class="rn">REF 38</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/38.jpg"></div><div class="rn">REF 38</div></div>
 <div class="c3"><b>RAFA</b></div>
 <div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>4 Apr</b> Meet Rafa<p class="capt">“RAFA. Probably outside. You coming? / Try me.”</p></div></div><div class="row" >
+<div class="c5"><b>4 Apr</b> Meet Rafa<p class="capt">“RAFA. Probably outside. You coming? / Try me.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">RA3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/70.jpg"></div><div class="rn">REF 70</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/70.jpg"></div><div class="rn">REF 70</div></div>
 <div class="c3"><b>RAFA</b></div>
 <div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span><span class="ang">low</span></div>
-<div class="c5"><b>4 Apr</b> Meet Rafa<br><span class="sm">also in: 21 Apr The Style File · 25 Apr NYA’s Angels</span><p class="capt">“RAFA. Probably outside. You coming? / Try me.”</p></div></div></div></section><section class="page pg" style="background:#FF3DA8;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">07<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" >
+<div class="c5"><b>4 Apr</b> Meet Rafa<br><span class="sm">also in: 21 Apr The Style File · 25 Apr NYA’s Angels</span><p class="capt">“RAFA. Probably outside. You coming? / Try me.”</p></div></div></div></section></div></div><div class="screen" style="background:#FF3DA8"><div class="fit"><section class="page pg" style="background:#FF3DA8;color:#141414;--fg:#141414">
+<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">07<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
 <div class="c1"><span class="code">RA4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/71.jpg"></div><div class="rn">REF 71</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/71.jpg"></div><div class="rn">REF 71</div></div>
 <div class="c3"><b>RAFA</b></div>
 <div class="c4"><b>SECOND POSE · PHONE CALL</b><span class="fr">FL</span></div>
-<div class="c5"><b>21 Apr</b> The Style File<br><span class="sm">also in: 11 Apr The Phone Call</span><p class="capt">“The finishing touch is already sorted.”</p></div></div><div class="row" >
+<div class="c5"><b>21 Apr</b> The Style File<br><span class="sm">also in: 11 Apr The Phone Call</span><p class="capt">“The finishing touch is already sorted.”</p></div></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">LO5</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>LOLA</b></div>
 <div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>2 Apr</b> Meet Lola<p class="capt">“LOLA. The outfit was planned. The rest wasn’t.”</p></div></div><div class="row" >
+<div class="c5"><b>2 Apr</b> Meet Lola<p class="capt">“LOLA. The outfit was planned. The rest wasn’t.”</p></div></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">LO6</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>LOLA</b></div>
@@ -176,131 +172,131 @@ tr.pev td { background:#141414; color:#fff; font-weight:900; text-align:center; 
 <div class="c5"><b>10 Apr</b> Lola’s Little Purchases<p class="capt">“She only went out for coffee.”</p></div></div><div class="bh"><span class="sn">STEP 5</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="soft">TOUCH-UPS</span></span>
 <span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><b>RAFA</b></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><b>RAFA</b></span></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">RA5</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>RAFA</b></div>
 <div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>13 Apr</b> Rafa In Motion<p class="capt">“She said it was a warm-up.”</p></div></div><div class="row" >
+<div class="c5"><b>13 Apr</b> Rafa In Motion<p class="capt">“She said it was a warm-up.”</p></div></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">RA6</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>RAFA</b></div>
 <div class="c4"><b>IN MOTION</b><span class="fr">FL → CU</span></div>
-<div class="c5"><b>13 Apr</b> Rafa In Motion<p class="capt">“She said it was a warm-up.”</p></div></div></div></section><section class="page pg" style="background:#9B3BE6;color:#ffffff;--fg:#ffffff">
+<div class="c5"><b>13 Apr</b> Rafa In Motion<p class="capt">“She said it was a warm-up.”</p></div></div></div></section></div></div><div class="screen" style="background:#9B3BE6"><div class="fit"><section class="page pg" style="background:#9B3BE6;color:#ffffff;--fg:#ffffff">
 <div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">08<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 6</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
 <span class="lab">PHOTO</span><span class="val"><b>STEVIE + LOLA + RAFA</b></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code grp">ST·<wbr>LO·<wbr>RA1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/73.jpg"></div><div class="rn">REF 73</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/73.jpg"></div><div class="rn">REF 73</div></div>
 <div class="c3"><b>STEVIE + LOLA + RAFA</b></div>
 <div class="c4"><b>TRIO COVER</b><span class="fr">MCU</span></div>
-<div class="c5"><b>30 Mar</b> The Cover<br><span class="sm">also in: 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" >
+<div class="c5"><b>30 Mar</b> The Cover<br><span class="sm">also in: 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code grp">ST·<wbr>LO·<wbr>RA2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/17a.jpg"></div><div class="rn">REF 17a</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/17a.jpg"></div><div class="rn">REF 17a</div></div>
 <div class="c3"><b>STEVIE + LOLA + RAFA</b></div>
 <div class="c4"><b>TRIO PHOTO BOOTH</b><span class="fr">MCU</span></div>
 <div class="c5"><b>29 Apr</b> The Photo Booth<p class="capt">“Everyone look here.”</p></div></div><div class="bh"><span class="sn">STEP 7</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
 <span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><b>STEVIE + LOLA + RAFA</b></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><b>STEVIE + LOLA + RAFA</b></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code grp">ST·<wbr>LO·<wbr>RA3</span><span class="tg">VIDEO</span></div>
-<div class="c2"><div class="ri" ><img src="img/75.jpg"></div><div class="rn">REF 75</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/75.jpg"></div><div class="rn">REF 75</div></div>
 <div class="c3"><b>STEVIE + LOLA + RAFA</b></div>
 <div class="c4"><b>WALK-IN / PAPARAZZI</b><span class="fr">FL → MCU</span><span class="ang">through the shop door</span></div>
-<div class="c5"><b>6 Apr</b> The Walk-In<br><span class="sm">also in: 15 Apr The Paparazzi Page</span><p class="capt">“Make room for three.”</p></div></div></div></section><section class="page pg" style="background:#1BB7FF;color:#141414;--fg:#141414">
+<div class="c5"><b>6 Apr</b> The Walk-In<br><span class="sm">also in: 15 Apr The Paparazzi Page</span><p class="capt">“Make room for three.”</p></div></div></div></section></div></div><div class="screen" style="background:#1BB7FF"><div class="fit"><section class="page pg" style="background:#1BB7FF;color:#141414;--fg:#141414">
 <div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">09<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 8</span>
 <span class="lab">MAKEUP</span><span class="val">→ <b>JADE</b></span>
 <span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
 <span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="bh"><span class="sn">STEP 9</span>
 <span class="lab">MAKEUP</span><span class="val">→ <b>RUBY</b></span>
 <span class="lab">PHOTO</span><span class="val"><b>JADE</b></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">JA1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/w-bend.jpg"></div><div class="rn">REF w-bend</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-bend.jpg"></div><div class="rn">REF w-bend</div></div>
 <div class="c3"><b>JADE</b></div>
 <div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span></div>
-<div class="c5"><b>1 Mar</b> The Cover<br><span class="sm">also in: 3 Mar Meet Jade · 16 Mar The Soundtrack · 23 Mar Open Chat · 30 Apr The Complete Collection</span><p class="capt">“JADE. Already making you a playlist.”</p></div></div><div class="row" >
+<div class="c5"><b>1 Mar</b> The Cover<br><span class="sm">also in: 3 Mar Meet Jade · 16 Mar The Soundtrack · 23 Mar Open Chat · 30 Apr The Complete Collection</span><p class="capt">“JADE. Already making you a playlist.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">JA2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/22.jpg"></div><div class="rn">REF 22</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/22.jpg"></div><div class="rn">REF 22</div></div>
 <div class="c3"><b>JADE</b></div>
 <div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>3 Mar</b> Meet Jade<br><span class="sm">also in: 14 Mar Jade’s Voice Note · 23 Mar Open Chat</span><p class="capt">“JADE. Already making you a playlist.”</p></div></div><div class="row" >
+<div class="c5"><b>3 Mar</b> Meet Jade<br><span class="sm">also in: 14 Mar Jade’s Voice Note · 23 Mar Open Chat</span><p class="capt">“JADE. Already making you a playlist.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">JA3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/b-ed2.jpg"></div><div class="rn">REF b-ed2</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/b-ed2.jpg"></div><div class="rn">REF b-ed2</div></div>
 <div class="c3"><b>JADE</b></div>
 <div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span><span class="ang">slightly above</span></div>
-<div class="c5"><b>3 Mar</b> Meet Jade<br><span class="sm">also in: 20 Mar The Style File</span><p class="capt">“JADE. Already making you a playlist.”</p></div></div></div></section><section class="page pg" style="background:#2FE3C6;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">10<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" >
+<div class="c5"><b>3 Mar</b> Meet Jade<br><span class="sm">also in: 20 Mar The Style File</span><p class="capt">“JADE. Already making you a playlist.”</p></div></div></div></section></div></div><div class="screen" style="background:#2FE3C6"><div class="fit"><section class="page pg" style="background:#2FE3C6;color:#141414;--fg:#141414">
+<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">10<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
 <div class="c1"><span class="code">JA4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/69.jpg"></div><div class="rn">REF 69</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/69.jpg"></div><div class="rn">REF 69</div></div>
 <div class="c3"><b>JADE</b></div>
 <div class="c4"><b>SECOND POSE</b><span class="fr">FL</span></div>
 <div class="c5"><b>20 Mar</b> The Style File<p class="capt">“The headband stayed. The jacket didn’t.”</p></div></div><div class="bh"><span class="sn">STEP 10</span>
 <span class="lab">MAKEUP</span><span class="val">→ <b>NAÏMA</b></span>
 <span class="lab">PHOTO</span><span class="val"><b>RUBY</b></span>
-<span class="lab">VIDEO</span><span class="val"><b>JADE</b></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><b>JADE</b></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">RU1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/47.jpg"></div><div class="rn">REF 47</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/47.jpg"></div><div class="rn">REF 47</div></div>
 <div class="c3"><b>RUBY</b></div>
 <div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span></div>
-<div class="c5"><b>1 Mar</b> The Cover<br><span class="sm">also in: 5 Mar Meet Ruby · 16 Mar The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“RUBY. A good person to have in your corner.”</p></div></div><div class="row" >
+<div class="c5"><b>1 Mar</b> The Cover<br><span class="sm">also in: 5 Mar Meet Ruby · 16 Mar The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“RUBY. A good person to have in your corner.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">RU2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/48.jpg"></div><div class="rn">REF 48</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/48.jpg"></div><div class="rn">REF 48</div></div>
 <div class="c3"><b>RUBY</b></div>
 <div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>5 Mar</b> Meet Ruby<br><span class="sm">also in: 12 Mar Ruby’s Screen Test</span><p class="capt">“RUBY. A good person to have in your corner.”</p></div></div></div></section><section class="page pg" style="background:#FFE93B;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">11<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" >
+<div class="c5"><b>5 Mar</b> Meet Ruby<br><span class="sm">also in: 12 Mar Ruby’s Screen Test</span><p class="capt">“RUBY. A good person to have in your corner.”</p></div></div></div></section></div></div><div class="screen" style="background:#FFE93B"><div class="fit"><section class="page pg" style="background:#FFE93B;color:#141414;--fg:#141414">
+<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">11<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
 <div class="c1"><span class="code">RU3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/45.jpg"></div><div class="rn">REF 45</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/45.jpg"></div><div class="rn">REF 45</div></div>
 <div class="c3"><b>RUBY</b></div>
 <div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span></div>
-<div class="c5"><b>5 Mar</b> Meet Ruby<br><span class="sm">also in: 20 Mar The Style File</span><p class="capt">“RUBY. A good person to have in your corner.”</p></div></div><div class="row" >
+<div class="c5"><b>5 Mar</b> Meet Ruby<br><span class="sm">also in: 20 Mar The Style File</span><p class="capt">“RUBY. A good person to have in your corner.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">RU4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/37.jpg"></div><div class="rn">REF 37</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/37.jpg"></div><div class="rn">REF 37</div></div>
 <div class="c3"><b>RUBY</b></div>
 <div class="c4"><b>SECOND POSE · PENNY LANE</b><span class="fr">FL + MCU crop</span></div>
-<div class="c5"><b>20 Mar</b> The Style File<br><span class="sm">also in: 12 Mar Ruby’s Screen Test</span><p class="capt">“The headband stayed. The jacket didn’t.”</p></div></div><div class="row" >
+<div class="c5"><b>20 Mar</b> The Style File<br><span class="sm">also in: 12 Mar Ruby’s Screen Test</span><p class="capt">“The headband stayed. The jacket didn’t.”</p></div></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">JA5</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>JADE</b></div>
 <div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>14 Mar</b> Jade’s Voice Note<br><span class="sm">also in: 7 Mar Getting Ready</span><p class="capt">“It started with one song.”</p></div></div><div class="row" >
+<div class="c5"><b>14 Mar</b> Jade’s Voice Note<br><span class="sm">also in: 7 Mar Getting Ready</span><p class="capt">“It started with one song.”</p></div></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">JA6</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>JADE</b></div>
 <div class="c4"><b>IN MOTION</b><span class="fr">FL → CU</span></div>
-<div class="c5"><b>14 Mar</b> Jade’s Voice Note<p class="capt">“It started with one song.”</p></div></div></div></section><section class="page pg" style="background:#C6FF6B;color:#141414;--fg:#141414">
+<div class="c5"><b>14 Mar</b> Jade’s Voice Note<p class="capt">“It started with one song.”</p></div></div></div></section></div></div><div class="screen" style="background:#C6FF6B"><div class="fit"><section class="page pg" style="background:#C6FF6B;color:#141414;--fg:#141414">
 <div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">12<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 11</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="soft">TOUCH-UPS</span></span>
 <span class="lab">PHOTO</span><span class="val"><b>NAÏMA</b></span>
-<span class="lab">VIDEO</span><span class="val"><b>RUBY</b></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><b>RUBY</b></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">NA1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/w-gum.jpg"></div><div class="rn">REF w-gum</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-gum.jpg"></div><div class="rn">REF w-gum</div></div>
 <div class="c3"><b>NAÏMA</b></div>
 <div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span></div>
-<div class="c5"><b>1 Feb</b> The Cover<br><span class="sm">also in: 5 Feb Meet Naïma · 31 Jan Next Issue · 30 Apr The Complete Collection</span><p class="capt">“NAÏMA. Particular about prints. And most other things.”</p></div></div><div class="row" >
+<div class="c5"><b>1 Feb</b> The Cover<br><span class="sm">also in: 5 Feb Meet Naïma · 31 Jan Next Issue · 30 Apr The Complete Collection</span><p class="capt">“NAÏMA. Particular about prints. And most other things.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">NA2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/30.jpg"></div><div class="rn">REF 30</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/30.jpg"></div><div class="rn">REF 30</div></div>
 <div class="c3"><b>NAÏMA</b></div>
 <div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>5 Feb</b> Meet Naïma<br><span class="sm">also in: 19 Jan The Introduction Cover · 22 Jan The First Pair</span><p class="capt">“NAÏMA. Particular about prints. And most other things.”</p></div></div><div class="row" >
+<div class="c5"><b>5 Feb</b> Meet Naïma<br><span class="sm">also in: 19 Jan The Introduction Cover · 22 Jan The First Pair</span><p class="capt">“NAÏMA. Particular about prints. And most other things.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">NA3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/w-tyla.jpg"></div><div class="rn">REF w-tyla</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-tyla.jpg"></div><div class="rn">REF w-tyla</div></div>
 <div class="c3"><b>NAÏMA</b></div>
 <div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span><span class="ang">from above</span></div>
-<div class="c5"><b>5 Feb</b> Meet Naïma<br><span class="sm">also in: 17 Feb The Wardrobe Computer · 21 Feb The Style File</span><p class="capt">“NAÏMA. Particular about prints. And most other things.”</p></div></div></div></section><section class="page pg" style="background:#FF3DA8;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">13<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" >
+<div class="c5"><b>5 Feb</b> Meet Naïma<br><span class="sm">also in: 17 Feb The Wardrobe Computer · 21 Feb The Style File</span><p class="capt">“NAÏMA. Particular about prints. And most other things.”</p></div></div></div></section></div></div><div class="screen" style="background:#FF3DA8"><div class="fit"><section class="page pg" style="background:#FF3DA8;color:#141414;--fg:#141414">
+<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">13<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
 <div class="c1"><span class="code">NA4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/b-ed3.jpg"></div><div class="rn">REF b-ed3</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/b-ed3.jpg"></div><div class="rn">REF b-ed3</div></div>
 <div class="c3"><b>NAÏMA</b></div>
 <div class="c4"><b>SECOND POSE · TITANIC</b><span class="fr">FL</span><span class="ang">slightly high</span></div>
-<div class="c5"><b>21 Feb</b> The Style File<br><span class="sm">also in: 12 Feb Naïma’s Screen Test</span><p class="capt">“The plans changed. This stayed.”</p></div></div><div class="row" >
+<div class="c5"><b>21 Feb</b> The Style File<br><span class="sm">also in: 12 Feb Naïma’s Screen Test</span><p class="capt">“The plans changed. This stayed.”</p></div></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">RU5</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>RUBY</b></div>
 <div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>7 Mar</b> Getting Ready<p class="capt">“Start at the top.”</p></div></div><div class="row" >
+<div class="c5"><b>7 Mar</b> Getting Ready<p class="capt">“Start at the top.”</p></div></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">RU6</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>RUBY</b></div>
@@ -308,18 +304,18 @@ tr.pev td { background:#141414; color:#fff; font-weight:900; text-align:center; 
 <div class="c5"><span class="sm">Stories of the Issue</span></div></div><div class="bh"><span class="sn">STEP 12</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
 <span class="lab">PHOTO</span><span class="val"><b>JADE + RUBY</b></span>
-<span class="lab">VIDEO</span><span class="val"><b>NAÏMA</b></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><b>NAÏMA</b></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code grp">JA·<wbr>RU1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/b-grp2.jpg"></div><div class="rn">REF b-grp2</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/b-grp2.jpg"></div><div class="rn">REF b-grp2</div></div>
 <div class="c3"><b>JADE + RUBY</b></div>
 <div class="c4"><b>PAIR COVER</b><span class="fr">MCU</span></div>
-<div class="c5"><b>1 Mar</b> The Cover<br><span class="sm">also in: 25 Mar Back Issue</span><p class="capt">“Consider this your invitation.”</p></div></div></div></section><section class="page pg" style="background:#9B3BE6;color:#ffffff;--fg:#ffffff">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">14<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" >
+<div class="c5"><b>1 Mar</b> The Cover<br><span class="sm">also in: 25 Mar Back Issue</span><p class="capt">“Consider this your invitation.”</p></div></div></div></section></div></div><div class="screen" style="background:#9B3BE6"><div class="fit"><section class="page pg" style="background:#9B3BE6;color:#ffffff;--fg:#ffffff">
+<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">14<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:24mm">
 <div class="c1"><span class="code">NA5</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>NAÏMA</b></div>
 <div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>7 Feb</b> Put It On<p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="row" >
+<div class="c5"><b>7 Feb</b> Put It On<p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">NA6</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>NAÏMA</b></div>
@@ -327,106 +323,129 @@ tr.pev td { background:#141414; color:#fff; font-weight:900; text-align:center; 
 <div class="c5"><b>7 Feb</b> Put It On<br><span class="sm">also in: 23 Feb Back Issue</span><p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="bh"><span class="sn">STEP 13</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
 <span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><b>JADE + RUBY</b></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><b>JADE + RUBY</b></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code grp">JA·<wbr>RU2</span><span class="tg">VIDEO</span></div>
-<div class="c2"><div class="ri" ><img src="img/b-grp1.jpg"></div><div class="rn">REF b-grp1</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/b-grp1.jpg"></div><div class="rn">REF b-grp1</div></div>
 <div class="c3"><b>JADE + RUBY</b></div>
 <div class="c4"><b>GETTING READY AT THE MIRROR</b><span class="fr">MCU</span><span class="ang">over the shoulder, into the mirror</span></div>
 <div class="c5"><b>7 Mar</b> Getting Ready<p class="capt">“Start at the top.”</p></div></div><div class="ev">RUBY and JADE go home</div><div class="ev">Lunch · IRIS arrives</div><div class="bh"><span class="sn">STEP 14</span>
 <span class="lab">MAKEUP</span><span class="val">→ <b>IRIS</b></span>
 <span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div></div></section><section class="page pg" style="background:#1BB7FF;color:#141414;--fg:#141414">
+<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div></div></section></div></div><div class="screen" style="background:#1BB7FF"><div class="fit"><section class="page pg" style="background:#1BB7FF;color:#141414;--fg:#141414">
 <div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">15<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 15</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
 <span class="lab">PHOTO</span><span class="val"><b>IRIS + NAÏMA</b></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code grp">IR·<wbr>NA1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/17b.jpg"></div><div class="rn">REF 17b</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/17b.jpg"></div><div class="rn">REF 17b</div></div>
 <div class="c3"><b>IRIS + NAÏMA</b></div>
 <div class="c4"><b>PAIR COVER</b><span class="fr">MCU</span></div>
 <div class="c5"><b>1 Feb</b> The Cover<br><span class="sm">also in: 14 Feb The Valentine’s Page · 23 Feb Back Issue · 28 Feb Next Issue · 25 Mar Back Issue</span><p class="capt">“We gave them names. It got personal.”</p></div></div><div class="bh"><span class="sn">STEP 16</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
 <span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><b>IRIS + NAÏMA</b></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><b>IRIS + NAÏMA</b></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code grp">IR·<wbr>NA2</span><span class="tg">VIDEO</span></div>
-<div class="c2"><div class="ri" ><img src="img/17c.jpg"></div><div class="rn">REF 17c</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/17c.jpg"></div><div class="rn">REF 17c</div></div>
 <div class="c3"><b>IRIS + NAÏMA</b></div>
 <div class="c4"><b>PUTTING IT ON TOGETHER</b><span class="fr">MCU</span></div>
-<div class="c5"><b>7 Feb</b> Put It On<p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="ev">NAÏMA goes home</div></div></section><section class="page pg" style="background:#2FE3C6;color:#141414;--fg:#141414">
+<div class="c5"><b>7 Feb</b> Put It On<p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="ev">NAÏMA goes home</div></div></section></div></div><div class="screen" style="background:#2FE3C6"><div class="fit"><section class="page pg" style="background:#2FE3C6;color:#141414;--fg:#141414">
 <div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">16<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 17</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
 <span class="lab">PHOTO</span><span class="val"><b>IRIS</b></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">IR1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/78a.jpg"></div><div class="rn">REF 78a</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/78a.jpg"></div><div class="rn">REF 78a</div></div>
 <div class="c3"><b>IRIS</b></div>
 <div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span><span class="ang">low</span></div>
-<div class="c5"><b>1 Feb</b> The Cover<br><span class="sm">also in: 3 Feb Meet Iris · 31 Jan Next Issue · 30 Apr The Complete Collection</span><p class="capt">“IRIS. The bookmark is a receipt.”</p></div></div><div class="row" >
+<div class="c5"><b>1 Feb</b> The Cover<br><span class="sm">also in: 3 Feb Meet Iris · 31 Jan Next Issue · 30 Apr The Complete Collection</span><p class="capt">“IRIS. The bookmark is a receipt.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">IR2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/24.jpg"></div><div class="rn">REF 24</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/24.jpg"></div><div class="rn">REF 24</div></div>
 <div class="c3"><b>IRIS</b></div>
 <div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>3 Feb</b> Meet Iris<br><span class="sm">also in: 19 Jan The Introduction Cover · 22 Jan The First Pair</span><p class="capt">“IRIS. The bookmark is a receipt.”</p></div></div><div class="row" >
+<div class="c5"><b>3 Feb</b> Meet Iris<br><span class="sm">also in: 19 Jan The Introduction Cover · 22 Jan The First Pair</span><p class="capt">“IRIS. The bookmark is a receipt.”</p></div></div><div class="row" style="height:48mm">
 <div class="c1"><span class="code">IR3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/53.jpg"></div><div class="rn">REF 53</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/53.jpg"></div><div class="rn">REF 53</div></div>
 <div class="c3"><b>IRIS</b></div>
 <div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span></div>
-<div class="c5"><b>3 Feb</b> Meet Iris<br><span class="sm">also in: 17 Feb The Wardrobe Computer · 21 Feb The Style File</span><p class="capt">“IRIS. The bookmark is a receipt.”</p></div></div></div></section><section class="page pg" style="background:#FFE93B;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">17<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" >
+<div class="c5"><b>3 Feb</b> Meet Iris<br><span class="sm">also in: 17 Feb The Wardrobe Computer · 21 Feb The Style File</span><p class="capt">“IRIS. The bookmark is a receipt.”</p></div></div></div></section></div></div><div class="screen" style="background:#FFE93B"><div class="fit"><section class="page pg" style="background:#FFE93B;color:#141414;--fg:#141414">
+<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">17<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
 <div class="c1"><span class="code">IR4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" ><img src="img/w-nice.jpg"></div><div class="rn">REF w-nice</div></div>
+<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-nice.jpg"></div><div class="rn">REF w-nice</div></div>
 <div class="c3"><b>IRIS</b></div>
 <div class="c4"><b>SECOND POSE</b><span class="fr">FL</span></div>
 <div class="c5"><b>21 Feb</b> The Style File<p class="capt">“The plans changed. This stayed.”</p></div></div><div class="bh"><span class="sn">STEP 18</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
 <span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><b>IRIS</b></span></div><div class="row" >
+<span class="lab">VIDEO</span><span class="val"><b>IRIS</b></span></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">IR5</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>IRIS</b></div>
 <div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>7 Feb</b> Put It On<p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="row" >
+<div class="c5"><b>7 Feb</b> Put It On<p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="row" style="height:24mm">
 <div class="c1"><span class="code">IR6</span><span class="tg">VIDEO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>IRIS</b></div>
 <div class="c4"><b>IN MOTION</b><span class="fr">FL → MS</span></div>
-<div class="c5"><b>7 Feb</b> Put It On<p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="ev">IRIS goes home</div></div></section><section class="page pg" style="background:#C6FF6B;color:#141414;--fg:#141414">
+<div class="c5"><b>7 Feb</b> Put It On<p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="ev">IRIS goes home</div></div></section></div></div><div class="screen" style="background:#C6FF6B"><div class="fit"><section class="page pg" style="background:#C6FF6B;color:#141414;--fg:#141414">
 <div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">18<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 19</span>
 <span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
 <span class="lab">PHOTO</span><span class="val">STILL LIFES · all seven headbands <span class="mn">(product, no model)</span></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="slg"><div class="row slr" >
+<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="slg"><div class="row slr" style="height:36mm">
 <div class="c1"><span class="code">ST7</span><span class="tg">PHOTO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>STEVIE</b><br><span class="soft">PRODUCT</span></div>
 <div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>31 Mar</b> Meet Stevie<br><span class="sm">also in: 11 Apr The Phone Call · 27 Mar Next Issue Hint · 29 Mar Next Issue</span><p class="capt">“STEVIE. Pink was always the plan.”</p></div></div><div class="row slr" >
+<div class="c5"><b>31 Mar</b> Meet Stevie<br><span class="sm">also in: 11 Apr The Phone Call · 27 Mar Next Issue Hint · 29 Mar Next Issue</span><p class="capt">“STEVIE. Pink was always the plan.”</p></div></div><div class="row slr" style="height:36mm">
 <div class="c1"><span class="code">LO7</span><span class="tg">PHOTO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>LOLA</b><br><span class="soft">PRODUCT</span></div>
 <div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>2 Apr</b> Meet Lola<br><span class="sm">also in: 10 Apr Lola’s Little Purchases · 27 Mar Next Issue Hint · 29 Mar Next Issue</span><p class="capt">“LOLA. The outfit was planned. The rest wasn’t.”</p></div></div><div class="row slr" >
+<div class="c5"><b>2 Apr</b> Meet Lola<br><span class="sm">also in: 10 Apr Lola’s Little Purchases · 27 Mar Next Issue Hint · 29 Mar Next Issue</span><p class="capt">“LOLA. The outfit was planned. The rest wasn’t.”</p></div></div><div class="row slr" style="height:36mm">
 <div class="c1"><span class="code">RA7</span><span class="tg">PHOTO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>RAFA</b><br><span class="soft">PRODUCT</span></div>
 <div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>4 Apr</b> Meet Rafa<br><span class="sm">also in: 11 Apr The Phone Call · 27 Mar Next Issue Hint · 29 Mar Next Issue</span><p class="capt">“RAFA. Probably outside. You coming? / Try me.”</p></div></div><div class="row slr" >
+<div class="c5"><b>4 Apr</b> Meet Rafa<br><span class="sm">also in: 11 Apr The Phone Call · 27 Mar Next Issue Hint · 29 Mar Next Issue</span><p class="capt">“RAFA. Probably outside. You coming? / Try me.”</p></div></div><div class="row slr" style="height:36mm">
 <div class="c1"><span class="code">JA7</span><span class="tg">PHOTO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>JADE</b><br><span class="soft">PRODUCT</span></div>
 <div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>3 Mar</b> Meet Jade<br><span class="sm">also in: 10 Mar Jade’s Top Drawer · 27 Feb Next Issue Hint · 28 Feb Next Issue · 16 Mar The Soundtrack</span><p class="capt">“JADE. Already making you a playlist.”</p></div></div><div class="row slr" >
+<div class="c5"><b>3 Mar</b> Meet Jade<br><span class="sm">also in: 10 Mar Jade’s Top Drawer · 27 Feb Next Issue Hint · 28 Feb Next Issue · 16 Mar The Soundtrack</span><p class="capt">“JADE. Already making you a playlist.”</p></div></div><div class="row slr" style="height:36mm">
 <div class="c1"><span class="code">RU7</span><span class="tg">PHOTO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>RUBY</b><br><span class="soft">PRODUCT</span></div>
 <div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>5 Mar</b> Meet Ruby<br><span class="sm">also in: 12 Mar Ruby’s Screen Test · 27 Feb Next Issue Hint · 28 Feb Next Issue · 16 Mar The Soundtrack</span><p class="capt">“RUBY. A good person to have in your corner.”</p></div></div><div class="row slr" >
+<div class="c5"><b>5 Mar</b> Meet Ruby<br><span class="sm">also in: 12 Mar Ruby’s Screen Test · 27 Feb Next Issue Hint · 28 Feb Next Issue · 16 Mar The Soundtrack</span><p class="capt">“RUBY. A good person to have in your corner.”</p></div></div><div class="row slr" style="height:36mm">
 <div class="c1"><span class="code">NA7</span><span class="tg">PHOTO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>NAÏMA</b><br><span class="soft">PRODUCT</span></div>
 <div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>5 Feb</b> Meet Naïma<br><span class="sm">also in: 22 Jan The First Pair · 17 Feb The Wardrobe Computer · 25 Feb Open Attachment</span><p class="capt">“NAÏMA. Particular about prints. And most other things.”</p></div></div><div class="row slr" >
+<div class="c5"><b>5 Feb</b> Meet Naïma<br><span class="sm">also in: 22 Jan The First Pair · 17 Feb The Wardrobe Computer · 25 Feb Open Attachment</span><p class="capt">“NAÏMA. Particular about prints. And most other things.”</p></div></div><div class="row slr" style="height:36mm">
 <div class="c1"><span class="code">IR7</span><span class="tg">PHOTO</span></div>
 <div class="c2"></div>
 <div class="c3"><b>IRIS</b><br><span class="soft">PRODUCT</span></div>
 <div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>3 Feb</b> Meet Iris<br><span class="sm">also in: 10 Feb Iris After Hours · 5 Jan New Document · 8 Jan Save as NYA · 22 Jan The First Pair · 25 Feb Open Attachment</span><p class="capt">“IRIS. The bookmark is a receipt.”</p></div></div></div><div class="ev">Wrap</div></div></section></body></html>
+<div class="c5"><b>3 Feb</b> Meet Iris<br><span class="sm">also in: 10 Feb Iris After Hours · 5 Jan New Document · 8 Jan Save as NYA · 22 Jan The First Pair · 25 Feb Open Attachment</span><p class="capt">“IRIS. The bookmark is a receipt.”</p></div></div></div><div class="ev">Wrap</div></div></section></div></div><script>
+(function(){
+  var fits=[].slice.call(document.querySelectorAll('.fit'));
+  function size(){
+    var mobile = window.matchMedia('(max-width:760px) and (orientation:portrait)').matches;
+    var w=window.innerWidth, h=window.innerHeight, pw=297*96/25.4, ph=210*96/25.4;
+    var s=Math.min(w/pw, h/ph);
+    fits.forEach(function(f){ f.style.transform = mobile ? 'none' : 'scale('+s+')'; });
+  }
+  size(); window.addEventListener('resize', size);
+  var screens=[].slice.call(document.querySelectorAll('.screen'));
+  var nav=document.createElement('nav'); nav.className='dots';
+  screens.forEach(function(s,i){ s.id='p'+(i+1); var a=document.createElement('a'); a.href='#p'+(i+1); a.setAttribute('aria-label','Page '+(i+1)); nav.appendChild(a); });
+  document.body.appendChild(nav);
+  var dots=[].slice.call(nav.children);
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ var i=screens.indexOf(e.target); dots.forEach(function(d,j){ d.classList.toggle('on', j===i); }); } }); },{threshold:0.6});
+  screens.forEach(function(s){ io.observe(s); });
+  document.addEventListener('keydown', function(e){
+    var i=dots.findIndex(function(d){return d.classList.contains('on');});
+    if(e.key==='ArrowDown'||e.key==='PageDown'){ e.preventDefault(); var n=screens[Math.min(i+1,screens.length-1)]; n.scrollIntoView({behavior:'smooth'}); }
+    if(e.key==='ArrowUp'||e.key==='PageUp'){ e.preventDefault(); var p=screens[Math.max(i-1,0)]; p.scrollIntoView({behavior:'smooth'}); }
+  });
+})();
+</script></body></html>
