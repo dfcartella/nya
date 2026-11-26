@@ -1,453 +1,195 @@
-<!doctype html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"><meta charset="utf-8"><title>NYA Shooting</title><style>
-@page { size:A4 landscape; margin:0; } * { box-sizing:border-box; }
-body { margin:0; font-family:'Inter', 'Helvetica Neue', Arial, sans-serif; color:#141414; }
-b { font-weight:900; }
-.pg { width:297mm; height:210mm; padding:8mm 10mm; page-break-after:always; overflow:hidden; position:relative; }
-.top { display:flex; justify-content:space-between; align-items:flex-end; height:14mm; margin-bottom:2mm; }
-.tt { font-size:24pt; font-weight:900; letter-spacing:-.03em; line-height:1; }
-.pn, .pnc { font-size:24pt; font-weight:900; letter-spacing:-.03em; line-height:1; } .pn span, .pnc span { font-size:10pt; opacity:.6; }
-.cover { display:flex; flex-direction:column; justify-content:center; padding:20mm 18mm; }
-.logo { height:34mm; width:auto; align-self:flex-start; filter:brightness(0); }
-.cover h1 { font-size:120pt; font-weight:900; letter-spacing:-.06em; line-height:.85; margin:6mm 0 0; }
-.nums { display:flex; gap:10mm; margin-top:12mm; } .nums div { font-size:12pt; font-weight:800; letter-spacing:.12em; }
-.nums b { display:block; font-size:64pt; letter-spacing:-.04em; line-height:.95; }
-.pnc { position:absolute; right:12mm; bottom:10mm; }
-.card { background:#fff; color:#141414; border-radius:3mm; padding:3mm 4mm; }
-table.pl { width:100%; border-collapse:collapse; font-size:7.6pt; }
-table.pl th { text-align:left; font-weight:900; font-size:7.4pt; letter-spacing:.08em; background:#141414; color:#fff; padding:1.4mm 2mm; }
-table.pl td { padding:.85mm 2mm; border-bottom:1px solid #e5e5e5; font-weight:600; }
-td.psn { font-weight:900; font-size:10pt; width:12mm; } td.pnt { font-size:6.6pt; color:#666; font-weight:500; width:58mm; }
-tr.pev td { background:#141414; color:#fff; font-weight:900; text-align:center; letter-spacing:.08em; text-transform:uppercase; font-size:7.4pt; padding:1mm; }
-.pause { color:#b0b0b0; font-weight:700; font-style:italic; } .soft { color:#9a9a9a; font-weight:700; }
-.leg { font-size:6.8pt; margin:2mm 0 0; color:#444; }
-/* detail */
-.thead { display:grid; grid-template-columns:24mm 52mm 40mm 46mm 1fr; font-size:7.4pt; font-weight:900; letter-spacing:.1em; background:#141414; color:#fff; border-radius:2mm; padding:1.6mm 2mm; margin-bottom:2mm; }
-.list > div { margin-bottom:2mm; }
-.bh { height:11mm; background:#141414; color:#fff; border-radius:2mm; display:flex; align-items:center; gap:3mm; padding:0 3mm; font-size:8.5pt; }
-.bh .sn { font-size:13pt; font-weight:900; letter-spacing:-.02em; margin-right:2mm; }
-.bh .lab { font-size:6.6pt; font-weight:900; letter-spacing:.12em; opacity:.6; }
-.bh .val { font-weight:800; margin-right:3mm; } .bh .pause { color:#888; }
-.ev { height:9mm; background:#fff; color:#141414; border-radius:2mm; display:flex; align-items:center; justify-content:center; font-weight:900; letter-spacing:.12em; text-transform:uppercase; font-size:9pt; }
-.row { display:grid; grid-template-columns:24mm 52mm 40mm 46mm 1fr; background:#fff; color:#141414; border-radius:2mm; padding:2mm; overflow:hidden; }
-.code.grp { font-size:11pt; line-height:1.05; word-break:break-word; }
-.thead .c3 { font-size:7.4pt; letter-spacing:.1em; }
-.slg { display:grid; grid-template-columns:1fr 1fr; gap:2mm; } .slg .row { margin:0; grid-template-columns:18mm 0 30mm 26mm 1fr; }
-.code { display:block; font-size:17pt; font-weight:900; letter-spacing:-.03em; line-height:1; }
-.tg { display:inline-block; margin-top:1.2mm; font-size:6.4pt; font-weight:900; letter-spacing:.12em; border:1.5px solid #141414; border-radius:3mm; padding:.3mm 1.6mm; }
-.ri { width:48mm; background:#f2f2f2; border-radius:1.6mm; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-.ri img { max-width:100%; max-height:100%; object-fit:contain; }
-.rn { font-size:6.4pt; font-weight:800; letter-spacing:.06em; margin-top:.6mm; color:#555; }
-.c3 { font-size:13pt; font-weight:900; letter-spacing:-.01em; line-height:1.05; }
-.c4 b { display:block; font-size:10pt; letter-spacing:.01em; line-height:1.1; }
-.fr { display:block; font-size:9pt; font-weight:900; margin-top:1mm; } .ang { display:block; font-size:7.4pt; font-weight:600; color:#555; margin-top:.6mm; }
-.c5 { font-size:10pt; font-weight:700; line-height:1.3; } .c5 b { font-weight:900; font-size:11.5pt; } .c5 .sm { font-size:9pt; color:#444; font-weight:600; }
-.capt { margin:1.6mm 0 0; font-style:italic; font-weight:700; color:#444; font-size:9.5pt; }
-
-html { scroll-snap-type:y mandatory; }
-html, body { margin:0; background:#141414; }
-.screen { height:100vh; height:100dvh; width:100%; scroll-snap-align:start; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-.fit { width:297mm; height:210mm; flex:none; transform-origin:center center; }
-.fit > .page { page-break-after:auto; }
-.dots { position:fixed; right:14px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:7px; z-index:5; }
-.dots a { width:8px; height:8px; border-radius:50%; background:rgba(20,20,20,.25); display:block; }
-.dots a.on { background:#141414; transform:scale(1.4); }
-@media (max-width:760px) and (orientation:portrait) {
- html { scroll-snap-type:none; }
- .screen { height:auto; display:block; }
- .fit { width:auto; height:auto; transform:none !important; }
- .dots { display:none; }
- .page.pg { width:auto; height:auto; min-height:0; padding:20px 16px; overflow:visible; }
- .cover.page { min-height:100vh; }
- .row { height:auto !important; grid-template-columns:1fr 1fr !important; gap:8px; }
- .row .c2 { grid-column:1 / -1; order:-1; } .row .c5 { grid-column:1 / -1; }
- .ri { width:100% !important; height:auto !important; aspect-ratio:1/1; } .ri img { width:100%; height:100%; object-fit:contain; }
- .thead { display:none; } .slg { grid-template-columns:1fr; }
- .bh { height:auto; flex-wrap:wrap; padding:8px 12px; } .ev { height:auto; padding:10px; }
- .card { overflow-x:auto; } table.pl { min-width:620px; }
- .cover h1 { font-size:68px; } .nums { flex-wrap:wrap; gap:18px; } .nums b { font-size:48px; }
- .c5 { font-size:15px; } .c5 b { font-size:17px; } .c5 .sm { font-size:13px; } .capt { font-size:14px; } .c3 { font-size:20px; }
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>NYA Team Brief</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap">
+<style>
+:root { --ink:#141414; --paper:#fff; --mute:#5c5c5c; }
+* { box-sizing:border-box; } html { scroll-padding-top:56px; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:Inter,system-ui,sans-serif; font-size:16px; line-height:1.5; }
+nav.top { position:sticky; top:0; z-index:9; background:var(--ink); display:flex; gap:6px; overflow-x:auto; padding:10px 16px; scrollbar-width:none; }
+nav.top a { flex:none; color:#fff; text-decoration:none; font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; border:1.5px solid #fff; border-radius:20px; padding:5px 11px; }
+.wrap { max-width:1100px; margin:0 auto; padding:0 16px; }
+header { background:#FF3DA8; padding:44px 0 36px; }
+.logo { height:52px; filter:brightness(0); }
+h1 { font-size:clamp(46px,10vw,104px); font-weight:900; letter-spacing:-.05em; line-height:.9; margin:16px 0 0; }
+.nums { display:flex; flex-wrap:wrap; gap:12px 28px; margin-top:24px; } .nums div { font-size:12px; font-weight:800; letter-spacing:.12em; }
+.nums b { display:block; font-size:44px; letter-spacing:-.04em; line-height:1; }
+.lead { font-size:18px; font-weight:600; max-width:780px; margin:20px 0 0; }
+.links { display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; } .links a { color:var(--ink); background:#fff; border:2px solid var(--ink); border-radius:20px; padding:6px 14px; font-weight:900; font-size:13px; text-decoration:none; letter-spacing:.06em; }
+section { padding:44px 0; border-bottom:2px solid var(--ink); } section.col { background:var(--c); }
+h2 { font-size:clamp(30px,6vw,52px); font-weight:900; letter-spacing:-.04em; line-height:1; margin:0 0 6px; }
+.kick { font-size:12px; font-weight:900; letter-spacing:.14em; text-transform:uppercase; margin:0 0 18px; }
+h3 { font-size:22px; font-weight:900; letter-spacing:-.02em; margin:0; }
+h4 { font-size:15px; font-weight:900; letter-spacing:.04em; margin:2px 0 6px; text-transform:uppercase; }
+p { margin:0 0 10px; } ul { margin:0 0 8px; padding-left:20px; } li { margin:0 0 6px; }
+.card { background:var(--paper); border:2px solid var(--ink); border-radius:14px; padding:18px; }
+.grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); }
+.big { font-size:20px; font-weight:800; line-height:1.3; }
+.pill { display:inline-block; font-size:11px; font-weight:900; letter-spacing:.1em; border:1.5px solid var(--ink); border-radius:20px; padding:2px 9px; }
+.pill.dark { background:var(--ink); color:#fff; }
+.issue { background:var(--c); border:2px solid var(--ink); border-radius:14px; padding:16px; } .issue b { display:block; font-size:24px; font-weight:900; letter-spacing:-.03em; }
+.tag { font-size:11px; font-weight:900; letter-spacing:.12em; color:var(--mute); }
+.girl { display:grid; grid-template-columns:180px 1fr; gap:18px; border:2px solid var(--ink); border-radius:16px; overflow:hidden; margin-bottom:16px; background:#fff; }
+.gl { background:#CAFD87; display:flex; align-items:center; justify-content:center; padding:12px; border-right:2px solid var(--ink); }
+.gl img { max-width:100%; max-height:300px; }
+.gr { padding:16px 16px 14px 0; } .gt { display:flex; flex-wrap:wrap; gap:8px; align-items:center; } .gt h3 { font-size:30px; margin-right:6px; }
+.band { font-size:12px; font-weight:900; letter-spacing:.14em; color:var(--mute); margin:6px 0 4px; }
+.line { font-size:17px; font-weight:800; } .sty { color:#333; font-weight:600; } .vid { font-weight:600; }
+.refs { display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; }
+.refs figure { margin:0; } .refs img { width:100%; height:260px; object-fit:contain; background:#f1f1f1; border-radius:8px; border:2px solid var(--c); display:block; background:#eee; }
+.nv { height:150px; border-radius:8px; border:2px dashed var(--c); display:flex; align-items:center; justify-content:center; text-align:center; font-weight:900; font-size:12px; color:#888; }
+.refs figcaption { font-size:11px; font-weight:900; letter-spacing:.1em; text-transform:uppercase; margin-top:3px; }
+.rules { counter-reset:r; list-style:none; padding:0; }
+.rules li { counter-increment:r; display:grid; grid-template-columns:34px 1fr; font-size:17px; font-weight:800; padding:7px 0; border-bottom:1.5px solid rgba(20,20,20,.2); margin:0; }
+.rules li::before { content:counter(r); font-weight:900; }
+.steps { list-style:none; padding:0; counter-reset:s; margin:0; }
+.steps li { counter-increment:s; position:relative; padding:10px 0 10px 50px; border-bottom:1.5px solid #ddd; margin:0; }
+.steps li::before { content:counter(s); position:absolute; left:0; top:9px; width:34px; height:34px; border-radius:50%; background:var(--ink); color:#fff; font-weight:900; display:flex; align-items:center; justify-content:center; }
+.flag { border-left:6px solid var(--ink); padding:4px 0 4px 14px; margin:0 0 14px; font-weight:600; }
+.pose { display:grid; grid-template-columns:220px 1fr; gap:16px; background:#fff; border:2px solid var(--ink); border-radius:14px; padding:14px; margin-bottom:12px; align-items:start; }
+.pose img { width:100%; height:300px; object-fit:contain; background:#f1f1f1; border-radius:10px; display:block; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th { text-align:left; font-size:11px; letter-spacing:.1em; text-transform:uppercase; background:var(--ink); color:#fff; padding:8px 10px; }
+td { padding:6px 10px; border-bottom:1px solid #ddd; vertical-align:middle; }
+td.cd { font-weight:900; white-space:nowrap; } td.live { font-size:13px; line-height:1.45; } td.u { color:var(--mute); font-size:13px; }
+td.th { width:64px; } td.th img { width:64px; height:90px; object-fit:contain; background:#f1f1f1; border-radius:6px; display:block; } .nr { color:#aaa; font-weight:900; }
+.tree { margin:0; font:600 14px/1.5 ui-monospace,Menlo,monospace; white-space:pre; overflow-x:auto; }
+table.key { margin-top:10px; } table.key td { padding:4px 8px; }
+.tbl { overflow-x:auto; border:2px solid var(--ink); border-radius:14px; background:#fff; margin-bottom:20px; } .tbl table { min-width:560px; }
+@media (max-width:700px) {
+  .girl { grid-template-columns:1fr; } .gl { border-right:0; border-bottom:2px solid var(--ink); } .gl img { max-height:220px; }
+  .gr { padding:0 14px 14px; } .refs { grid-template-columns:repeat(2, 1fr); } .pose { grid-template-columns:1fr; } .pose img { height:320px; object-fit:contain; background:#eee; }
 }
-.role { font-weight:800; color:#141414; }
-.row.slr { height:auto !important; }
-</style></head><body><div class="screen" style="background:#FF3DA8"><div class="fit"><section class="page pg cover" style="background:#FF3DA8">
-<img class="logo" src="img/logo.png"><h1>SHOOTING</h1>
-<div class="nums"><div><b>39</b>PHOTOS</div><div><b>17</b>VIDEOS</div><div><b>4</b>MODELS</div><div><b>1</b>STORE</div></div>
-<span class="pnc">01<span>/18</span></span></section></div></div><div class="screen" style="background:#9B3BE6"><div class="fit"><section class="page pg" style="background:#9B3BE6;color:#ffffff;--fg:#ffffff">
-<div class="top"><span class="tt">THE DAY · STATION PLAN</span><span class="pn">02<span>/18</span></span></div><div class="card"><table class="pl"><thead><tr><th>STEP</th><th>MAKEUP &amp; HAIR</th><th>PHOTO</th><th>VIDEO</th><th>NOTE</th></tr></thead><tbody><tr><td class="psn">1</td><td>→ <b>STEVIE</b></td><td><span class="pause">PAUSE</span></td><td><span class="pause">PAUSE</span></td><td class="pnt">Start: the first girl in makeup</td></tr><tr><td class="psn">2</td><td>→ <b>LOLA</b></td><td><b>STEVIE</b></td><td><span class="pause">PAUSE</span></td><td class="pnt"></td></tr><tr><td class="psn">3</td><td>→ <b>RAFA</b></td><td><b>LOLA</b></td><td><b>STEVIE</b></td><td class="pnt"></td></tr><tr><td class="psn">4</td><td><span class="soft">TOUCH-UPS</span></td><td><b>RAFA</b></td><td><b>LOLA</b></td><td class="pnt"></td></tr><tr><td class="psn">5</td><td><span class="soft">TOUCH-UPS</span></td><td><span class="pause">PAUSE</span></td><td><b>RAFA</b></td><td class="pnt"></td></tr><tr><td class="psn">6</td><td><span class="pause">—</span></td><td><b>STEVIE + LOLA + RAFA</b></td><td><span class="pause">PAUSE</span></td><td class="pnt">Group</td></tr><tr><td class="psn">7</td><td><span class="pause">—</span></td><td><span class="pause">PAUSE</span></td><td><b>STEVIE + LOLA + RAFA</b></td><td class="pnt">Group</td></tr><tr><td class="psn">8</td><td>→ <b>JADE</b></td><td><span class="pause">PAUSE</span></td><td><span class="pause">PAUSE</span></td><td class="pnt"></td></tr><tr><td class="psn">9</td><td>→ <b>RUBY</b></td><td><b>JADE</b></td><td><span class="pause">PAUSE</span></td><td class="pnt"></td></tr><tr><td class="psn">10</td><td>→ <b>NAÏMA</b></td><td><b>RUBY</b></td><td><b>JADE</b></td><td class="pnt"></td></tr><tr><td class="psn">11</td><td><span class="soft">TOUCH-UPS</span></td><td><b>NAÏMA</b></td><td><b>RUBY</b></td><td class="pnt"></td></tr><tr><td class="psn">12</td><td><span class="pause">—</span></td><td><b>JADE + RUBY</b></td><td><b>NAÏMA</b></td><td class="pnt">Group at photo, NAÏMA on video</td></tr><tr><td class="psn">13</td><td><span class="pause">—</span></td><td><span class="pause">PAUSE</span></td><td><b>JADE + RUBY</b></td><td class="pnt">Group</td></tr><tr class="pev"><td colspan="5">RUBY and JADE go home</td></tr><tr class="pev"><td colspan="5">Lunch · IRIS arrives</td></tr><tr><td class="psn">14</td><td>→ <b>IRIS</b></td><td><span class="pause">PAUSE</span></td><td><span class="pause">PAUSE</span></td><td class="pnt"></td></tr><tr><td class="psn">15</td><td><span class="pause">—</span></td><td><b>IRIS + NAÏMA</b></td><td><span class="pause">PAUSE</span></td><td class="pnt">Group</td></tr><tr><td class="psn">16</td><td><span class="pause">—</span></td><td><span class="pause">PAUSE</span></td><td><b>IRIS + NAÏMA</b></td><td class="pnt">Group</td></tr><tr class="pev"><td colspan="5">NAÏMA goes home</td></tr><tr><td class="psn">17</td><td><span class="pause">—</span></td><td><b>IRIS</b></td><td><span class="pause">PAUSE</span></td><td class="pnt"></td></tr><tr><td class="psn">18</td><td><span class="pause">—</span></td><td><span class="pause">PAUSE</span></td><td><b>IRIS</b></td><td class="pnt"></td></tr><tr class="pev"><td colspan="5">IRIS goes home</td></tr><tr><td class="psn">19</td><td><span class="pause">—</span></td><td>STILL LIFES · all seven headbands <span class="mn">(product, no model)</span></td><td><span class="pause">PAUSE</span></td><td class="pnt">Still lifes, all seven together, no model</td></tr><tr class="pev"><td colspan="5">Wrap</td></tr></tbody></table>
-<p class="leg"><b>CODES</b> ST STEVIE · LO LOLA · RA RAFA · JA JADE · RU RUBY · NA NAÏMA · IR IRIS — 1–4 PHOTOS · 5–6 VIDEOS · 7 STILL LIFE &nbsp;·&nbsp; <b>FRAMING</b> CU CLOSE-UP · MCU MEDIUM CLOSE-UP · FL FULL LENGTH · MS MEDIUM SHOT</p></div></section></div></div><div class="screen" style="background:#1BB7FF"><div class="fit"><section class="page pg" style="background:#1BB7FF;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">03<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 1</span>
-<span class="lab">MAKEUP</span><span class="val">→ <b>STEVIE</b></span>
-<span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="bh"><span class="sn">STEP 2</span>
-<span class="lab">MAKEUP</span><span class="val">→ <b>LOLA</b></span>
-<span class="lab">PHOTO</span><span class="val"><b>STEVIE</b></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">ST1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/76b.jpg"></div><div class="rn">REF 76b</div></div>
-<div class="c3"><b>STEVIE</b></div>
-<div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span></div>
-<div class="c5"><b>30 Mar</b> The Cover <span class="role">· her solo cover, after the trio cover</span><br><span class="sm">also in: 31 Mar Meet Stevie · 19 Apr Stevie’s Voice Note · 23 Apr The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">ST2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/62.jpg"></div><div class="rn">REF 62</div></div>
-<div class="c3"><b>STEVIE</b></div>
-<div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>31 Mar</b> Meet Stevie <span class="role">· slide 3 of Meet: the detail</span><p class="capt">“STEVIE. Pink was always the plan.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">ST3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/64.jpg"></div><div class="rn">REF 64</div></div>
-<div class="c3"><b>STEVIE</b></div>
-<div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span></div>
-<div class="c5"><b>31 Mar</b> Meet Stevie <span class="role">· slide 4 of Meet: the outfit</span><br><span class="sm">also in: 21 Apr The Style File · 25 Apr NYA’s Angels</span><p class="capt">“STEVIE. Pink was always the plan.”</p></div></div></div></section></div></div><div class="screen" style="background:#2FE3C6"><div class="fit"><section class="page pg" style="background:#2FE3C6;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">04<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
-<div class="c1"><span class="code">ST4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/b-clones.jpg"></div><div class="rn">REF b-clones</div></div>
-<div class="c3"><b>STEVIE</b></div>
-<div class="c4"><b>SECOND POSE · PHONE CALL</b><span class="fr">FL</span></div>
-<div class="c5"><b>11 Apr</b> The Phone Call <span class="role">· her panel of 3</span><br><span class="sm">also in: 21 Apr The Style File</span><p class="capt">“You’re on speaker.”</p></div></div><div class="bh"><span class="sn">STEP 3</span>
-<span class="lab">MAKEUP</span><span class="val">→ <b>RAFA</b></span>
-<span class="lab">PHOTO</span><span class="val"><b>LOLA</b></span>
-<span class="lab">VIDEO</span><span class="val"><b>STEVIE</b></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">LO1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-bella.jpg"></div><div class="rn">REF w-bella</div></div>
-<div class="c3"><b>LOLA</b></div>
-<div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span></div>
-<div class="c5"><b>30 Mar</b> The Cover <span class="role">· her solo cover, after the trio cover</span><br><span class="sm">also in: 2 Apr Meet Lola · 23 Apr The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">LO2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/59.jpg"></div><div class="rn">REF 59</div></div>
-<div class="c3"><b>LOLA</b></div>
-<div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>2 Apr</b> Meet Lola <span class="role">· slide 3 of Meet: the detail</span><p class="capt">“LOLA. The outfit was planned. The rest wasn’t.”</p></div></div></div></section></div></div><div class="screen" style="background:#FFE93B"><div class="fit"><section class="page pg" style="background:#FFE93B;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">05<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
-<div class="c1"><span class="code">LO3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/58.jpg"></div><div class="rn">REF 58</div></div>
-<div class="c3"><b>LOLA</b></div>
-<div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span></div>
-<div class="c5"><b>2 Apr</b> Meet Lola <span class="role">· slide 4 of Meet: the outfit</span><br><span class="sm">also in: 21 Apr The Style File · 25 Apr NYA’s Angels</span><p class="capt">“LOLA. The outfit was planned. The rest wasn’t.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">LO4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-mouth.jpg"></div><div class="rn">REF w-mouth</div></div>
-<div class="c3"><b>LOLA</b></div>
-<div class="c4"><b>SECOND POSE · PHONE CALL</b><span class="fr">FL</span></div>
-<div class="c5"><b>11 Apr</b> The Phone Call <span class="role">· her panel of 3</span><br><span class="sm">also in: 21 Apr The Style File</span><p class="capt">“You’re on speaker.”</p></div></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">ST5</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>STEVIE</b></div>
-<div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>31 Mar</b> Meet Stevie <span class="role">· the clip in her Meet carousel</span><p class="capt">“STEVIE. Pink was always the plan.”</p></div></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">ST6</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>STEVIE</b></div>
-<div class="c4"><b>IN MOTION</b><span class="fr">FL → CU</span></div>
-<div class="c5"><b>19 Apr</b> Stevie’s Voice Note <span class="role">· the clip under her voice</span><p class="capt">“Stevie has an update.”</p></div></div></div></section></div></div><div class="screen" style="background:#C6FF6B"><div class="fit"><section class="page pg" style="background:#C6FF6B;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">06<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 4</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="soft">TOUCH-UPS</span></span>
-<span class="lab">PHOTO</span><span class="val"><b>RAFA</b></span>
-<span class="lab">VIDEO</span><span class="val"><b>LOLA</b></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">RA1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-shades.jpg"></div><div class="rn">REF w-shades</div></div>
-<div class="c3"><b>RAFA</b></div>
-<div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span><span class="ang">from above</span></div>
-<div class="c5"><b>30 Mar</b> The Cover <span class="role">· her solo cover, after the trio cover</span><br><span class="sm">also in: 4 Apr Meet Rafa · 23 Apr The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">RA2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/38.jpg"></div><div class="rn">REF 38</div></div>
-<div class="c3"><b>RAFA</b></div>
-<div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>4 Apr</b> Meet Rafa <span class="role">· slide 3 of Meet: the detail</span><p class="capt">“RAFA. Probably outside. You coming? / Try me.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">RA3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/70.jpg"></div><div class="rn">REF 70</div></div>
-<div class="c3"><b>RAFA</b></div>
-<div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span><span class="ang">low</span></div>
-<div class="c5"><b>4 Apr</b> Meet Rafa <span class="role">· slide 4 of Meet: the outfit</span><br><span class="sm">also in: 21 Apr The Style File · 25 Apr NYA’s Angels</span><p class="capt">“RAFA. Probably outside. You coming? / Try me.”</p></div></div></div></section></div></div><div class="screen" style="background:#FF3DA8"><div class="fit"><section class="page pg" style="background:#FF3DA8;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">07<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
-<div class="c1"><span class="code">RA4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/71.jpg"></div><div class="rn">REF 71</div></div>
-<div class="c3"><b>RAFA</b></div>
-<div class="c4"><b>SECOND POSE · PHONE CALL</b><span class="fr">FL</span></div>
-<div class="c5"><b>11 Apr</b> The Phone Call <span class="role">· her panel of 3</span><br><span class="sm">also in: 21 Apr The Style File</span><p class="capt">“You’re on speaker.”</p></div></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">LO5</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>LOLA</b></div>
-<div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>2 Apr</b> Meet Lola <span class="role">· the clip in her Meet carousel</span><p class="capt">“LOLA. The outfit was planned. The rest wasn’t.”</p></div></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">LO6</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>LOLA</b></div>
-<div class="c4"><b>IN MOTION</b><span class="fr">FL</span></div>
-<div class="c5"><b>10 Apr</b> Lola’s Little Purchases <span class="role">· the clip</span><p class="capt">“She only went out for coffee.”</p></div></div><div class="bh"><span class="sn">STEP 5</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="soft">TOUCH-UPS</span></span>
-<span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><b>RAFA</b></span></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">RA5</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>RAFA</b></div>
-<div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>13 Apr</b> Rafa In Motion <span class="role">· clip 1 of 2</span><p class="capt">“She said it was a warm-up.”</p></div></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">RA6</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>RAFA</b></div>
-<div class="c4"><b>IN MOTION</b><span class="fr">FL → CU</span></div>
-<div class="c5"><b>13 Apr</b> Rafa In Motion <span class="role">· clip 2 of 2</span><p class="capt">“She said it was a warm-up.”</p></div></div></div></section></div></div><div class="screen" style="background:#9B3BE6"><div class="fit"><section class="page pg" style="background:#9B3BE6;color:#ffffff;--fg:#ffffff">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">08<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 6</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
-<span class="lab">PHOTO</span><span class="val"><b>STEVIE + LOLA + RAFA</b></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code grp">ST·<wbr>LO·<wbr>RA1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/73.jpg"></div><div class="rn">REF 73</div></div>
-<div class="c3"><b>STEVIE + LOLA + RAFA</b></div>
-<div class="c4"><b>TRIO COVER</b><span class="fr">MCU</span></div>
-<div class="c5"><b>30 Mar</b> The Cover <span class="role">· slide 1: the trio cover</span><br><span class="sm">also in: 30 Apr The Complete Collection</span><p class="capt">“Meet Stevie, Lola and Rafa. We think you’ll get along.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code grp">ST·<wbr>LO·<wbr>RA2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/17a.jpg"></div><div class="rn">REF 17a</div></div>
-<div class="c3"><b>STEVIE + LOLA + RAFA</b></div>
-<div class="c4"><b>TRIO PHOTO BOOTH</b><span class="fr">MCU</span></div>
-<div class="c5"><b>29 Apr</b> The Photo Booth <span class="role">· the strip</span><p class="capt">“Everyone look here.”</p></div></div><div class="bh"><span class="sn">STEP 7</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
-<span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><b>STEVIE + LOLA + RAFA</b></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code grp">ST·<wbr>LO·<wbr>RA3</span><span class="tg">VIDEO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/75.jpg"></div><div class="rn">REF 75</div></div>
-<div class="c3"><b>STEVIE + LOLA + RAFA</b></div>
-<div class="c4"><b>WALK-IN / PAPARAZZI</b><span class="fr">FL → MCU</span><span class="ang">through the shop door</span></div>
-<div class="c5"><b>6 Apr</b> The Walk-In <span class="role">· the clip</span><br><span class="sm">also in: 15 Apr The Paparazzi Page</span><p class="capt">“Make room for three.”</p></div></div></div></section></div></div><div class="screen" style="background:#1BB7FF"><div class="fit"><section class="page pg" style="background:#1BB7FF;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">09<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 8</span>
-<span class="lab">MAKEUP</span><span class="val">→ <b>JADE</b></span>
-<span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="bh"><span class="sn">STEP 9</span>
-<span class="lab">MAKEUP</span><span class="val">→ <b>RUBY</b></span>
-<span class="lab">PHOTO</span><span class="val"><b>JADE</b></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">JA1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-bend.jpg"></div><div class="rn">REF w-bend</div></div>
-<div class="c3"><b>JADE</b></div>
-<div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span></div>
-<div class="c5"><b>1 Mar</b> The Cover <span class="role">· her solo cover, after the pair cover</span><br><span class="sm">also in: 3 Mar Meet Jade · 16 Mar The Soundtrack · 23 Mar Open Chat · 30 Apr The Complete Collection</span><p class="capt">“Consider this your invitation.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">JA2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/22.jpg"></div><div class="rn">REF 22</div></div>
-<div class="c3"><b>JADE</b></div>
-<div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>3 Mar</b> Meet Jade <span class="role">· slide 3 of Meet: the detail</span><br><span class="sm">also in: 14 Mar Jade’s Voice Note · 23 Mar Open Chat</span><p class="capt">“JADE. Already making you a playlist.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">JA3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/b-ed2.jpg"></div><div class="rn">REF b-ed2</div></div>
-<div class="c3"><b>JADE</b></div>
-<div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span><span class="ang">slightly above</span></div>
-<div class="c5"><b>3 Mar</b> Meet Jade <span class="role">· slide 4 of Meet: the outfit</span><br><span class="sm">also in: 20 Mar The Style File</span><p class="capt">“JADE. Already making you a playlist.”</p></div></div></div></section></div></div><div class="screen" style="background:#2FE3C6"><div class="fit"><section class="page pg" style="background:#2FE3C6;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">10<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
-<div class="c1"><span class="code">JA4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/69.jpg"></div><div class="rn">REF 69</div></div>
-<div class="c3"><b>JADE</b></div>
-<div class="c4"><b>SECOND POSE</b><span class="fr">FL</span></div>
-<div class="c5"><b>20 Mar</b> The Style File <span class="role">· her Style File frame</span><p class="capt">“The headband stayed. The jacket didn’t.”</p></div></div><div class="bh"><span class="sn">STEP 10</span>
-<span class="lab">MAKEUP</span><span class="val">→ <b>NAÏMA</b></span>
-<span class="lab">PHOTO</span><span class="val"><b>RUBY</b></span>
-<span class="lab">VIDEO</span><span class="val"><b>JADE</b></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">RU1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/47.jpg"></div><div class="rn">REF 47</div></div>
-<div class="c3"><b>RUBY</b></div>
-<div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span></div>
-<div class="c5"><b>1 Mar</b> The Cover <span class="role">· her solo cover, after the pair cover</span><br><span class="sm">also in: 5 Mar Meet Ruby · 16 Mar The Soundtrack · 30 Apr The Complete Collection</span><p class="capt">“Consider this your invitation.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">RU2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/48.jpg"></div><div class="rn">REF 48</div></div>
-<div class="c3"><b>RUBY</b></div>
-<div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>5 Mar</b> Meet Ruby <span class="role">· slide 3 of Meet: the detail</span><br><span class="sm">also in: 12 Mar Ruby’s Screen Test</span><p class="capt">“RUBY. A good person to have in your corner.”</p></div></div></div></section></div></div><div class="screen" style="background:#FFE93B"><div class="fit"><section class="page pg" style="background:#FFE93B;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">11<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
-<div class="c1"><span class="code">RU3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/45.jpg"></div><div class="rn">REF 45</div></div>
-<div class="c3"><b>RUBY</b></div>
-<div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span></div>
-<div class="c5"><b>5 Mar</b> Meet Ruby <span class="role">· slide 4 of Meet: the outfit</span><br><span class="sm">also in: 20 Mar The Style File</span><p class="capt">“RUBY. A good person to have in your corner.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">RU4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/37.jpg"></div><div class="rn">REF 37</div></div>
-<div class="c3"><b>RUBY</b></div>
-<div class="c4"><b>SECOND POSE · PENNY LANE</b><span class="fr">FL + MCU crop</span></div>
-<div class="c5"><b>12 Mar</b> Ruby’s Screen Test <span class="role">· the full frame</span><br><span class="sm">also in: 20 Mar The Style File</span><p class="capt">“Very well connected.”</p></div></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">JA5</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>JADE</b></div>
-<div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>7 Mar</b> Getting Ready <span class="role">· 1 of 3 clips in the reel</span><br><span class="sm">also in: 14 Mar Jade’s Voice Note</span><p class="capt">“Start at the top.”</p></div></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">JA6</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>JADE</b></div>
-<div class="c4"><b>IN MOTION</b><span class="fr">FL → CU</span></div>
-<div class="c5"><b>14 Mar</b> Jade’s Voice Note <span class="role">· the clip under her voice</span><p class="capt">“It started with one song.”</p></div></div></div></section></div></div><div class="screen" style="background:#C6FF6B"><div class="fit"><section class="page pg" style="background:#C6FF6B;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">12<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 11</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="soft">TOUCH-UPS</span></span>
-<span class="lab">PHOTO</span><span class="val"><b>NAÏMA</b></span>
-<span class="lab">VIDEO</span><span class="val"><b>RUBY</b></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">NA1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-gum.jpg"></div><div class="rn">REF w-gum</div></div>
-<div class="c3"><b>NAÏMA</b></div>
-<div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span></div>
-<div class="c5"><b>31 Jan</b> Next Issue <span class="role">· cropped preview, 1 of 2</span><br><span class="sm">also in: 1 Feb The Cover · 5 Feb Meet Naïma · 30 Apr The Complete Collection</span><p class="capt">“Iris + Naïma. Our first drop, tomorrow. 1 February 2027.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">NA2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/30.jpg"></div><div class="rn">REF 30</div></div>
-<div class="c3"><b>NAÏMA</b></div>
-<div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>19 Jan</b> The Introduction Cover <span class="role">· 1 of 2 detail windows</span><br><span class="sm">also in: 22 Jan The First Pair · 5 Feb Meet Naïma</span><p class="capt">“Consider this your first look. Our first drop arrives 1 February.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">NA3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-tyla.jpg"></div><div class="rn">REF w-tyla</div></div>
-<div class="c3"><b>NAÏMA</b></div>
-<div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span><span class="ang">from above</span></div>
-<div class="c5"><b>5 Feb</b> Meet Naïma <span class="role">· slide 4 of Meet: the outfit</span><br><span class="sm">also in: 17 Feb The Wardrobe Computer · 21 Feb The Style File</span><p class="capt">“NAÏMA. Particular about prints. And most other things.”</p></div></div></div></section></div></div><div class="screen" style="background:#FF3DA8"><div class="fit"><section class="page pg" style="background:#FF3DA8;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">13<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
-<div class="c1"><span class="code">NA4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/b-ed3.jpg"></div><div class="rn">REF b-ed3</div></div>
-<div class="c3"><b>NAÏMA</b></div>
-<div class="c4"><b>SECOND POSE · TITANIC</b><span class="fr">FL</span><span class="ang">slightly high</span></div>
-<div class="c5"><b>12 Feb</b> Naïma’s Screen Test <span class="role">· the full frame</span><br><span class="sm">also in: 21 Feb The Style File</span><p class="capt">“The headband stays.”</p></div></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">RU5</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>RUBY</b></div>
-<div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>7 Mar</b> Getting Ready <span class="role">· 1 of 3 clips in the reel</span><p class="capt">“Start at the top.”</p></div></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">RU6</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>RUBY</b></div>
-<div class="c4"><b>IN MOTION</b><span class="fr">FL</span></div>
-<div class="c5"><span class="sm">Stories of the Issue</span></div></div><div class="bh"><span class="sn">STEP 12</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
-<span class="lab">PHOTO</span><span class="val"><b>JADE + RUBY</b></span>
-<span class="lab">VIDEO</span><span class="val"><b>NAÏMA</b></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code grp">JA·<wbr>RU1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/b-grp2.jpg"></div><div class="rn">REF b-grp2</div></div>
-<div class="c3"><b>JADE + RUBY</b></div>
-<div class="c4"><b>PAIR COVER</b><span class="fr">MCU</span></div>
-<div class="c5"><b>1 Mar</b> The Cover <span class="role">· slide 1: the pair cover</span><br><span class="sm">also in: 25 Mar Back Issue</span><p class="capt">“Consider this your invitation.”</p></div></div></div></section></div></div><div class="screen" style="background:#9B3BE6"><div class="fit"><section class="page pg" style="background:#9B3BE6;color:#ffffff;--fg:#ffffff">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">14<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:24mm">
-<div class="c1"><span class="code">NA5</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>NAÏMA</b></div>
-<div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>7 Feb</b> Put It On <span class="role">· 1 of 5 clips in the reel</span><p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">NA6</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>NAÏMA</b></div>
-<div class="c4"><b>IN MOTION</b><span class="fr">FL</span></div>
-<div class="c5"><b>7 Feb</b> Put It On <span class="role">· 1 of 5 clips in the reel</span><br><span class="sm">also in: 23 Feb Back Issue</span><p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="bh"><span class="sn">STEP 13</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
-<span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><b>JADE + RUBY</b></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code grp">JA·<wbr>RU2</span><span class="tg">VIDEO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/b-grp1.jpg"></div><div class="rn">REF b-grp1</div></div>
-<div class="c3"><b>JADE + RUBY</b></div>
-<div class="c4"><b>GETTING READY AT THE MIRROR</b><span class="fr">MCU</span><span class="ang">over the shoulder, into the mirror</span></div>
-<div class="c5"><b>7 Mar</b> Getting Ready <span class="role">· 1 of 3 clips in the reel</span><p class="capt">“Start at the top.”</p></div></div><div class="ev">RUBY and JADE go home</div><div class="ev">Lunch · IRIS arrives</div><div class="bh"><span class="sn">STEP 14</span>
-<span class="lab">MAKEUP</span><span class="val">→ <b>IRIS</b></span>
-<span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div></div></section></div></div><div class="screen" style="background:#1BB7FF"><div class="fit"><section class="page pg" style="background:#1BB7FF;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">15<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 15</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
-<span class="lab">PHOTO</span><span class="val"><b>IRIS + NAÏMA</b></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code grp">IR·<wbr>NA1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/17b.jpg"></div><div class="rn">REF 17b</div></div>
-<div class="c3"><b>IRIS + NAÏMA</b></div>
-<div class="c4"><b>PAIR COVER</b><span class="fr">MCU</span></div>
-<div class="c5"><b>1 Feb</b> The Cover <span class="role">· slide 1: the pair cover</span><br><span class="sm">also in: 14 Feb The Valentine’s Page · 23 Feb Back Issue · 28 Feb Next Issue · 25 Mar Back Issue</span><p class="capt">“We gave them names. It got personal.”</p></div></div><div class="bh"><span class="sn">STEP 16</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
-<span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><b>IRIS + NAÏMA</b></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code grp">IR·<wbr>NA2</span><span class="tg">VIDEO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/17c.jpg"></div><div class="rn">REF 17c</div></div>
-<div class="c3"><b>IRIS + NAÏMA</b></div>
-<div class="c4"><b>PUTTING IT ON TOGETHER</b><span class="fr">MCU</span></div>
-<div class="c5"><b>7 Feb</b> Put It On <span class="role">· 1 of 5 clips in the reel</span><p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="ev">NAÏMA goes home</div></div></section></div></div><div class="screen" style="background:#2FE3C6"><div class="fit"><section class="page pg" style="background:#2FE3C6;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">16<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 17</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
-<span class="lab">PHOTO</span><span class="val"><b>IRIS</b></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">IR1</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/78a.jpg"></div><div class="rn">REF 78a</div></div>
-<div class="c3"><b>IRIS</b></div>
-<div class="c4"><b>COVER PORTRAIT</b><span class="fr">MCU</span><span class="ang">low</span></div>
-<div class="c5"><b>31 Jan</b> Next Issue <span class="role">· cropped preview, 1 of 2</span><br><span class="sm">also in: 1 Feb The Cover · 3 Feb Meet Iris · 30 Apr The Complete Collection</span><p class="capt">“Iris + Naïma. Our first drop, tomorrow. 1 February 2027.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">IR2</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/24.jpg"></div><div class="rn">REF 24</div></div>
-<div class="c3"><b>IRIS</b></div>
-<div class="c4"><b>CLOSE-UP</b><span class="fr">CU</span></div>
-<div class="c5"><b>19 Jan</b> The Introduction Cover <span class="role">· 1 of 2 detail windows</span><br><span class="sm">also in: 22 Jan The First Pair · 3 Feb Meet Iris</span><p class="capt">“Consider this your first look. Our first drop arrives 1 February.”</p></div></div><div class="row" style="height:48mm">
-<div class="c1"><span class="code">IR3</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/53.jpg"></div><div class="rn">REF 53</div></div>
-<div class="c3"><b>IRIS</b></div>
-<div class="c4"><b>FULL LENGTH</b><span class="fr">FL</span></div>
-<div class="c5"><b>3 Feb</b> Meet Iris <span class="role">· slide 4 of Meet: the outfit</span><br><span class="sm">also in: 17 Feb The Wardrobe Computer · 21 Feb The Style File</span><p class="capt">“IRIS. The bookmark is a receipt.”</p></div></div></div></section></div></div><div class="screen" style="background:#FFE93B"><div class="fit"><section class="page pg" style="background:#FFE93B;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">17<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="row" style="height:48mm">
-<div class="c1"><span class="code">IR4</span><span class="tg">PHOTO</span></div>
-<div class="c2"><div class="ri" style="height:42mm"><img src="img/w-nice.jpg"></div><div class="rn">REF w-nice</div></div>
-<div class="c3"><b>IRIS</b></div>
-<div class="c4"><b>SECOND POSE</b><span class="fr">FL</span></div>
-<div class="c5"><b>21 Feb</b> The Style File <span class="role">· her Style File frame</span><p class="capt">“The plans changed. This stayed.”</p></div></div><div class="bh"><span class="sn">STEP 18</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
-<span class="lab">PHOTO</span><span class="val"><span class="pause">PAUSE</span></span>
-<span class="lab">VIDEO</span><span class="val"><b>IRIS</b></span></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">IR5</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>IRIS</b></div>
-<div class="c4"><b>PUTTING IT ON</b><span class="fr">MCU</span></div>
-<div class="c5"><b>7 Feb</b> Put It On <span class="role">· 1 of 5 clips in the reel</span><p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="row" style="height:24mm">
-<div class="c1"><span class="code">IR6</span><span class="tg">VIDEO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>IRIS</b></div>
-<div class="c4"><b>IN MOTION</b><span class="fr">FL → MS</span></div>
-<div class="c5"><b>7 Feb</b> Put It On <span class="role">· 1 of 5 clips in the reel</span><p class="capt">“Put it on before taking anything else off.”</p></div></div><div class="ev">IRIS goes home</div></div></section></div></div><div class="screen" style="background:#C6FF6B"><div class="fit"><section class="page pg" style="background:#C6FF6B;color:#141414;--fg:#141414">
-<div class="top"><span class="tt">THE SHOTS · STEP BY STEP</span><span class="pn">18<span>/18</span></span></div><div class="thead"><div class="c1">#</div><div class="c2">REFERENCE</div><div class="c3">WHO</div><div class="c4">SHOT</div><div class="c5">GOES LIVE</div></div><div class="list"><div class="bh"><span class="sn">STEP 19</span>
-<span class="lab">MAKEUP</span><span class="val"><span class="pause">—</span></span>
-<span class="lab">PHOTO</span><span class="val">STILL LIFES · all seven headbands <span class="mn">(product, no model)</span></span>
-<span class="lab">VIDEO</span><span class="val"><span class="pause">PAUSE</span></span></div><div class="slg"><div class="row slr" style="height:36mm">
-<div class="c1"><span class="code">ST7</span><span class="tg">PHOTO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>STEVIE</b><br><span class="soft">PRODUCT</span></div>
-<div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>27 Mar</b> Next Issue Hint <span class="role">· 1 of 3 band crops</span><br><span class="sm">also in: 29 Mar Next Issue · 31 Mar Meet Stevie · 11 Apr The Phone Call</span><p class="capt">“Your next issue. 30.03.27.”</p></div></div><div class="row slr" style="height:36mm">
-<div class="c1"><span class="code">LO7</span><span class="tg">PHOTO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>LOLA</b><br><span class="soft">PRODUCT</span></div>
-<div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>27 Mar</b> Next Issue Hint <span class="role">· 1 of 3 band crops</span><br><span class="sm">also in: 29 Mar Next Issue · 2 Apr Meet Lola · 10 Apr Lola’s Little Purchases</span><p class="capt">“Your next issue. 30.03.27.”</p></div></div><div class="row slr" style="height:36mm">
-<div class="c1"><span class="code">RA7</span><span class="tg">PHOTO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>RAFA</b><br><span class="soft">PRODUCT</span></div>
-<div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>27 Mar</b> Next Issue Hint <span class="role">· 1 of 3 band crops</span><br><span class="sm">also in: 29 Mar Next Issue · 4 Apr Meet Rafa · 11 Apr The Phone Call</span><p class="capt">“Your next issue. 30.03.27.”</p></div></div><div class="row slr" style="height:36mm">
-<div class="c1"><span class="code">JA7</span><span class="tg">PHOTO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>JADE</b><br><span class="soft">PRODUCT</span></div>
-<div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>27 Feb</b> Next Issue Hint <span class="role">· 1 of 2 band crops</span><br><span class="sm">also in: 28 Feb Next Issue · 3 Mar Meet Jade · 10 Mar Jade’s Top Drawer · 16 Mar The Soundtrack</span><p class="capt">“Something’s coming through. 01.03.27.”</p></div></div><div class="row slr" style="height:36mm">
-<div class="c1"><span class="code">RU7</span><span class="tg">PHOTO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>RUBY</b><br><span class="soft">PRODUCT</span></div>
-<div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>27 Feb</b> Next Issue Hint <span class="role">· 1 of 2 band crops</span><br><span class="sm">also in: 28 Feb Next Issue · 5 Mar Meet Ruby · 12 Mar Ruby’s Screen Test · 16 Mar The Soundtrack</span><p class="capt">“Something’s coming through. 01.03.27.”</p></div></div><div class="row slr" style="height:36mm">
-<div class="c1"><span class="code">NA7</span><span class="tg">PHOTO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>NAÏMA</b><br><span class="soft">PRODUCT</span></div>
-<div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>22 Jan</b> The First Pair <span class="role">· slide 3: her band</span><br><span class="sm">also in: 5 Feb Meet Naïma · 17 Feb The Wardrobe Computer · 25 Feb Open Attachment</span><p class="capt">“Iris + Naïma. You’ll meet properly on 1 February.”</p></div></div><div class="row slr" style="height:36mm">
-<div class="c1"><span class="code">IR7</span><span class="tg">PHOTO</span></div>
-<div class="c2"></div>
-<div class="c3"><b>IRIS</b><br><span class="soft">PRODUCT</span></div>
-<div class="c4"><b>STILL LIFE</b><span class="fr">CU</span><span class="ang">top-down</span></div>
-<div class="c5"><b>5 Jan</b> New Document <span class="role">· in the window</span><br><span class="sm">also in: 8 Jan Save as NYA · 22 Jan The First Pair · 3 Feb Meet Iris · 10 Feb Iris After Hours · 25 Feb Open Attachment</span><p class="capt">“We’ve been working on something. Headbands, to be specific.”</p></div></div></div><div class="ev">Wrap</div></div></section></div></div><script>
-(function(){
-  var fits=[].slice.call(document.querySelectorAll('.fit'));
-  function size(){
-    var mobile = window.matchMedia('(max-width:760px) and (orientation:portrait)').matches;
-    var w=window.innerWidth, h=window.innerHeight, pw=297*96/25.4, ph=210*96/25.4;
-    var s=Math.min(w/pw, h/ph);
-    fits.forEach(function(f){ f.style.transform = mobile ? 'none' : 'scale('+s+')'; });
-  }
-  size(); window.addEventListener('resize', size);
-  var screens=[].slice.call(document.querySelectorAll('.screen'));
-  var nav=document.createElement('nav'); nav.className='dots';
-  screens.forEach(function(s,i){ s.id='p'+(i+1); var a=document.createElement('a'); a.href='#p'+(i+1); a.setAttribute('aria-label','Page '+(i+1)); nav.appendChild(a); });
-  document.body.appendChild(nav);
-  var dots=[].slice.call(nav.children);
-  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ var i=screens.indexOf(e.target); dots.forEach(function(d,j){ d.classList.toggle('on', j===i); }); } }); },{threshold:0.6});
-  screens.forEach(function(s){ io.observe(s); });
-  document.addEventListener('keydown', function(e){
-    var i=dots.findIndex(function(d){return d.classList.contains('on');});
-    if(e.key==='ArrowDown'||e.key==='PageDown'){ e.preventDefault(); var n=screens[Math.min(i+1,screens.length-1)]; n.scrollIntoView({behavior:'smooth'}); }
-    if(e.key==='ArrowUp'||e.key==='PageUp'){ e.preventDefault(); var p=screens[Math.max(i-1,0)]; p.scrollIntoView({behavior:'smooth'}); }
-  });
-})();
-</script></body></html>
+</style></head><body>
+<nav class="top"><a href="/foto" style="background:#FF3DA8;color:#141414;border-color:#FF3DA8">APP · PHOTO</a><a href="/video" style="background:#FF3DA8;color:#141414;border-color:#FF3DA8">APP · VIDEO</a><a href="#girls">Girls</a><a href="#groups">Pairs + trio</a><a href="#direction">Direction</a><a href="#where">Arepa / Studio</a><a href="#photo">Photos</a><a href="#video">Videos</a><a href="#files">Format + files</a><a href="#shots">Shot list</a></nav>
+<header><div class="wrap"><img class="logo" src="img/logo.png" alt="NYA"><h1>TEAM BRIEF</h1>
+<div class="nums"><div><b>34</b>PHOTOS</div><div><b>11</b>VIDEOS</div><div><b>7</b>HEADBANDS</div><div><b>4</b>MODELS</div><div><b>2</b>LOCATIONS</div><div><b>1</b>DAY</div></div></div></header>
+
+<section id="girls"><div class="wrap">
+<h2>The girls</h2><p class="kick">7 headbands · 4 models · one look each</p>
+<div class="flag">The name belongs to the headband, not to the model. Carolina is Iris and Ruby, Esther is Naïma and Rafa, Delfi is Lola and Jade, Nina is Stevie and is also the make-up artist. Each model changes character once in the whole day, and never appears twice in the same group shot.</div>
+<article class="girl" style="--c:#FF3DA8">
+<div class="gl"><img src="img/ill-iris.jpg" alt=""></div>
+<div class="gr"><div class="gt"><h3>IRIS</h3><span class="pill" style="background:#FF3DA8">ISSUE 01</span><span class="pill dark">CAROLINA</span></div>
+<p class="band">PURPLE, LIME EDGE</p><p class="line">“The romantic. Soft eyes, hard edge. Valentine’s with a bite. She flirts with the lens, never with the crowd.”</p><p class="sty">Brought a book. Heard everything. A book or her own jewellery as a small character detail.</p>
+<p class="vid"><b>Her video:</b> At a small mirror she slides the band on, tucks her hair behind her ear, then catches the lens in the mirror. She walks off reading and looks up over the book.</p><div class="refs"><figure><img src="img/ref/IR-PH1.jpg" alt=""><figcaption>IR-PH1 · Cover</figcaption></figure><figure><img src="img/ref/IR-PH2.jpg" alt=""><figcaption>IR-PH2 · Close-up</figcaption></figure><figure><img src="img/ref/IR-PH3.jpg" alt=""><figcaption>IR-PH3 · Full body</figcaption></figure></div></div></article><article class="girl" style="--c:#FF3DA8">
+<div class="gl"><img src="img/ill-naima.jpg" alt=""></div>
+<div class="gr"><div class="gt"><h3>NAÏMA</h3><span class="pill" style="background:#FF3DA8">ISSUE 01</span><span class="pill dark">ESTHER</span></div>
+<p class="band">LEOPARD</p><p class="line">“The wild card. Big hair, bigger attitude. Never asks permission. Every frame she walks into becomes hers.”</p><p class="sty">Hard to read. Black neckline, gold jewellery only, never a full smile, hands close to the face.</p>
+<p class="vid"><b>Her video:</b> She walks into the frame without asking, pulls the band over her updo, frees two curls, drops onto the leopard rug and holds the stare.</p><div class="refs"><figure><img src="img/ref/NA-PH1.jpg" alt=""><figcaption>NA-PH1 · Cover</figcaption></figure><figure><img src="img/ref/NA-PH2.jpg" alt=""><figcaption>NA-PH2 · Close-up</figcaption></figure><figure><img src="img/ref/NA-PH3.jpg" alt=""><figcaption>NA-PH3 · Full body</figcaption></figure></div></div></article><article class="girl" style="--c:#1BB7FF">
+<div class="gl"><img src="img/ill-jade.jpg" alt=""></div>
+<div class="gr"><div class="gt"><h3>JADE</h3><span class="pill" style="background:#1BB7FF">ISSUE 02</span><span class="pill dark">DELFI</span></div>
+<p class="band">NAVY, ELECTRIC BLUE STRIPE</p><p class="line">“The cool one. Says little, stares a lot. Music in her ears. A half-smile from her is worth a whole laugh.”</p><p class="sty">Silver, striking eyeliner, earphones, chrome sunglasses.</p>
+<p class="vid"><b>Her video:</b> Earphones in, one line of eyeliner, the band on in one move. She stares. A half smile only on the very last frame.</p><div class="refs"><figure><img src="img/ref/JA-PH1.jpg" alt=""><figcaption>JA-PH1 · Cover</figcaption></figure><figure><img src="img/ref/JA-PH2.jpg" alt=""><figcaption>JA-PH2 · Close-up</figcaption></figure><figure><img src="img/ref/JA-PH3.jpg" alt=""><figcaption>JA-PH3 · Full body</figcaption></figure></div></div></article><article class="girl" style="--c:#1BB7FF">
+<div class="gl"><img src="img/ill-ruby.jpg" alt=""></div>
+<div class="gr"><div class="gt"><h3>RUBY</h3><span class="pill" style="background:#1BB7FF">ISSUE 02</span><span class="pill dark">CAROLINA</span></div>
+<p class="band">ORANGE AND PURPLE ZEBRA</p><p class="line">“The night owl. Backstage, after-hours, eyeliner from yesterday. The party is over and she is still the story.”</p><p class="sty">Worn leather, fur, platform boots, smudged liner, messy waves.</p>
+<p class="vid"><b>Her video:</b> She shrugs the jacket on, pushes the band over her messy waves, kicks one boot towards the lens and laughs.</p><div class="refs"><figure><img src="img/ref/RU-PH1.jpg" alt=""><figcaption>RU-PH1 · Cover</figcaption></figure><figure><img src="img/ref/RU-PH2.jpg" alt=""><figcaption>RU-PH2 · Close-up</figcaption></figure><figure><img src="img/ref/RU-PH3.jpg" alt=""><figcaption>RU-PH3 · Full body</figcaption></figure></div></div></article><article class="girl" style="--c:#2FE3C6">
+<div class="gl"><img src="img/ill-stevie.jpg" alt=""></div>
+<div class="gr"><div class="gt"><h3>STEVIE</h3><span class="pill" style="background:#2FE3C6">ISSUE 03</span><span class="pill dark">NINA</span></div>
+<p class="band">HOT PINK, TURQUOISE EDGE</p><p class="line">“The sprinter. 90s aerobics energy, always moving, sweating glitter. If she is standing still, we are doing it wrong.”</p><p class="sty">Sporty, pink and turquoise, glitter, faces and tongue out.</p>
+<p class="vid"><b>Her video:</b> Aerobics step with the pink dumbbells, the band goes on mid-move, glitter on the cheekbones, tongue out to the lens.</p><div class="refs"><figure><img src="img/ref/ST-PH1.jpg" alt=""><figcaption>ST-PH1 · Cover</figcaption></figure><figure><img src="img/ref/ST-PH2.jpg" alt=""><figcaption>ST-PH2 · Close-up</figcaption></figure><figure><img src="img/ref/ST-PH3.jpg" alt=""><figcaption>ST-PH3 · Full body</figcaption></figure></div></div></article><article class="girl" style="--c:#2FE3C6">
+<div class="gl"><img src="img/ill-lola.jpg" alt=""></div>
+<div class="gr"><div class="gt"><h3>LOLA</h3><span class="pill" style="background:#2FE3C6">ISSUE 03</span><span class="pill dark">DELFI</span></div>
+<p class="band">PINK, COW PRINT</p><p class="line">“The sweetheart. Playful, giggly, a bit kitsch on purpose. Pink on pink, wink at the camera, pop the bubble.”</p><p class="sty">Pink on pink, coloured glasses, little shoulder bag, coffee.</p>
+<p class="vid"><b>Her video:</b> A bubble-gum bubble grows and pops, she slides the band on, winks, and walks off with her coffee.</p><div class="refs"><figure><img src="img/ref/LO-PH1.jpg" alt=""><figcaption>LO-PH1 · Cover</figcaption></figure><figure><img src="img/ref/LO-PH2.jpg" alt=""><figcaption>LO-PH2 · Close-up</figcaption></figure><figure><img src="img/ref/LO-PH3.jpg" alt=""><figcaption>LO-PH3 · Full body</figcaption></figure></div></div></article><article class="girl" style="--c:#2FE3C6">
+<div class="gl"><img src="img/ill-rafa.jpg" alt=""></div>
+<div class="gr"><div class="gt"><h3>RAFA</h3><span class="pill" style="background:#2FE3C6">ISSUE 03</span><span class="pill dark">ESTHER</span></div>
+<p class="band">YELLOW, LILAC EDGE</p><p class="line">“The sun. Festival, golden hour, arms up. Big smile, big movement, nothing held back.”</p><p class="sty">Sporty, yellow, gold hoops, basketball, Suki energy.</p>
+<p class="vid"><b>Her video:</b> Band on, arms straight up, two dribbles with the basketball, she fakes a pass to the lens and laughs.</p><div class="refs"><figure><img src="img/ref/RA-PH1.jpg" alt=""><figcaption>RA-PH1 · Cover</figcaption></figure><figure><img src="img/ref/RA-PH2.jpg" alt=""><figcaption>RA-PH2 · Close-up</figcaption></figure><figure><img src="img/ref/RA-PH3.jpg" alt=""><figcaption>RA-PH3 · Full body</figcaption></figure></div></div></article>
+</div></section>
+<section id="groups"><div class="wrap">
+<h2>Pairs and trio</h2><p class="kick">Two photos per Issue · the reference shows the pose</p>
+<div class="pose"><img src="img/ref/IR-NA-PH1.jpg" alt=""><div><span class="tag">IR-NA-PH1</span><h4>Iris + Naïma · pair cover</h4><p>Embraced, one slightly behind the other with a hand on her shoulder, faces close, both into the lens. Iris soft, Naïma a direct stare. Contrast their textures and necklines (planning).</p></div></div>
+<div class="pose"><img src="img/ref/IR-NA-PH2.jpg" alt=""><div><span class="tag">IR-NA-PH2</span><h4>Iris + Naïma · together (Valentine’s)</h4><p>Shoulder to shoulder, heads tilted together, one finger on the lips, the other framing her face. Close, warm, a little provocative.</p></div></div>
+<div class="pose"><img src="img/ref/JA-RU-PH1.jpg" alt=""><div><span class="tag">JA-RU-PH1</span><h4>Jade + Ruby · pair cover</h4><p>Back to back or one behind the other, glossy skin, coloured sunglasses, heads turned over the shoulder to the lens.</p></div></div>
+<div class="pose"><img src="img/ref/JA-RU-PH2.jpg" alt=""><div><span class="tag">JA-RU-PH2</span><h4>Jade + Ruby · together</h4><p>Standing side by side, camera above, sunglasses and caps, hands on hips: cool, unbothered, after-hours.</p></div></div>
+<div class="pose"><img src="img/ref/ST-LO-RA-PH1.jpg" alt=""><div><span class="tag">ST-LO-RA-PH1</span><h4>Stevie + Lola + Rafa · trio cover</h4><p>Three faces stacked close to the lens, each with her own expression: Stevie a face, Lola a wink, Rafa the big smile.</p></div></div>
+<div class="pose"><img src="img/ref/ST-LO-RA-PH2.jpg" alt=""><div><span class="tag">ST-LO-RA-PH2</span><h4>Stevie + Lola + Rafa · together</h4><p>Three in a row with flip phones, each in her own attitude. Feeds The Phone Call and NYA’s Angels.</p></div></div>
+</div></section>
+<section id="direction" class="col" style="--c:#FFE93B"><div class="wrap">
+<h2>Creative direction</h2><p class="kick">One idea that holds everything together</p>
+<div class="grid">
+<div class="card"><p class="big">NYA Magazine, shot on the day it went to print.</p>
+<p><b>Studio = the magazine:</b> clean, saturated, made for the client’s templates.</p>
+<p><b>Arepa Queer = the life:</b> rails, mirrors, the fitting room, the street door. The girls being themselves, in motion.</p></div>
+<div class="card"><h4>Every frame</h4><ul>
+<li><b>The headband is the cover star:</b> whole, readable, never covered.</li>
+<li><b>2000s:</b> glossy skin, strong colour, attitude over pretty.</li>
+<li><b>One colour per Issue</b> in the backdrop or an accent: 01 pink, 02 electric blue, 03 turquoise.</li>
+<li><b>Each girl plays her line</b> (see The Girls). No two shots alike.</li></ul></div>
+</div></div></section>
+
+<section id="where"><div class="wrap">
+<h2>Arepa Queer or studio</h2><p class="kick">Each model plays her first character at Arepa and her second in the studio: one change in the whole day</p>
+<div class="grid">
+<div class="card" style="background:#FFE93B"><h3>AREPA QUEER · MORNING</h3><p><b>14 photos · 5 videos</b></p>
+<ol class="steps">
+<li><b>Make-up:</b> Carolina → IRIS, Delfi → LOLA, Esther → RAFA, Nina does herself → STEVIE.</li>
+<li>As each girl is ready: her cover, close-up, full body and video.</li>
+<li><b>Trio:</b> cover, together photo, The Walk-In video.</li></ol></div>
+<div class="card" style="background:#2FE3C6"><h3>STUDIO · AFTERNOON</h3><p><b>20 photos · 6 videos</b></p>
+<ol class="steps">
+<li><b>Product:</b> the seven bands, while the models eat and change.</li>
+<li><b>Change:</b> Esther → NAÏMA, Delfi → JADE. Carolina is still Iris. Naïma and Jade: photos + video.</li>
+<li><b>Iris + Naïma:</b> pair cover, together, Put It On.</li>
+<li><b>Change:</b> Carolina → RUBY. Ruby: photos + video.</li>
+<li><b>Jade + Ruby:</b> pair cover, together, Getting Ready.</li>
+<li><b>Hero video</b> with all four.</li></ol></div>
+</div></div></section>
+
+<section id="photo"><div class="wrap">
+<h2>Photos</h2><p class="kick">What the finished photo must be, so it works with the client’s designer</p>
+<div class="grid">
+<div class="card"><h4>Always</h4><ul><li>Vertical 2:3, the client crops 4:5 and 9:16.</li><li>The headband whole and readable.</li><li>Deliver every frame, not only the picks.</li></ul></div>
+<div class="card"><h4>Cover portrait · 7</h4><ul><li>Head and shoulders, into the lens.</li><li><b>Empty space above the head</b> for the masthead and Issue number.</li><li>Same framing for all seven: they sit side by side in the Phone Call, the Soundtrack and Class of NYA.</li></ul></div>
+<div class="card"><h4>Close-up · 7</h4><ul><li>The client’s most repeated request: <b>“Close-ups on the headband. Lots of them.”</b></li><li>Band, edge and logo readable.</li><li>One pick, many variations: front, ¾, side, edge, logo. They become every crop of the pre-launch and the Next Issue posts.</li></ul></div>
+<div class="card"><h4>Full body · 7</h4><ul><li>Head to toe, feet in frame, space around her.</li><li><b>Clean outline:</b> the client cuts her out (Wardrobe Computer, stickers).</li></ul></div>
+<div class="card"><h4>Pairs + trio · 6</h4><ul><li>Every band whole, at different heights.</li><li>Shoot in bursts: the frames in between become Back Issue, Photo Booth, Paparazzi and Stories.</li></ul></div>
+<div class="card"><h4>Product · 7</h4><ul><li>Each band alone, logo readable, on white and on its Issue colour.</li><li>No reference: clean and simple.</li></ul></div>
+</div></div></section>
+<section id="video" class="col" style="--c:#FF3DA8"><div class="wrap">
+<h2>Videos</h2><p class="kick">Vertical 9:16 · clips of 3–10 seconds · actions repeated many times</p>
+<div class="card" style="margin-bottom:14px"><p><b>Each girl has one video:</b> band in hand → on → hair fixed → she moves in her own way. The band stays visible the whole clip, full body in frame at the end. No music needed: the client adds it.</p></div>
+<div class="grid">
+<div class="card"><span class="tag">AREPA · IR-V1</span><h3>IRIS</h3><p>At a small mirror she slides the band on, tucks her hair behind her ear, then catches the lens in the mirror. She walks off reading and looks up over the book.</p></div><div class="card"><span class="tag">STUDIO · NA-V1</span><h3>NAÏMA</h3><p>She walks into the frame without asking, pulls the band over her updo, frees two curls, drops onto the leopard rug and holds the stare.</p></div><div class="card"><span class="tag">STUDIO · JA-V1</span><h3>JADE</h3><p>Earphones in, one line of eyeliner, the band on in one move. She stares. A half smile only on the very last frame.</p></div><div class="card"><span class="tag">STUDIO · RU-V1</span><h3>RUBY</h3><p>She shrugs the jacket on, pushes the band over her messy waves, kicks one boot towards the lens and laughs.</p></div><div class="card"><span class="tag">AREPA · ST-V1</span><h3>STEVIE</h3><p>Aerobics step with the pink dumbbells, the band goes on mid-move, glitter on the cheekbones, tongue out to the lens.</p></div><div class="card"><span class="tag">AREPA · LO-V1</span><h3>LOLA</h3><p>A bubble-gum bubble grows and pops, she slides the band on, winks, and walks off with her coffee.</p></div><div class="card"><span class="tag">AREPA · RA-V1</span><h3>RAFA</h3><p>Band on, arms straight up, two dribbles with the basketball, she fakes a pass to the lens and laughs.</p></div>
+<div class="card"><span class="tag">STUDIO · IR-NA-V1 · 7 FEB</span><h3>PUT IT ON</h3><p>Iris and Naïma: a short part each (band in hand → on → hair), then both together, bands side by side, looking into the lens.</p></div>
+<div class="card"><span class="tag">STUDIO · JA-RU-V1 · 7 MAR · FINAL 8–12 s</span><h3>GETTING READY</h3><p>Jade and Ruby at the mirror: Jade’s eyeliner, Ruby’s earrings and jacket, then both look into the mirror at the lens.</p></div>
+<div class="card"><span class="tag">AREPA · ST-LO-RA-V1 · 6 APR · FINAL 6–8 s</span><h3>THE WALK-IN</h3><p>The trio walks down the store aisle towards the camera, each fixes her band, they end in a close shared portrait. The client also takes frames from it for the Paparazzi Page.</p></div>
+<div class="card" style="background:#C6FF6B"><span class="tag">STUDIO · HV0 · 60 s</span><h3>HEAD TO HEAD</h3><p>The four models on the colour set. A headband passes from hand to hand: every time it lands on a head, she becomes that girl. One part per Issue, then all four in a line, bands on, into the lens.</p></div>
+</div></div></section>
+<section id="files"><div class="wrap">
+<h2>Format and files</h2><p class="kick">So the client can crop everything she needs</p>
+<div class="grid">
+<div class="card"><h4>Photos</h4><ul><li>Shoot <b>vertical 2:3</b> (the camera’s own format), with room around the subject.</li><li>From the 2:3 the client crops <b>4:5</b> (feed, carousels: a little off the top and bottom) and <b>9:16</b> (Stories: a little off the sides).</li></ul></div>
+<div class="card"><h4>Videos</h4><ul><li>Shoot <b>vertical 9:16</b>.</li><li>From the 9:16 the client crops <b>4:5</b> for the feed (a little off the top and bottom). Keep the action and the band in the middle of the frame.</li></ul></div>
+</div>
+<div class="grid" style="margin-top:14px">
+<div class="card"><h4>Folders</h4><pre class="tree">PHOTO
+├─ ISSUE 01
+│  ├─ IRIS
+│  ├─ NAÏMA
+│  └─ IRIS + NAÏMA
+├─ ISSUE 02
+│  ├─ JADE
+│  ├─ RUBY
+│  └─ JADE + RUBY
+└─ ISSUE 03
+   ├─ STEVIE
+   ├─ LOLA
+   ├─ RAFA
+   └─ STEVIE + LOLA + RAFA
+
+VIDEO
+└─ same structure + HERO (HV0)</pre></div>
+<div class="card"><h4>File names</h4><ul><li>Headband initials + PH (photo) or V (video) + number.</li><li><b>IR-PH1</b> = Iris, photo 1 · <b>IR-V1</b> = Iris, video 1.</li><li>Pairs and trio: the initials together. <b>IR-NA-V1</b> = Iris + Naïma, video 1 · <b>ST-LO-RA-PH2</b> = the trio, photo 2.</li><li>Hero: <b>HV0</b>.</li><li>Photos stay with photos, videos with videos.</li></ul>
+<table class="key"><tr><th>Code</th><th>Shot</th></tr><tr><td>PH1</td><td>Cover portrait</td></tr><tr><td>PH2</td><td>Close-up</td></tr><tr><td>PH3</td><td>Full body</td></tr><tr><td>PH4</td><td>Product (the band alone)</td></tr><tr><td>V1</td><td>Video</td></tr><tr><td>Pair/trio PH1 · PH2 · V1</td><td>Cover · together · video</td></tr><tr><td>HV0</td><td>Hero video</td></tr></table></div>
+</div></div></section>
+
+<section id="shots" class="col" style="--c:#1BB7FF"><div class="wrap">
+<h2>Shot list</h2><p class="kick">34 photos + 11 videos · in shooting order · dates from the planning</p>
+<h3 style="margin-bottom:8px">Arepa Queer · morning · 14 photos · 5 videos</h3>
+<div class="tbl"><table><tr><th></th><th>Code</th><th>What</th><th>Goes live</th></tr><tr><td class="th"><img src="img/ref/IR-PH1.jpg" alt=""></td><td class="cd">IR-PH1</td><td>IRIS · Cover portrait</td><td class="live"><b>1 Feb · The Cover</b> <span class="u">— carousel: her own cover, after the pair cover</span><br><b>3 Feb · Meet Iris</b> <span class="u">— carousel slide 1: the worn portrait</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— yearbook portrait</span></td></tr><tr><td class="th"><img src="img/ref/IR-PH2.jpg" alt=""></td><td class="cd">IR-PH2</td><td>IRIS · Close-up</td><td class="live"><b>8 Jan · Save as NYA</b> <span class="u">— reel frame 1: crop of the detail</span><br><b>19 Jan · The Introduction Cover</b> <span class="u">— window 1: purple-and-green detail</span><br><b>31 Jan · Next Issue</b> <span class="u">— crop around the type</span><br><b>3 Feb · Meet Iris</b> <span class="u">— carousel slide 3: the headband detail</span></td></tr><tr><td class="th"><img src="img/ref/IR-PH3.jpg" alt=""></td><td class="cd">IR-PH3</td><td>IRIS · Full body</td><td class="live"><b>3 Feb · Meet Iris</b> <span class="u">— carousel slide 4: the complete outfit</span><br><b>17 Feb · The Wardrobe Computer</b> <span class="u">— cut-out (made by the influencer)</span></td></tr><tr><td class="th"><img src="img/ref/LO-PH1.jpg" alt=""></td><td class="cd">LO-PH1</td><td>LOLA · Cover portrait</td><td class="live"><b>30 Mar · The Cover</b> <span class="u">— carousel: her own cover, after the trio cover</span><br><b>2 Apr · Meet Lola</b> <span class="u">— carousel slide 1: the worn portrait</span><br><b>11 Apr · The Phone Call</b> <span class="u">— her panel of the split screen</span><br><b>23 Apr · The Soundtrack</b> <span class="u">— cover art (made by Linh)</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— yearbook portrait</span></td></tr><tr><td class="th"><img src="img/ref/LO-PH2.jpg" alt=""></td><td class="cd">LO-PH2</td><td>LOLA · Close-up</td><td class="live"><b>29 Mar · Next Issue</b> <span class="u">— crop</span><br><b>2 Apr · Meet Lola</b> <span class="u">— carousel slide 3: the headband detail</span></td></tr><tr><td class="th"><img src="img/ref/LO-PH3.jpg" alt=""></td><td class="cd">LO-PH3</td><td>LOLA · Full body</td><td class="live"><b>2 Apr · Meet Lola</b> <span class="u">— carousel slide 4: the complete outfit</span></td></tr><tr><td class="th"><img src="img/ref/RA-PH1.jpg" alt=""></td><td class="cd">RA-PH1</td><td>RAFA · Cover portrait</td><td class="live"><b>30 Mar · The Cover</b> <span class="u">— carousel: her own cover, after the trio cover</span><br><b>4 Apr · Meet Rafa</b> <span class="u">— carousel slide 1: the worn portrait</span><br><b>11 Apr · The Phone Call</b> <span class="u">— her panel of the split screen</span><br><b>23 Apr · The Soundtrack</b> <span class="u">— cover art (made by Linh)</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— yearbook portrait</span></td></tr><tr><td class="th"><img src="img/ref/RA-PH2.jpg" alt=""></td><td class="cd">RA-PH2</td><td>RAFA · Close-up</td><td class="live"><b>29 Mar · Next Issue</b> <span class="u">— crop</span><br><b>4 Apr · Meet Rafa</b> <span class="u">— carousel slide 3: the headband detail</span></td></tr><tr><td class="th"><img src="img/ref/RA-PH3.jpg" alt=""></td><td class="cd">RA-PH3</td><td>RAFA · Full body</td><td class="live"><b>4 Apr · Meet Rafa</b> <span class="u">— carousel slide 4: the complete outfit</span></td></tr><tr><td class="th"><img src="img/ref/ST-PH1.jpg" alt=""></td><td class="cd">ST-PH1</td><td>STEVIE · Cover portrait</td><td class="live"><b>30 Mar · The Cover</b> <span class="u">— carousel: her own cover, after the trio cover</span><br><b>31 Mar · Meet Stevie</b> <span class="u">— carousel slide 1: the worn portrait</span><br><b>11 Apr · The Phone Call</b> <span class="u">— her panel of the split screen</span><br><b>23 Apr · The Soundtrack</b> <span class="u">— cover art (made by Linh)</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— yearbook portrait</span></td></tr><tr><td class="th"><img src="img/ref/ST-PH2.jpg" alt=""></td><td class="cd">ST-PH2</td><td>STEVIE · Close-up</td><td class="live"><b>29 Mar · Next Issue</b> <span class="u">— crop</span><br><b>31 Mar · Meet Stevie</b> <span class="u">— carousel slide 3: the headband detail</span><br><b>19 Apr · Stevie’s Voice Note</b> <span class="u">— carousel image</span></td></tr><tr><td class="th"><img src="img/ref/ST-PH3.jpg" alt=""></td><td class="cd">ST-PH3</td><td>STEVIE · Full body</td><td class="live"><b>31 Mar · Meet Stevie</b> <span class="u">— carousel slide 4: the complete outfit</span></td></tr><tr><td class="th"><img src="img/ref/ST-LO-RA-PH1.jpg" alt=""></td><td class="cd">ST-LO-RA-PH1</td><td>STEVIE + LOLA + RAFA · Trio cover</td><td class="live"><b>30 Mar · The Cover</b> <span class="u">— carousel slide 1: the group cover</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— slide 1: the trio</span></td></tr><tr><td class="th"><img src="img/ref/ST-LO-RA-PH2.jpg" alt=""></td><td class="cd">ST-LO-RA-PH2</td><td>STEVIE + LOLA + RAFA · Together</td><td class="live"><b>25 Apr · NYA’s Angels</b> <span class="u">— the group photo</span><br><b>29 Apr · The Photo Booth</b> <span class="u">— strip from the burst outtakes</span></td></tr><tr><td class="th"></td><td class="cd">IR-V1</td><td>IRIS · Video · putting it on, in motion</td><td class="live"><b>7 Feb · Put It On</b> <span class="u">— reel: Iris’s section</span></td></tr><tr><td class="th"></td><td class="cd">LO-V1</td><td>LOLA · Video · putting it on, in motion</td><td class="live"><b>weekly · Stories + TikTok</b> <span class="u">— no feed post in the planning</span></td></tr><tr><td class="th"></td><td class="cd">RA-V1</td><td>RAFA · Video · putting it on, in motion</td><td class="live"><b>13 Apr · Rafa In Motion</b> <span class="u">— the reel</span></td></tr><tr><td class="th"></td><td class="cd">ST-V1</td><td>STEVIE · Video · putting it on, in motion</td><td class="live"><b>19 Apr · Stevie’s Voice Note</b> <span class="u">— clip under her voice</span></td></tr><tr><td class="th"></td><td class="cd">ST-LO-RA-V1</td><td>STEVIE + LOLA + RAFA · Video · The Walk-In</td><td class="live"><b>6 Apr · The Walk-In</b> <span class="u">— reel, final 6–8 s</span><br><b>15 Apr · The Paparazzi Page</b> <span class="u">— frames taken from the video</span></td></tr></table></div>
+<h3 style="margin-bottom:8px">Studio · afternoon · 20 photos · 6 videos</h3>
+<div class="tbl"><table><tr><th></th><th>Code</th><th>What</th><th>Goes live</th></tr><tr><td class="th"></td><td class="cd">IR-PH4</td><td>IRIS · Product</td><td class="live"><b>22 Jan · The First Pair</b> <span class="u">— slide 1 avatar + slide 2</span><br><b>3 Feb · Meet Iris</b> <span class="u">— carousel slide 2: the full headband</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— last slide: all seven bands</span></td></tr><tr><td class="th"></td><td class="cd">NA-PH4</td><td>NAÏMA · Product</td><td class="live"><b>22 Jan · The First Pair</b> <span class="u">— slide 1 avatar + slide 3</span><br><b>5 Feb · Meet Naïma</b> <span class="u">— carousel slide 2: the full headband</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— last slide: all seven bands</span></td></tr><tr><td class="th"></td><td class="cd">JA-PH4</td><td>JADE · Product</td><td class="live"><b>27 Feb · Next Issue Hint</b> <span class="u">— small crop</span><br><b>28 Feb · Next Issue</b> <span class="u">— limited product view</span><br><b>3 Mar · Meet Jade</b> <span class="u">— carousel slide 2: the full headband</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— last slide: all seven bands</span></td></tr><tr><td class="th"></td><td class="cd">RU-PH4</td><td>RUBY · Product</td><td class="live"><b>27 Feb · Next Issue Hint</b> <span class="u">— small crop</span><br><b>28 Feb · Next Issue</b> <span class="u">— limited product view</span><br><b>5 Mar · Meet Ruby</b> <span class="u">— carousel slide 2: the full headband</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— last slide: all seven bands</span></td></tr><tr><td class="th"></td><td class="cd">ST-PH4</td><td>STEVIE · Product</td><td class="live"><b>27 Mar · Next Issue Hint</b> <span class="u">— small crop</span><br><b>29 Mar · Next Issue</b> <span class="u">— limited product view</span><br><b>31 Mar · Meet Stevie</b> <span class="u">— carousel slide 2: the full headband</span><br><b>11 Apr · The Phone Call</b> <span class="u">— last slide: the three products</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— last slide: all seven bands</span></td></tr><tr><td class="th"></td><td class="cd">LO-PH4</td><td>LOLA · Product</td><td class="live"><b>27 Mar · Next Issue Hint</b> <span class="u">— small crop</span><br><b>29 Mar · Next Issue</b> <span class="u">— limited product view</span><br><b>2 Apr · Meet Lola</b> <span class="u">— carousel slide 2: the full headband</span><br><b>11 Apr · The Phone Call</b> <span class="u">— last slide: the three products</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— last slide: all seven bands</span></td></tr><tr><td class="th"></td><td class="cd">RA-PH4</td><td>RAFA · Product</td><td class="live"><b>27 Mar · Next Issue Hint</b> <span class="u">— small crop</span><br><b>29 Mar · Next Issue</b> <span class="u">— limited product view</span><br><b>4 Apr · Meet Rafa</b> <span class="u">— carousel slide 2: the full headband</span><br><b>11 Apr · The Phone Call</b> <span class="u">— last slide: the three products</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— last slide: all seven bands</span></td></tr><tr><td class="th"><img src="img/ref/NA-PH1.jpg" alt=""></td><td class="cd">NA-PH1</td><td>NAÏMA · Cover portrait</td><td class="live"><b>1 Feb · The Cover</b> <span class="u">— carousel: her own cover, after the pair cover</span><br><b>5 Feb · Meet Naïma</b> <span class="u">— carousel slide 1: the worn portrait</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— yearbook portrait</span></td></tr><tr><td class="th"><img src="img/ref/NA-PH2.jpg" alt=""></td><td class="cd">NA-PH2</td><td>NAÏMA · Close-up</td><td class="live"><b>19 Jan · The Introduction Cover</b> <span class="u">— window 2: leopard detail</span><br><b>31 Jan · Next Issue</b> <span class="u">— crop around the type</span><br><b>5 Feb · Meet Naïma</b> <span class="u">— carousel slide 3: the headband detail</span></td></tr><tr><td class="th"><img src="img/ref/NA-PH3.jpg" alt=""></td><td class="cd">NA-PH3</td><td>NAÏMA · Full body</td><td class="live"><b>5 Feb · Meet Naïma</b> <span class="u">— carousel slide 4: the complete outfit</span><br><b>17 Feb · The Wardrobe Computer</b> <span class="u">— cut-out (made by the influencer)</span></td></tr><tr><td class="th"><img src="img/ref/JA-PH1.jpg" alt=""></td><td class="cd">JA-PH1</td><td>JADE · Cover portrait</td><td class="live"><b>1 Mar · The Cover</b> <span class="u">— carousel: her own cover, after the pair cover</span><br><b>3 Mar · Meet Jade</b> <span class="u">— carousel slide 1: the worn portrait</span><br><b>16 Mar · The Soundtrack</b> <span class="u">— cover art (made by Linh)</span><br><b>23 Mar · Open Chat</b> <span class="u">— chat image</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— yearbook portrait</span></td></tr><tr><td class="th"><img src="img/ref/JA-PH2.jpg" alt=""></td><td class="cd">JA-PH2</td><td>JADE · Close-up</td><td class="live"><b>3 Mar · Meet Jade</b> <span class="u">— carousel slide 3: the headband detail</span><br><b>14 Mar · Jade’s Voice Note</b> <span class="u">— carousel image</span></td></tr><tr><td class="th"><img src="img/ref/JA-PH3.jpg" alt=""></td><td class="cd">JA-PH3</td><td>JADE · Full body</td><td class="live"><b>3 Mar · Meet Jade</b> <span class="u">— carousel slide 4: the complete outfit</span></td></tr><tr><td class="th"><img src="img/ref/IR-NA-PH1.jpg" alt=""></td><td class="cd">IR-NA-PH1</td><td>IRIS + NAÏMA · Pair cover</td><td class="live"><b>1 Feb · The Cover</b> <span class="u">— carousel slide 1: the shared cover</span><br><b>28 Feb · Next Issue</b> <span class="u">— small archive reference</span></td></tr><tr><td class="th"><img src="img/ref/IR-NA-PH2.jpg" alt=""></td><td class="cd">IR-NA-PH2</td><td>IRIS + NAÏMA · Together</td><td class="live"><b>14 Feb · The Valentine’s Page</b> <span class="u">— the photo + a relaxed second frame from the same setup</span><br><b>23 Feb · Back Issue</b> <span class="u">— unused frames</span></td></tr><tr><td class="th"><img src="img/ref/RU-PH1.jpg" alt=""></td><td class="cd">RU-PH1</td><td>RUBY · Cover portrait</td><td class="live"><b>1 Mar · The Cover</b> <span class="u">— carousel: her own cover, after the pair cover</span><br><b>5 Mar · Meet Ruby</b> <span class="u">— carousel slide 1: the worn portrait</span><br><b>16 Mar · The Soundtrack</b> <span class="u">— cover art (made by Linh)</span><br><b>30 Apr · The Complete Collection</b> <span class="u">— yearbook portrait</span></td></tr><tr><td class="th"><img src="img/ref/RU-PH2.jpg" alt=""></td><td class="cd">RU-PH2</td><td>RUBY · Close-up</td><td class="live"><b>5 Mar · Meet Ruby</b> <span class="u">— carousel slide 3: the headband detail</span></td></tr><tr><td class="th"><img src="img/ref/RU-PH3.jpg" alt=""></td><td class="cd">RU-PH3</td><td>RUBY · Full body</td><td class="live"><b>5 Mar · Meet Ruby</b> <span class="u">— carousel slide 4: the complete outfit</span></td></tr><tr><td class="th"><img src="img/ref/JA-RU-PH1.jpg" alt=""></td><td class="cd">JA-RU-PH1</td><td>JADE + RUBY · Pair cover</td><td class="live"><b>1 Mar · The Cover</b> <span class="u">— carousel slide 1: the shared cover</span></td></tr><tr><td class="th"><img src="img/ref/JA-RU-PH2.jpg" alt=""></td><td class="cd">JA-RU-PH2</td><td>JADE + RUBY · Together</td><td class="live"><b>25 Mar · Back Issue</b> <span class="u">— fresh edit, with Issue 01 frames</span></td></tr><tr><td class="th"></td><td class="cd">NA-V1</td><td>NAÏMA · Video · putting it on, in motion</td><td class="live"><b>7 Feb · Put It On</b> <span class="u">— reel: Naïma’s section</span></td></tr><tr><td class="th"></td><td class="cd">JA-V1</td><td>JADE · Video · putting it on, in motion</td><td class="live"><b>7 Mar · Getting Ready</b> <span class="u">— reel: Jade’s part</span><br><b>14 Mar · Jade’s Voice Note</b> <span class="u">— clip under her voice</span></td></tr><tr><td class="th"></td><td class="cd">IR-NA-V1</td><td>IRIS + NAÏMA · Video · Put It On</td><td class="live"><b>7 Feb · Put It On</b> <span class="u">— reel: both together at the end</span></td></tr><tr><td class="th"></td><td class="cd">RU-V1</td><td>RUBY · Video · putting it on, in motion</td><td class="live"><b>7 Mar · Getting Ready</b> <span class="u">— reel: Ruby’s part</span></td></tr><tr><td class="th"></td><td class="cd">JA-RU-V1</td><td>JADE + RUBY · Video · Getting Ready</td><td class="live"><b>7 Mar · Getting Ready</b> <span class="u">— reel, final 8–12 s</span></td></tr><tr><td class="th"></td><td class="cd">HV0</td><td>EVERYONE · Hero video, 60 s</td><td class="live"><b>launch · Hero video</b> <span class="u">— date to agree with the client</span></td></tr></table></div>
+</div></section>
+</body></html>
