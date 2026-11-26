@@ -1,0 +1,133 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex,nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes"><title>NYA Photographer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap">
+<style>
+:root { --ink:#141414; --paper:#fff; --mute:#666; }
+* { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html,body { margin:0; background:#141414; color:var(--ink); font-family:Inter,system-ui,sans-serif; }
+header { position:sticky; top:0; z-index:20; background:var(--ink); color:#fff; padding:12px 18px 10px; }
+.hrow { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.logo { height:26px; filter:brightness(0) invert(1); }
+h1 { margin:0; font-size:22px; font-weight:900; letter-spacing:-.02em; }
+.sw { display:flex; gap:6px; } .sw a { color:#fff; text-decoration:none; font-size:12px; font-weight:900; letter-spacing:.1em; border:2px solid #fff; border-radius:20px; padding:5px 12px; }
+.sw a.on { background:#fff; color:var(--ink); }
+.tot { margin-left:auto; font-size:26px; font-weight:900; letter-spacing:-.03em; } .tot small { font-size:12px; letter-spacing:.1em; opacity:.6; }
+.bar { height:8px; background:#333; border-radius:4px; overflow:hidden; margin-top:10px; } .bar i { display:block; height:100%; width:0; background:linear-gradient(90deg,#FF3DA8,#1BB7FF,#2FE3C6,#FFE93B,#C6FF6B); transition:width .3s; }
+.tabs { display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
+.tabs button { font:inherit; font-size:12px; font-weight:900; letter-spacing:.1em; color:#fff; background:none; border:2px solid #555; border-radius:20px; padding:6px 14px; cursor:pointer; }
+.tabs button.on { border-color:#fff; background:#fff; color:var(--ink); }
+.tabs .sp { flex:1; }
+details.glob { background:#222; color:#fff; margin:12px 18px 0; border-radius:12px; padding:10px 14px; }
+details.glob summary { font-weight:900; font-size:13px; letter-spacing:.1em; cursor:pointer; }
+details.glob ul { margin:8px 0 2px; padding-left:18px; font-size:14px; line-height:1.5; }
+.loc { color:#fff; font-size:40px; font-weight:900; letter-spacing:-.04em; padding:26px 18px 4px; }
+.loc small { display:block; font-size:12px; letter-spacing:.14em; opacity:.6; font-weight:800; }
+.block { margin:12px 0 0; padding:14px 0 16px; background:var(--col); }
+.block.wrapped { opacity:.55; }
+.bh { display:flex; align-items:baseline; gap:12px; padding:0 18px 10px; flex-wrap:wrap; }
+.bh .t { font-size:15px; font-weight:900; background:var(--ink); color:#fff; border-radius:8px; padding:3px 8px; }
+.bh h2 { margin:0; font-size:28px; font-weight:900; letter-spacing:-.03em; line-height:1; }
+.bh .n { margin-left:auto; font-size:18px; font-weight:900; }
+.now { display:none; font-size:11px; font-weight:900; letter-spacing:.14em; background:var(--ink); color:#fff; border-radius:20px; padding:4px 10px; animation:pulse 1.4s infinite; }
+.block.current .now { display:inline-block; }
+@keyframes pulse { 50% { opacity:.35; } }
+.row { display:flex; gap:12px; overflow-x:auto; padding:0 18px 4px; scroll-snap-type:x proximity; -webkit-overflow-scrolling:touch; }
+.card { flex:none; width:250px; scroll-snap-align:start; background:var(--paper); border-radius:14px; overflow:hidden; position:relative; cursor:pointer; border:3px solid var(--ink); }
+.card .pic { height:300px; background:#eee; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+.card .pic img { width:100%; height:100%; object-fit:cover; display:block; transition:filter .3s; }
+.card .noref { font-weight:900; font-size:20px; text-align:center; padding:16px; color:var(--ink); }
+.card .meta { padding:10px 12px 12px; }
+.card .code { font-size:20px; font-weight:900; letter-spacing:-.02em; }
+.card .tt { font-size:14px; font-weight:800; margin-top:2px; }
+.card .sp { font-size:12.5px; font-weight:600; color:var(--mute); margin-top:6px; line-height:1.35; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.chk { position:absolute; top:10px; right:10px; width:44px; height:44px; border-radius:50%; border:3px solid var(--ink); background:#fff; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:900; z-index:3; }
+.stamp { position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(20,20,20,.62); z-index:2; }
+.stamp span { background:var(--col); color:var(--ink); border:4px solid var(--ink); border-radius:12px; padding:8px 14px; font-size:26px; font-weight:900; letter-spacing:.02em; transform:rotate(-9deg); text-align:center; line-height:1; box-shadow:6px 6px 0 var(--ink); }
+.stamp span small { display:block; font-size:12px; letter-spacing:.14em; margin-top:5px; }
+.card.done .stamp { display:flex; animation:pop .35s ease-out; } .card.done .pic img { filter:grayscale(1); }
+.card.done .chk { background:var(--ink); color:#fff; }
+.card.next { box-shadow:0 0 0 4px #fff, 0 0 0 7px var(--ink); }
+@keyframes pop { 0% { transform:scale(1.25); opacity:0; } 100% { transform:scale(1); opacity:1; } }
+.sheet { position:fixed; inset:0; z-index:50; background:rgba(0,0,0,.75); display:none; align-items:center; justify-content:center; padding:18px; }
+.sheet.open { display:flex; }
+.sbox { background:#fff; border-radius:18px; max-width:980px; width:100%; max-height:92vh; overflow:auto; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); border:3px solid var(--ink); }
+.sbox .big { background:#eee; display:flex; align-items:center; justify-content:center; min-height:420px; }
+.sbox .big img { width:100%; height:100%; max-height:84vh; object-fit:contain; display:block; }
+.sbox .txt { padding:22px; display:flex; flex-direction:column; gap:12px; }
+.sbox .tag { display:inline-block; font-size:12px; font-weight:900; letter-spacing:.12em; background:var(--col); border:2px solid var(--ink); border-radius:20px; padding:3px 10px; align-self:flex-start; }
+.sbox h3 { margin:0; font-size:34px; font-weight:900; letter-spacing:-.03em; line-height:1; }
+.sbox h4 { margin:0; font-size:12px; font-weight:900; letter-spacing:.12em; color:var(--mute); }
+.sbox ul { margin:0; padding-left:18px; font-size:16px; font-weight:600; line-height:1.45; }
+.sbox p { margin:0; font-size:15px; font-weight:600; }
+.sbox .acts { display:flex; gap:10px; margin-top:auto; padding-top:8px; }
+.sbox button { font:inherit; font-size:18px; font-weight:900; border:3px solid var(--ink); border-radius:14px; padding:14px 18px; cursor:pointer; }
+.sbox .go { flex:1; background:var(--ink); color:#fff; } .sbox .go.undo { background:#fff; color:var(--ink); }
+.sbox .x { background:#fff; }
+.reset { display:block; margin:34px auto 60px; font:inherit; font-size:12px; font-weight:900; letter-spacing:.12em; color:#888; background:none; border:2px solid #444; border-radius:20px; padding:8px 16px; cursor:pointer; }
+@media (max-width:760px) { .sbox { grid-template-columns:1fr; } .sbox .big { min-height:260px; } .card { width:200px; } .card .pic { height:240px; } .loc { font-size:32px; } }
+</style></head><body>
+<header><div class="hrow"><img class="logo" src="img/logo.png" alt="NYA"><h1>PHOTOGRAPHER</h1>
+<nav class="sw"><a href="foto" class="on">FOTO</a><a href="video" class="">VIDEO</a></nav>
+<div class="tot"><span id="d">0</span>/37 <small>DONE</small></div></div>
+<div class="bar"><i id="bar"></i></div>
+<div class="tabs"><button data-go="AREPA">AREPA · MORNING</button><button data-go="STUDIO">STUDIO · AFTERNOON</button><span class="sp"></span><button id="nextbtn">→ NEXT</button></div></header>
+<details class="glob"><summary>ALWAYS · PHOTO SPECS</summary><ul><li>RAW + JPEG · tethered, picks approved on screen</li><li>Colour chart at the start of each set: the client grades</li><li>Vertical. Main crop 4:5 (1080×1350) with room for 9:16 and 1:1</li><li>Band always whole, trim and logo towards the lens</li><li>File name = code + number, e.g. IR-CU_014 · deliver every unselected frame too</li></ul></details>
+<main id="app"></main>
+<button class="reset" id="reset">RESET ALL</button>
+<div class="sheet" id="sheet"><div class="sbox" id="sbox"></div></div>
+<script>
+const DATA = [{"loc": "AREPA", "t": "09:35", "who": "STEVIE + LOLA + RAFA", "col": "#2FE3C6", "items": [{"code": "I03-G1", "title": "Together", "kind": "PHOTO", "spec": "Together · vertical 4:5 · every band whole · shoot bursts: the frames in between become Back Issue, Photo Booth, Valentine’s", "used": "25 Apr NYA’s Angels · 29 Apr Photo Booth (outtakes)", "ref": "72a", "col": "#2FE3C6"}, {"code": "I03-G2", "title": "At the door, flash", "kind": "PHOTO", "spec": "At the door, direct flash · vertical 4:5 · every band whole · shoot bursts", "used": "15 Apr The Paparazzi Page", "ref": "b-kitten", "col": "#2FE3C6"}]}, {"loc": "AREPA", "t": "10:45", "who": "IRIS + NAÏMA", "col": "#FF3DA8", "items": [{"code": "I01-G1", "title": "Together", "kind": "PHOTO", "spec": "Together · vertical 4:5 · every band whole · shoot bursts: the frames in between become Back Issue, Photo Booth, Valentine’s", "used": "14 Feb The Valentine’s Page", "ref": "13", "col": "#FF3DA8"}, {"code": "I01-G2", "title": "At the door, flash", "kind": "PHOTO", "spec": "At the door, direct flash · vertical 4:5 · every band whole · shoot bursts", "used": "23 Feb Back Issue", "ref": "35", "col": "#FF3DA8"}]}, {"loc": "AREPA", "t": "11:40", "who": "JADE + RUBY", "col": "#1BB7FF", "items": [{"code": "I02-G1", "title": "Together", "kind": "PHOTO", "spec": "Together · vertical 4:5 · every band whole · shoot bursts: the frames in between become Back Issue, Photo Booth, Valentine’s", "used": "25 Mar Back Issue", "ref": "17a", "col": "#1BB7FF"}, {"code": "I02-G2", "title": "At the door, flash", "kind": "PHOTO", "spec": "At the door, direct flash · vertical 4:5 · every band whole · shoot bursts", "used": "Stories", "ref": "b-gnd", "col": "#1BB7FF"}]}, {"loc": "STUDIO", "t": "13:30", "who": "PRODUCT · ISSUE 03 BANDS", "col": "#2FE3C6", "items": [{"code": "P-ST", "title": "STEVIE band · product", "kind": "PHOTO", "spec": "Band alone · on white and on its Issue colour · flat + ¾ with the logo · no props", "used": "Meet slide 2 · Next Issue · Soundtrack · Class of NYA", "ref": "bandonly4", "col": "#2FE3C6"}, {"code": "P-LO", "title": "LOLA band · product", "kind": "PHOTO", "spec": "Band alone · on white and on its Issue colour · flat + ¾ with the logo · no props", "used": "Meet slide 2 · Next Issue · Soundtrack · Class of NYA", "ref": "bandonly9", "col": "#2FE3C6"}, {"code": "P-RA", "title": "RAFA band · product", "kind": "PHOTO", "spec": "Band alone · on white and on its Issue colour · flat + ¾ with the logo · no props", "used": "Meet slide 2 · Next Issue · Soundtrack · Class of NYA", "ref": "bandonly10", "col": "#2FE3C6"}]}, {"loc": "STUDIO", "t": "13:50", "who": "NAÏMA", "col": "#FF3DA8", "items": [{"code": "NA-C", "title": "Cover portrait", "kind": "PHOTO", "spec": "Head + shoulders · vertical 4:5 · eyes on the upper third · 20–25% empty above the head for the masthead · into the lens · band whole, logo to camera", "used": "1 Feb The Cover · 5 Feb Meet Naïma · 30 Apr Class of NYA", "ref": "w-gum", "col": "#FF3DA8"}, {"code": "NA-CU", "title": "Close-up", "kind": "PHOTO", "spec": "Band fills the top of the frame · trim + logo sharp · shoot front, ¾ and detail · 1 pick, the rest go to the client", "used": "19 Jan · 22 Jan · 31 Jan crops · 5 Feb Meet Naïma", "ref": "30", "col": "#FF3DA8"}, {"code": "NA-FB", "title": "Full body", "kind": "PHOTO", "spec": "Head to toe, feet in · tripod, same lens + distance for all 7 · clean outline for the cut-out", "used": "5 Feb Meet Naïma · 12 Feb Screen Test · 17 Feb Wardrobe Computer", "ref": "w-tyla", "col": "#FF3DA8"}]}, {"loc": "STUDIO", "t": "14:05", "who": "JADE", "col": "#1BB7FF", "items": [{"code": "JA-C", "title": "Cover portrait", "kind": "PHOTO", "spec": "Head + shoulders · vertical 4:5 · eyes on the upper third · 20–25% empty above the head for the masthead · into the lens · band whole, logo to camera", "used": "1 Mar The Cover · 3 Mar Meet Jade · 16 Mar Soundtrack · 30 Apr Class of NYA", "ref": "w-bend", "col": "#1BB7FF"}, {"code": "JA-CU", "title": "Close-up", "kind": "PHOTO", "spec": "Band fills the top of the frame · trim + logo sharp · shoot front, ¾ and detail · 1 pick, the rest go to the client", "used": "3 Mar Meet Jade · 14 Mar Jade’s Voice Note", "ref": "22", "col": "#1BB7FF"}, {"code": "JA-FB", "title": "Full body", "kind": "PHOTO", "spec": "Head to toe, feet in · tripod, same lens + distance for all 7 · clean outline for the cut-out", "used": "3 Mar Meet Jade", "ref": "b-ed2", "col": "#1BB7FF"}]}, {"loc": "STUDIO", "t": "14:20", "who": "RUBY", "col": "#1BB7FF", "items": [{"code": "RU-C", "title": "Cover portrait", "kind": "PHOTO", "spec": "Head + shoulders · vertical 4:5 · eyes on the upper third · 20–25% empty above the head for the masthead · into the lens · band whole, logo to camera", "used": "1 Mar The Cover · 5 Mar Meet Ruby · 16 Mar Soundtrack · 30 Apr Class of NYA", "ref": "47", "col": "#1BB7FF"}, {"code": "RU-CU", "title": "Close-up", "kind": "PHOTO", "spec": "Band fills the top of the frame · trim + logo sharp · shoot front, ¾ and detail · 1 pick, the rest go to the client", "used": "5 Mar Meet Ruby", "ref": "48", "col": "#1BB7FF"}, {"code": "RU-FB", "title": "Full body", "kind": "PHOTO", "spec": "Head to toe, feet in · tripod, same lens + distance for all 7 · clean outline for the cut-out", "used": "5 Mar Meet Ruby · 12 Mar Screen Test", "ref": "45", "col": "#1BB7FF"}]}, {"loc": "STUDIO", "t": "14:35", "who": "IRIS", "col": "#FF3DA8", "items": [{"code": "IR-C", "title": "Cover portrait", "kind": "PHOTO", "spec": "Head + shoulders · vertical 4:5 · eyes on the upper third · 20–25% empty above the head for the masthead · into the lens · band whole, logo to camera", "used": "1 Feb The Cover · 3 Feb Meet Iris · 30 Apr Class of NYA", "ref": "78a", "col": "#FF3DA8"}, {"code": "IR-CU", "title": "Close-up", "kind": "PHOTO", "spec": "Band fills the top of the frame · trim + logo sharp · shoot front, ¾ and detail · 1 pick, the rest go to the client", "used": "8 Jan · 19 Jan · 22 Jan · 31 Jan crops · 3 Feb Meet Iris", "ref": "24", "col": "#FF3DA8"}, {"code": "IR-FB", "title": "Full body", "kind": "PHOTO", "spec": "Head to toe, feet in · tripod, same lens + distance for all 7 · clean outline for the cut-out", "used": "3 Feb Meet Iris · 17 Feb Wardrobe Computer", "ref": "53", "col": "#FF3DA8"}]}, {"loc": "STUDIO", "t": "14:50", "who": "PAIR COVERS", "col": "#FF3DA8", "items": [{"code": "I01-COV", "title": "Iris + Naïma · cover", "kind": "PHOTO", "spec": "Group cover · vertical 4:5 · same headroom as the solo covers · every band whole, at different heights", "used": "1 Feb The Cover · 28 Feb Next Issue", "ref": "17b", "col": "#FF3DA8"}, {"code": "I02-COV", "title": "Jade + Ruby · cover", "kind": "PHOTO", "spec": "Group cover · vertical 4:5 · same headroom as the solo covers · every band whole, at different heights", "used": "1 Mar The Cover", "ref": "b-grp2", "col": "#1BB7FF"}]}, {"loc": "STUDIO", "t": "15:10", "who": "PRODUCT · IRIS + NAÏMA BANDS", "col": "#FF3DA8", "items": [{"code": "P-IR", "title": "IRIS band · product", "kind": "PHOTO", "spec": "Band alone · on white and on its Issue colour · flat + ¾ with the logo · no props", "used": "Meet slide 2 · Next Issue · Soundtrack · Class of NYA", "ref": "bandonly6", "col": "#FF3DA8"}, {"code": "P-NA", "title": "NAÏMA band · product", "kind": "PHOTO", "spec": "Band alone · on white and on its Issue colour · flat + ¾ with the logo · no props", "used": "Meet slide 2 · Next Issue · Soundtrack · Class of NYA", "ref": "bandonly5", "col": "#FF3DA8"}]}, {"loc": "STUDIO", "t": "15:30", "who": "STEVIE", "col": "#2FE3C6", "items": [{"code": "ST-C", "title": "Cover portrait", "kind": "PHOTO", "spec": "Head + shoulders · vertical 4:5 · eyes on the upper third · 20–25% empty above the head for the masthead · into the lens · band whole, logo to camera", "used": "30 Mar The Cover · 31 Mar Meet Stevie · 11 Apr Phone Call · 23 Apr Soundtrack · 30 Apr Class of NYA", "ref": "76b", "col": "#2FE3C6"}, {"code": "ST-CU", "title": "Close-up", "kind": "PHOTO", "spec": "Band fills the top of the frame · trim + logo sharp · shoot front, ¾ and detail · 1 pick, the rest go to the client", "used": "29 Mar Next Issue · 31 Mar Meet Stevie · 19 Apr Voice Note", "ref": "62", "col": "#2FE3C6"}, {"code": "ST-FB", "title": "Full body", "kind": "PHOTO", "spec": "Head to toe, feet in · tripod, same lens + distance for all 7 · clean outline for the cut-out", "used": "31 Mar Meet Stevie", "ref": "64", "col": "#2FE3C6"}]}, {"loc": "STUDIO", "t": "15:45", "who": "PRODUCT · JADE BAND", "col": "#1BB7FF", "items": [{"code": "P-JA", "title": "JADE band · product", "kind": "PHOTO", "spec": "Band alone · on white and on its Issue colour · flat + ¾ with the logo · no props", "used": "Meet slide 2 · Next Issue · Soundtrack · Class of NYA", "ref": "bandonly8", "col": "#1BB7FF"}]}, {"loc": "STUDIO", "t": "15:50", "who": "LOLA", "col": "#2FE3C6", "items": [{"code": "LO-C", "title": "Cover portrait", "kind": "PHOTO", "spec": "Head + shoulders · vertical 4:5 · eyes on the upper third · 20–25% empty above the head for the masthead · into the lens · band whole, logo to camera", "used": "30 Mar The Cover · 2 Apr Meet Lola · 11 Apr Phone Call · 23 Apr Soundtrack · 30 Apr Class of NYA", "ref": "w-bella", "col": "#2FE3C6"}, {"code": "LO-CU", "title": "Close-up", "kind": "PHOTO", "spec": "Band fills the top of the frame · trim + logo sharp · shoot front, ¾ and detail · 1 pick, the rest go to the client", "used": "29 Mar Next Issue · 2 Apr Meet Lola", "ref": "59", "col": "#2FE3C6"}, {"code": "LO-FB", "title": "Full body", "kind": "PHOTO", "spec": "Head to toe, feet in · tripod, same lens + distance for all 7 · clean outline for the cut-out", "used": "2 Apr Meet Lola", "ref": "58", "col": "#2FE3C6"}]}, {"loc": "STUDIO", "t": "16:05", "who": "PRODUCT · RUBY BAND", "col": "#1BB7FF", "items": [{"code": "P-RU", "title": "RUBY band · product", "kind": "PHOTO", "spec": "Band alone · on white and on its Issue colour · flat + ¾ with the logo · no props", "used": "Meet slide 2 · Next Issue · Soundtrack · Class of NYA", "ref": "bandonly7", "col": "#1BB7FF"}]}, {"loc": "STUDIO", "t": "16:10", "who": "RAFA", "col": "#2FE3C6", "items": [{"code": "RA-C", "title": "Cover portrait", "kind": "PHOTO", "spec": "Head + shoulders · vertical 4:5 · eyes on the upper third · 20–25% empty above the head for the masthead · into the lens · band whole, logo to camera", "used": "30 Mar The Cover · 4 Apr Meet Rafa · 11 Apr Phone Call · 23 Apr Soundtrack · 30 Apr Class of NYA", "ref": "w-shades", "col": "#2FE3C6"}, {"code": "RA-CU", "title": "Close-up", "kind": "PHOTO", "spec": "Band fills the top of the frame · trim + logo sharp · shoot front, ¾ and detail · 1 pick, the rest go to the client", "used": "29 Mar Next Issue · 4 Apr Meet Rafa", "ref": "38", "col": "#2FE3C6"}, {"code": "RA-FB", "title": "Full body", "kind": "PHOTO", "spec": "Head to toe, feet in · tripod, same lens + distance for all 7 · clean outline for the cut-out", "used": "4 Apr Meet Rafa", "ref": "70", "col": "#2FE3C6"}]}, {"loc": "STUDIO", "t": "16:25", "who": "TRIO COVER", "col": "#2FE3C6", "items": [{"code": "I03-COV", "title": "Stevie + Lola + Rafa · cover", "kind": "PHOTO", "spec": "Group cover · vertical 4:5 · same headroom as the solo covers · every band whole, at different heights", "used": "30 Mar The Cover · 30 Apr Class of NYA", "ref": "73", "col": "#2FE3C6"}]}];
+const KEY = 'nya-pad-foto-v1';
+let st = {}; try { st = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch(e) {} };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const WORD = 'SHOT';
+const app = document.getElementById('app');
+let html = '', last = '';
+DATA.forEach((b, bi) => {
+  if (b.loc !== last) { html += `<div class="loc" id="loc-${b.loc}">${b.loc === 'AREPA' ? 'AREPA QUEER' : 'STUDIO'}<small>${b.loc === 'AREPA' ? 'MORNING · UNTIL 12:00' : 'AFTERNOON · FROM 13:30'}</small></div>`; last = b.loc; }
+  html += `<section class="block" id="b${bi}" style="--col:${b.col}"><div class="bh"><span class="t">${b.t}</span><h2>${esc(b.who)}</h2><span class="now">NOW</span><span class="n" id="n${bi}"></span></div><div class="row">`;
+  b.items.forEach(x => {
+    const pic = x.ref ? `<img src="img/${x.ref}.jpg" alt="">` : `<div class="noref">${esc(x.title.toUpperCase())}</div>`;
+    html += `<div class="card" data-c="${x.code}" data-b="${bi}" style="--col:${x.col}"><div class="pic">${pic}<div class="stamp"><span>${WORD} ✓<small class="tm"></small></span></div></div>
+      <div class="chk" data-t="${x.code}">✓</div><div class="meta"><div class="code">${x.code}</div><div class="tt">${esc(x.title)}</div><div class="sp">${esc(x.spec)}</div></div></div>`;
+  });
+  html += `</div></section>`;
+});
+app.innerHTML = html;
+const cards = [...document.querySelectorAll('.card')];
+const items = {}; DATA.forEach(b => b.items.forEach(x => items[x.code] = x));
+const counted = c => items[c].kind !== 'SEG';
+function render() {
+  let d = 0, firstOpen = null;
+  cards.forEach(c => { const on = !!st[c.dataset.c]; c.classList.toggle('done', on); c.classList.remove('next');
+    c.querySelector('.tm').textContent = on ? st[c.dataset.c] : ''; if (on && counted(c.dataset.c)) d++; if (!on && !firstOpen) firstOpen = c; });
+  if (firstOpen) firstOpen.classList.add('next');
+  document.getElementById('d').textContent = d;
+  document.getElementById('bar').style.width = (100 * d / 37) + '%';
+  DATA.forEach((b, bi) => { const n = b.items.filter(x => st[x.code]).length; document.getElementById('n' + bi).textContent = n + '/' + b.items.length;
+    const el = document.getElementById('b' + bi); el.classList.toggle('wrapped', n === b.items.length);
+    el.classList.toggle('current', firstOpen && +firstOpen.dataset.b === bi); });
+}
+function toggle(code) { if (st[code]) delete st[code]; else { const t = new Date(); st[code] = String(t.getHours()).padStart(2,'0') + ':' + String(t.getMinutes()).padStart(2,'0'); } save(); render(); }
+const sheet = document.getElementById('sheet'), sbox = document.getElementById('sbox');
+function open(code) {
+  const x = items[code];
+  const specs = x.spec.split(' · ').map(s => `<li>${esc(s)}</li>`).join('');
+  sbox.style.setProperty('--col', x.col);
+  sbox.innerHTML = `<div class="big">${x.ref ? `<img src="img/${x.ref}.jpg" alt="">` : `<div class="noref" style="font-size:28px;font-weight:900;padding:30px">${esc(x.title.toUpperCase())}</div>`}</div>
+   <div class="txt"><span class="tag">${x.kind === 'SEG' ? 'HERO SEGMENT' : x.kind} · ${x.code}</span><h3>${esc(x.title)}</h3>
+   <h4>SPECS</h4><ul>${specs}</ul><h4>USED IN</h4><p>${esc(x.used)}</p>
+   <div class="acts"><button class="x" id="sx">CLOSE</button><button class="go ${st[code] ? 'undo' : ''}" id="sgo">${st[code] ? 'UNDO' : 'DONE ✓'}</button></div></div>`;
+  sheet.classList.add('open');
+  document.getElementById('sx').onclick = () => sheet.classList.remove('open');
+  document.getElementById('sgo').onclick = () => { toggle(code); sheet.classList.remove('open'); };
+}
+sheet.addEventListener('click', e => { if (e.target === sheet) sheet.classList.remove('open'); });
+cards.forEach(c => c.addEventListener('click', e => { if (e.target.closest('.chk')) { toggle(c.dataset.c); return; } open(c.dataset.c); }));
+document.querySelectorAll('[data-go]').forEach(b => b.onclick = () => { const el = document.getElementById('loc-' + b.dataset.go); if (el) window.scrollTo({ top: el.offsetTop - document.querySelector('header').offsetHeight, behavior: 'smooth' }); });
+document.getElementById('nextbtn').onclick = () => { const n = document.querySelector('.card.next'); if (n) { const blk = n.closest('.block'); window.scrollTo({ top: blk.offsetTop - document.querySelector('header').offsetHeight - 8, behavior: 'smooth' }); n.scrollIntoView({ inline:'center', block:'nearest', behavior:'smooth' }); } };
+document.getElementById('reset').onclick = () => { if (confirm('Reset everything back to TO DO?')) { st = {}; save(); render(); } };
+render();
+</script></body></html>
