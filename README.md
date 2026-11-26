@@ -1,5 +1,5 @@
 # NYA
 
-- `/` team brief
-- `/foto` on-set app, photographer
-- `/video` on-set app, videomaker
+- `teambrief/` team brief
+- `photographer/` on-set app, photographer
+- `videomaker/` on-set app, videomaker
