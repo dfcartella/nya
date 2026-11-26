@@ -15,7 +15,8 @@ h1 { font-size:clamp(46px,10vw,104px); font-weight:900; letter-spacing:-.05em; l
 .nums b { display:block; font-size:44px; letter-spacing:-.04em; line-height:1; }
 .lead { font-size:18px; font-weight:600; max-width:780px; margin:20px 0 0; }
 .links { display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; } .links a { color:var(--ink); background:#fff; border:2px solid var(--ink); border-radius:20px; padding:6px 14px; font-weight:900; font-size:13px; text-decoration:none; letter-spacing:.06em; }
-section { padding:44px 0; border-bottom:2px solid var(--ink); } section.col { background:var(--c); }
+section { padding:48px 0; border-bottom:0; } section:nth-of-type(even) { background:#f4f4f4; }
+h2::after { content:''; display:block; width:64px; height:8px; margin-top:12px; border-radius:4px; background:linear-gradient(90deg,#FF3DA8,#1BB7FF,#2FE3C6); }
 h2 { font-size:clamp(30px,6vw,52px); font-weight:900; letter-spacing:-.04em; line-height:1; margin:0 0 6px; }
 .kick { font-size:12px; font-weight:900; letter-spacing:.14em; text-transform:uppercase; margin:0 0 18px; }
 h3 { font-size:22px; font-weight:900; letter-spacing:-.02em; margin:0; }
@@ -29,7 +30,7 @@ p { margin:0 0 10px; } ul { margin:0 0 8px; padding-left:20px; } li { margin:0 0
 .issue { background:var(--c); border:2px solid var(--ink); border-radius:14px; padding:16px; } .issue b { display:block; font-size:24px; font-weight:900; letter-spacing:-.03em; }
 .tag { font-size:11px; font-weight:900; letter-spacing:.12em; color:var(--mute); }
 .girl { display:grid; grid-template-columns:180px 1fr; gap:18px; border:2px solid var(--ink); border-radius:16px; overflow:hidden; margin-bottom:16px; background:#fff; }
-.gl { background:#CAFD87; display:flex; align-items:center; justify-content:center; padding:12px; border-right:2px solid var(--ink); }
+.gl { background:#CAFD87; display:flex; align-items:center; justify-content:center; padding:12px; border-right:8px solid var(--c); }
 .gl img { max-width:100%; max-height:300px; }
 .gr { padding:16px 16px 14px 0; } .gt { display:flex; flex-wrap:wrap; gap:8px; align-items:center; } .gt h3 { font-size:30px; margin-right:6px; }
 .band { font-size:12px; font-weight:900; letter-spacing:.14em; color:var(--mute); margin:6px 0 4px; }
@@ -63,7 +64,7 @@ table.key { margin-top:10px; } table.key td { padding:4px 8px; }
 <header><div class="wrap"><img class="logo" src="img/logo.png" alt="NYA"><h1>TEAM BRIEF</h1>
 <div class="nums"><div><b>34</b>PHOTOS</div><div><b>11</b>VIDEOS</div><div><b>7</b>HEADBANDS</div><div><b>4</b>MODELS</div><div><b>2</b>LOCATIONS</div><div><b>1</b>DAY</div></div></div></header>
 
-<section id="cast" class="col" style="--c:#FFE93B"><div class="wrap">
+<section id="cast"><div class="wrap">
 <h2>Who is who</h2><p class="kick">4 models · 7 headbands · the name is the headband, the model plays it</p>
 <div class="grid" style="grid-template-columns:repeat(auto-fit, minmax(220px, 1fr))">
 <div class="card"><h3>NINA</h3><p class="big">STEVIE</p><p>All day. She is also the make-up artist.</p></div>
@@ -107,14 +108,14 @@ table.key { margin-top:10px; } table.key td { padding:4px 8px; }
 </div></section>
 <section id="groups"><div class="wrap">
 <h2>Pairs and trio</h2><p class="kick">Two photos per Issue · the reference shows the pose</p>
-<div class="pose"><img src="img/ref/IR-NA-PH1.jpg" alt=""><div><span class="tag">IR-NA-PH1</span><h4>Iris (Carolina) + Naïma (Esther) · pair cover</h4><p>Embraced, one slightly behind the other with a hand on her shoulder, faces close, both into the lens. Iris soft, Naïma a direct stare. Contrast their textures and necklines (planning).</p></div></div>
-<div class="pose"><img src="img/ref/IR-NA-PH2.jpg" alt=""><div><span class="tag">IR-NA-PH2</span><h4>Iris (Carolina) + Naïma (Esther) · together (Valentine’s)</h4><p>Shoulder to shoulder, heads tilted together, one finger on the lips, the other framing her face. Close, warm, a little provocative.</p></div></div>
-<div class="pose"><img src="img/ref/JA-RU-PH1.jpg" alt=""><div><span class="tag">JA-RU-PH1</span><h4>Jade (Delfi) + Ruby (Carolina) · pair cover</h4><p>Back to back or one behind the other, glossy skin, coloured sunglasses, heads turned over the shoulder to the lens.</p></div></div>
-<div class="pose"><img src="img/ref/JA-RU-PH2.jpg" alt=""><div><span class="tag">JA-RU-PH2</span><h4>Jade (Delfi) + Ruby (Carolina) · together</h4><p>Standing side by side, camera above, sunglasses and caps, hands on hips: cool, unbothered, after-hours.</p></div></div>
-<div class="pose"><img src="img/ref/ST-LO-RA-PH1.jpg" alt=""><div><span class="tag">ST-LO-RA-PH1</span><h4>Stevie (Nina) + Lola (Delfi) + Rafa (Esther) · trio cover</h4><p>Three faces stacked close to the lens, each with her own expression: Stevie a face, Lola a wink, Rafa the big smile.</p></div></div>
-<div class="pose"><img src="img/ref/ST-LO-RA-PH2.jpg" alt=""><div><span class="tag">ST-LO-RA-PH2</span><h4>Stevie (Nina) + Lola (Delfi) + Rafa (Esther) · together</h4><p>Three in a row with flip phones, each in her own attitude. Feeds The Phone Call and NYA’s Angels.</p></div></div>
+<div class="pose" style="border-color:#FF3DA8; border-width:3px"><img src="img/ref/IR-NA-PH1.jpg" alt=""><div><span class="tag">IR-NA-PH1</span><h4>Iris (Carolina) + Naïma (Esther) · pair cover</h4><p>Embraced, one slightly behind the other with a hand on her shoulder, faces close, both into the lens. Iris soft, Naïma a direct stare. Contrast their textures and necklines (planning).</p></div></div>
+<div class="pose" style="border-color:#FF3DA8; border-width:3px"><img src="img/ref/IR-NA-PH2.jpg" alt=""><div><span class="tag">IR-NA-PH2</span><h4>Iris (Carolina) + Naïma (Esther) · together (Valentine’s)</h4><p>Shoulder to shoulder, heads tilted together, one finger on the lips, the other framing her face. Close, warm, a little provocative.</p></div></div>
+<div class="pose" style="border-color:#1BB7FF; border-width:3px"><img src="img/ref/JA-RU-PH1.jpg" alt=""><div><span class="tag">JA-RU-PH1</span><h4>Jade (Delfi) + Ruby (Carolina) · pair cover</h4><p>Back to back or one behind the other, glossy skin, coloured sunglasses, heads turned over the shoulder to the lens.</p></div></div>
+<div class="pose" style="border-color:#1BB7FF; border-width:3px"><img src="img/ref/JA-RU-PH2.jpg" alt=""><div><span class="tag">JA-RU-PH2</span><h4>Jade (Delfi) + Ruby (Carolina) · together</h4><p>Standing side by side, camera above, sunglasses and caps, hands on hips: cool, unbothered, after-hours.</p></div></div>
+<div class="pose" style="border-color:#2FE3C6; border-width:3px"><img src="img/ref/ST-LO-RA-PH1.jpg" alt=""><div><span class="tag">ST-LO-RA-PH1</span><h4>Stevie (Nina) + Lola (Delfi) + Rafa (Esther) · trio cover</h4><p>Three faces stacked close to the lens, each with her own expression: Stevie a face, Lola a wink, Rafa the big smile.</p></div></div>
+<div class="pose" style="border-color:#2FE3C6; border-width:3px"><img src="img/ref/ST-LO-RA-PH2.jpg" alt=""><div><span class="tag">ST-LO-RA-PH2</span><h4>Stevie (Nina) + Lola (Delfi) + Rafa (Esther) · together</h4><p>Three in a row with flip phones, each in her own attitude. Feeds The Phone Call and NYA’s Angels.</p></div></div>
 </div></section>
-<section id="direction" class="col" style="--c:#FFE93B"><div class="wrap">
+<section id="direction"><div class="wrap">
 <h2>Creative direction</h2><p class="kick">One idea that holds everything together</p>
 <div class="grid">
 <div class="card"><p class="big">NYA Magazine, shot on the day it went to print.</p>
@@ -130,12 +131,12 @@ table.key { margin-top:10px; } table.key td { padding:4px 8px; }
 <section id="where"><div class="wrap">
 <h2>Arepa Queer or studio</h2><p class="kick">Each model plays her first character at Arepa and her second in the studio: one change in the whole day</p>
 <div class="grid">
-<div class="card" style="background:#FFE93B"><h3>AREPA QUEER · MORNING</h3><p><b>14 photos · 5 videos</b></p>
+<div class="card"><h3>AREPA QUEER · MORNING</h3><p><b>14 photos · 5 videos</b></p>
 <ol class="steps">
 <li><b>Make-up:</b> Carolina → IRIS, Delfi → LOLA, Esther → RAFA, Nina does herself → STEVIE.</li>
 <li>As each girl is ready: her cover, close-up, full body and video.</li>
 <li><b>Trio:</b> cover, together photo, The Walk-In video.</li></ol></div>
-<div class="card" style="background:#2FE3C6"><h3>STUDIO · AFTERNOON</h3><p><b>20 photos · 6 videos</b></p>
+<div class="card"><h3>STUDIO · AFTERNOON</h3><p><b>20 photos · 6 videos</b></p>
 <ol class="steps">
 <li><b>Product:</b> the seven bands, while the models eat and change.</li>
 <li><b>Change:</b> Esther → NAÏMA, Delfi → JADE. Carolina is still Iris. Naïma and Jade: photos + video.</li>
@@ -153,15 +154,15 @@ table.key { margin-top:10px; } table.key td { padding:4px 8px; }
 <div class="card"><h4>Full body · 7</h4><ul><li>Head to toe, feet in frame, space around her.</li><li><b>Clean outline:</b> the client cuts her out (Wardrobe Computer, stickers).</li></ul></div>
 <div class="card"><h4>Product · 7</h4><ul><li>Each band alone, logo readable, on white and on its Issue colour.</li><li>No reference: clean and simple.</li></ul></div>
 </div></div></section>
-<section id="video" class="col" style="--c:#FF3DA8"><div class="wrap">
+<section id="video"><div class="wrap">
 <h2>Videos</h2><p class="kick">Vertical 9:16 · clips of 3–10 seconds · actions repeated many times</p>
 <div class="card" style="margin-bottom:14px"><p><b>Each girl has one video:</b> band in hand → on → hair fixed → she moves in her own way. The band stays visible the whole clip, full body in frame at the end. No music needed: the client adds it.</p></div>
 <div class="grid">
-<div class="card"><span class="tag">AREPA · IR-V1</span><h3>IRIS <span class="tag">CAROLINA</span></h3><p>At a small mirror she slides the band on, tucks her hair behind her ear, then catches the lens in the mirror. She walks off reading and looks up over the book.</p></div><div class="card"><span class="tag">STUDIO · NA-V1</span><h3>NAÏMA <span class="tag">ESTHER</span></h3><p>She walks into the frame without asking, pulls the band over her updo, frees two curls, drops onto the leopard rug and holds the stare.</p></div><div class="card"><span class="tag">STUDIO · JA-V1</span><h3>JADE <span class="tag">DELFI</span></h3><p>Earphones in, one line of eyeliner, the band on in one move. She stares. A half smile only on the very last frame.</p></div><div class="card"><span class="tag">STUDIO · RU-V1</span><h3>RUBY <span class="tag">CAROLINA</span></h3><p>She shrugs the jacket on, pushes the band over her messy waves, kicks one boot towards the lens and laughs.</p></div><div class="card"><span class="tag">AREPA · ST-V1</span><h3>STEVIE <span class="tag">NINA</span></h3><p>Aerobics step with the pink dumbbells, the band goes on mid-move, glitter on the cheekbones, tongue out to the lens.</p></div><div class="card"><span class="tag">AREPA · LO-V1</span><h3>LOLA <span class="tag">DELFI</span></h3><p>A bubble-gum bubble grows and pops, she slides the band on, winks, and walks off with her coffee.</p></div><div class="card"><span class="tag">AREPA · RA-V1</span><h3>RAFA <span class="tag">ESTHER</span></h3><p>Band on, arms straight up, two dribbles with the basketball, she fakes a pass to the lens and laughs.</p></div>
-<div class="card"><span class="tag">STUDIO · IR-NA-V1 · 7 FEB</span><h3>PUT IT ON</h3><p>Iris and Naïma: a short part each (band in hand → on → hair), then both together, bands side by side, looking into the lens.</p></div>
-<div class="card"><span class="tag">STUDIO · JA-RU-V1 · 7 MAR · FINAL 8–12 s</span><h3>GETTING READY</h3><p>Jade and Ruby at the mirror: Jade’s eyeliner, Ruby’s earrings and jacket, then both look into the mirror at the lens.</p></div>
-<div class="card"><span class="tag">AREPA · ST-LO-RA-V1 · 6 APR · FINAL 6–8 s</span><h3>THE WALK-IN</h3><p>The trio walks down the store aisle towards the camera, each fixes her band, they end in a close shared portrait. The client also takes frames from it for the Paparazzi Page.</p></div>
-<div class="card" style="background:#C6FF6B"><span class="tag">STUDIO · HV0 · 60 s</span><h3>HEAD TO HEAD</h3><p>The four models on the colour set. A headband passes from hand to hand: every time it lands on a head, she becomes that girl. One part per Issue, then all four in a line, bands on, into the lens.</p></div>
+<div class="card" style="border-color:#FF3DA8; border-width:3px"><span class="tag">AREPA · IR-V1</span><h3>IRIS <span class="tag">CAROLINA</span></h3><p>At a small mirror she slides the band on, tucks her hair behind her ear, then catches the lens in the mirror. She walks off reading and looks up over the book.</p></div><div class="card" style="border-color:#FF3DA8; border-width:3px"><span class="tag">STUDIO · NA-V1</span><h3>NAÏMA <span class="tag">ESTHER</span></h3><p>She walks into the frame without asking, pulls the band over her updo, frees two curls, drops onto the leopard rug and holds the stare.</p></div><div class="card" style="border-color:#1BB7FF; border-width:3px"><span class="tag">STUDIO · JA-V1</span><h3>JADE <span class="tag">DELFI</span></h3><p>Earphones in, one line of eyeliner, the band on in one move. She stares. A half smile only on the very last frame.</p></div><div class="card" style="border-color:#1BB7FF; border-width:3px"><span class="tag">STUDIO · RU-V1</span><h3>RUBY <span class="tag">CAROLINA</span></h3><p>She shrugs the jacket on, pushes the band over her messy waves, kicks one boot towards the lens and laughs.</p></div><div class="card" style="border-color:#2FE3C6; border-width:3px"><span class="tag">AREPA · ST-V1</span><h3>STEVIE <span class="tag">NINA</span></h3><p>Aerobics step with the pink dumbbells, the band goes on mid-move, glitter on the cheekbones, tongue out to the lens.</p></div><div class="card" style="border-color:#2FE3C6; border-width:3px"><span class="tag">AREPA · LO-V1</span><h3>LOLA <span class="tag">DELFI</span></h3><p>A bubble-gum bubble grows and pops, she slides the band on, winks, and walks off with her coffee.</p></div><div class="card" style="border-color:#2FE3C6; border-width:3px"><span class="tag">AREPA · RA-V1</span><h3>RAFA <span class="tag">ESTHER</span></h3><p>Band on, arms straight up, two dribbles with the basketball, she fakes a pass to the lens and laughs.</p></div>
+<div class="card" style="border-color:#FF3DA8; border-width:3px"><span class="tag">STUDIO · IR-NA-V1 · 7 FEB</span><h3>PUT IT ON</h3><p>Iris and Naïma: a short part each (band in hand → on → hair), then both together, bands side by side, looking into the lens.</p></div>
+<div class="card" style="border-color:#1BB7FF; border-width:3px"><span class="tag">STUDIO · JA-RU-V1 · 7 MAR · FINAL 8–12 s</span><h3>GETTING READY</h3><p>Jade and Ruby at the mirror: Jade’s eyeliner, Ruby’s earrings and jacket, then both look into the mirror at the lens.</p></div>
+<div class="card" style="border-color:#2FE3C6; border-width:3px"><span class="tag">AREPA · ST-LO-RA-V1 · 6 APR · FINAL 6–8 s</span><h3>THE WALK-IN</h3><p>The trio walks down the store aisle towards the camera, each fixes her band, they end in a close shared portrait. The client also takes frames from it for the Paparazzi Page.</p></div>
+<div class="card"><span class="tag">STUDIO · HV0 · 60 s</span><h3>HEAD TO HEAD</h3><p>The four models on the colour set. A headband passes from hand to hand: every time it lands on a head, she becomes that girl. One part per Issue, then all four in a line, bands on, into the lens.</p></div>
 </div></div></section>
 <section id="files"><div class="wrap">
 <h2>Format and files</h2><p class="kick">So the client can crop everything she needs</p>
