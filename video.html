@@ -50,7 +50,12 @@ h1 { margin:0; font-size:20px; font-weight:900; letter-spacing:-.02em; }
 .cover .role { margin:4vh 0 0; font-size:clamp(28px, 5vw, 56px); font-weight:900; letter-spacing:-.03em; }
 .cover .cnt { margin:10px 0 0; font-size:clamp(14px, 2vw, 20px); font-weight:900; letter-spacing:.14em; }
 .glob .reset { margin-top:14px; color:var(--ink); border-color:#bbb; }
-@media (max-width:760px) { h1 { display:none; } .row { grid-template-columns:repeat(min(var(--cols), 2), minmax(0,1fr)); } .specs { font-size:13px; } .code { font-size:22px; } .tt { font-size:16px; } }
+@media (max-width:760px) { h1 { display:none; }
+ .row { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; margin:0 -18px; padding:0 18px; }
+ .card, .card.solo { flex:0 0 84vw; max-width:none; scroll-snap-align:center; }
+ .pic { min-height:52vh; } .specs { font-size:13px; } .code { font-size:22px; } .tt { font-size:16px; }
+ .dense .specs { display:block; } .dense .ty { display:inline; } }
+.pic { background:#f1f1f1; }
 </style></head><body>
 <header><img class="logo" src="img/logo.png" alt="NYA"><h1>VIDEOMAKER</h1>
 <a class="pill " href="foto">FOTO</a><a class="pill on" href="video">VIDEO</a>
