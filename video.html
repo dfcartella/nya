@@ -3,131 +3,93 @@
 <meta name="apple-mobile-web-app-capable" content="yes"><title>NYA Videomaker</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap">
 <style>
-:root { --ink:#141414; --paper:#fff; --mute:#666; }
+:root { --ink:#141414; --paper:#fff; --mute:#555; --hh:64px; }
 * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html { scroll-snap-type:y mandatory; }
 html,body { margin:0; background:#141414; color:var(--ink); font-family:Inter,system-ui,sans-serif; }
-header { position:sticky; top:0; z-index:20; background:var(--ink); color:#fff; padding:12px 18px 10px; }
-.hrow { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
-.logo { height:26px; filter:brightness(0) invert(1); }
-h1 { margin:0; font-size:22px; font-weight:900; letter-spacing:-.02em; }
-.sw { display:flex; gap:6px; } .sw a { color:#fff; text-decoration:none; font-size:12px; font-weight:900; letter-spacing:.1em; border:2px solid #fff; border-radius:20px; padding:5px 12px; }
-.sw a.on { background:#fff; color:var(--ink); }
-.tot { margin-left:auto; font-size:26px; font-weight:900; letter-spacing:-.03em; } .tot small { font-size:12px; letter-spacing:.1em; opacity:.6; }
-.bar { height:8px; background:#333; border-radius:4px; overflow:hidden; margin-top:10px; } .bar i { display:block; height:100%; width:0; background:linear-gradient(90deg,#FF3DA8,#1BB7FF,#2FE3C6,#FFE93B,#C6FF6B); transition:width .3s; }
-.tabs { display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
-.tabs button { font:inherit; font-size:12px; font-weight:900; letter-spacing:.1em; color:#fff; background:none; border:2px solid #555; border-radius:20px; padding:6px 14px; cursor:pointer; }
-.tabs button.on { border-color:#fff; background:#fff; color:var(--ink); }
-.tabs .sp { flex:1; }
-details.glob { background:#222; color:#fff; margin:12px 18px 0; border-radius:12px; padding:10px 14px; }
-details.glob summary { font-weight:900; font-size:13px; letter-spacing:.1em; cursor:pointer; }
-details.glob ul { margin:8px 0 2px; padding-left:18px; font-size:14px; line-height:1.5; }
-.loc { color:#fff; font-size:40px; font-weight:900; letter-spacing:-.04em; padding:26px 18px 4px; }
-.loc small { display:block; font-size:12px; letter-spacing:.14em; opacity:.6; font-weight:800; }
-.block { margin:12px 0 0; padding:14px 0 16px; background:var(--col); }
-.block.wrapped { opacity:.55; }
-.bh { display:flex; align-items:baseline; gap:12px; padding:0 18px 10px; flex-wrap:wrap; }
-.bh .t { font-size:15px; font-weight:900; background:var(--ink); color:#fff; border-radius:8px; padding:3px 8px; }
-.bh h2 { margin:0; font-size:28px; font-weight:900; letter-spacing:-.03em; line-height:1; }
-.bh .n { margin-left:auto; font-size:18px; font-weight:900; }
-.now { display:none; font-size:11px; font-weight:900; letter-spacing:.14em; background:var(--ink); color:#fff; border-radius:20px; padding:4px 10px; animation:pulse 1.4s infinite; }
-.block.current .now { display:inline-block; }
-@keyframes pulse { 50% { opacity:.35; } }
-.row { display:flex; gap:12px; overflow-x:auto; padding:0 18px 4px; scroll-snap-type:x proximity; -webkit-overflow-scrolling:touch; }
-.card { flex:none; width:250px; scroll-snap-align:start; background:var(--paper); border-radius:14px; overflow:hidden; position:relative; cursor:pointer; border:3px solid var(--ink); }
-.card .pic { height:300px; background:#eee; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; }
-.card .pic img { width:100%; height:100%; object-fit:cover; display:block; transition:filter .3s; }
-.card .noref { font-weight:900; font-size:20px; text-align:center; padding:16px; color:var(--ink); }
-.card .meta { padding:10px 12px 12px; }
-.card .code { font-size:20px; font-weight:900; letter-spacing:-.02em; }
-.card .tt { font-size:14px; font-weight:800; margin-top:2px; }
-.card .sp { font-size:12.5px; font-weight:600; color:var(--mute); margin-top:6px; line-height:1.35; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
-.chk { position:absolute; top:10px; right:10px; width:44px; height:44px; border-radius:50%; border:3px solid var(--ink); background:#fff; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:900; z-index:3; }
-.stamp { position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(20,20,20,.62); z-index:2; }
-.stamp span { background:var(--col); color:var(--ink); border:4px solid var(--ink); border-radius:12px; padding:8px 14px; font-size:26px; font-weight:900; letter-spacing:.02em; transform:rotate(-9deg); text-align:center; line-height:1; box-shadow:6px 6px 0 var(--ink); }
-.stamp span small { display:block; font-size:12px; letter-spacing:.14em; margin-top:5px; }
+header { position:fixed; top:0; left:0; right:0; height:var(--hh); z-index:20; background:var(--ink); color:#fff; display:flex; align-items:center; gap:14px; padding:0 18px; }
+.logo { height:24px; filter:brightness(0) invert(1); }
+h1 { margin:0; font-size:20px; font-weight:900; letter-spacing:-.02em; }
+.pill { color:#fff; text-decoration:none; font:inherit; font-size:12px; font-weight:900; letter-spacing:.1em; border:2px solid #fff; border-radius:20px; padding:5px 12px; background:none; cursor:pointer; }
+.pill.on { background:#fff; color:var(--ink); }
+.sp { flex:1; }
+.tot { font-size:24px; font-weight:900; letter-spacing:-.03em; white-space:nowrap; } .tot small { font-size:11px; letter-spacing:.1em; opacity:.6; }
+.bar { position:fixed; top:var(--hh); left:0; right:0; height:6px; background:#333; z-index:20; } .bar i { display:block; height:100%; width:0; background:linear-gradient(90deg,#FF3DA8,#1BB7FF,#2FE3C6,#FFE93B,#C6FF6B); transition:width .3s; }
+.glob { position:fixed; top:calc(var(--hh) + 6px); right:12px; z-index:30; width:min(520px, calc(100vw - 24px)); background:#fff; border:3px solid var(--ink); border-radius:14px; padding:16px 18px; display:none; }
+.glob.open { display:block; } .glob ul { margin:0; padding-left:20px; font-size:17px; font-weight:700; line-height:1.5; }
+.screen { height:100vh; height:100dvh; padding:calc(var(--hh) + 18px) 18px 18px; scroll-snap-align:start; display:flex; flex-direction:column; background:var(--col); }
+.screen.locs { background:var(--ink); color:#fff; justify-content:center; }
+.locs h2 { margin:0; font-size:clamp(56px, 11vw, 120px); font-weight:900; letter-spacing:-.05em; line-height:.9; }
+.locs p { margin:14px 0 0; font-size:18px; font-weight:900; letter-spacing:.14em; opacity:.7; }
+.bh { display:flex; align-items:center; gap:14px; margin-bottom:14px; flex-wrap:wrap; }
+.bh .t { font-size:22px; font-weight:900; background:var(--ink); color:#fff; border-radius:10px; padding:4px 10px; }
+.bh h2 { margin:0; font-size:clamp(30px, 4.6vw, 48px); font-weight:900; letter-spacing:-.04em; line-height:1; }
+.bh .loc { font-size:13px; font-weight:900; letter-spacing:.14em; border:2px solid var(--ink); border-radius:20px; padding:4px 10px; }
+.bh .n { margin-left:auto; font-size:28px; font-weight:900; }
+.row { flex:1; min-height:0; display:grid; gap:14px; grid-template-columns:repeat(var(--cols), minmax(0, 1fr)); grid-auto-rows:minmax(0, 1fr); }
+.card { background:var(--paper); border-radius:16px; overflow:hidden; position:relative; cursor:pointer; border:3px solid var(--ink); display:flex; flex-direction:column; min-height:0; user-select:none; }
+.card.solo { max-width:min(560px, 100%); }
+.pic { flex:1; min-height:0; background:#eee; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+.pic img { width:100%; height:100%; object-fit:cover; display:block; transition:filter .3s; }
+.noref { font-weight:900; font-size:26px; text-align:center; padding:20px; }
+.meta { padding:12px 14px 14px; }
+.code { font-size:28px; font-weight:900; letter-spacing:-.03em; line-height:1; }
+.tt { font-size:20px; font-weight:900; margin-top:4px; }
+.specs { margin:8px 0 0; padding-left:18px; font-size:16px; font-weight:700; color:var(--mute); line-height:1.35; }
+.dense .code { font-size:22px; } .dense .tt { font-size:15px; } .dense .specs { display:none; }
+.stamp { position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(20,20,20,.6); z-index:2; }
+.stamp span { background:var(--col); color:var(--ink); border:4px solid var(--ink); border-radius:14px; padding:10px 18px; font-size:clamp(24px, 3.4vw, 40px); font-weight:900; transform:rotate(-9deg); text-align:center; line-height:1; box-shadow:7px 7px 0 var(--ink); }
+.stamp span small { display:block; font-size:14px; letter-spacing:.14em; margin-top:6px; }
 .card.done .stamp { display:flex; animation:pop .35s ease-out; } .card.done .pic img { filter:grayscale(1); }
-.card.done .chk { background:var(--ink); color:#fff; }
-.card.next { box-shadow:0 0 0 4px #fff, 0 0 0 7px var(--ink); }
-@keyframes pop { 0% { transform:scale(1.25); opacity:0; } 100% { transform:scale(1); opacity:1; } }
-.sheet { position:fixed; inset:0; z-index:50; background:rgba(0,0,0,.75); display:none; align-items:center; justify-content:center; padding:18px; }
-.sheet.open { display:flex; }
-.sbox { background:#fff; border-radius:18px; max-width:980px; width:100%; max-height:92vh; overflow:auto; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); border:3px solid var(--ink); }
-.sbox .big { background:#eee; display:flex; align-items:center; justify-content:center; min-height:420px; }
-.sbox .big img { width:100%; height:100%; max-height:84vh; object-fit:contain; display:block; }
-.sbox .txt { padding:22px; display:flex; flex-direction:column; gap:12px; }
-.sbox .tag { display:inline-block; font-size:12px; font-weight:900; letter-spacing:.12em; background:var(--col); border:2px solid var(--ink); border-radius:20px; padding:3px 10px; align-self:flex-start; }
-.sbox h3 { margin:0; font-size:34px; font-weight:900; letter-spacing:-.03em; line-height:1; }
-.sbox h4 { margin:0; font-size:12px; font-weight:900; letter-spacing:.12em; color:var(--mute); }
-.sbox ul { margin:0; padding-left:18px; font-size:16px; font-weight:600; line-height:1.45; }
-.sbox p { margin:0; font-size:15px; font-weight:600; }
-.sbox .acts { display:flex; gap:10px; margin-top:auto; padding-top:8px; }
-.sbox button { font:inherit; font-size:18px; font-weight:900; border:3px solid var(--ink); border-radius:14px; padding:14px 18px; cursor:pointer; }
-.sbox .go { flex:1; background:var(--ink); color:#fff; } .sbox .go.undo { background:#fff; color:var(--ink); }
-.sbox .x { background:#fff; }
-.reset { display:block; margin:34px auto 60px; font:inherit; font-size:12px; font-weight:900; letter-spacing:.12em; color:#888; background:none; border:2px solid #444; border-radius:20px; padding:8px 16px; cursor:pointer; }
-@media (max-width:760px) { .sbox { grid-template-columns:1fr; } .sbox .big { min-height:260px; } .card { width:200px; } .card .pic { height:240px; } .loc { font-size:32px; } }
+.card.done .meta { opacity:.45; }
+@keyframes pop { 0% { transform:scale(1.2); opacity:0; } 100% { transform:scale(1); opacity:1; } }
+.end { text-align:center; } .end .reset { margin-top:26px; }
+@media (max-width:760px) { h1 { display:none; } .row { grid-template-columns:repeat(min(var(--cols), 2), minmax(0,1fr)); } .specs { font-size:13px; } .code { font-size:22px; } .tt { font-size:16px; } }
 </style></head><body>
-<header><div class="hrow"><img class="logo" src="img/logo.png" alt="NYA"><h1>VIDEOMAKER</h1>
-<nav class="sw"><a href="foto" class="">FOTO</a><a href="video" class="on">VIDEO</a></nav>
-<div class="tot"><span id="d">0</span>/18 <small>DONE</small></div></div>
+<header><img class="logo" src="img/logo.png" alt="NYA"><h1>VIDEOMAKER</h1>
+<a class="pill " href="foto">FOTO</a><a class="pill on" href="video">VIDEO</a>
+<span class="sp"></span><button class="pill" data-go="AREPA">AREPA</button><button class="pill" data-go="STUDIO">STUDIO</button><button class="pill" id="gb">SPECS</button>
+<div class="tot"><span id="d">0</span>/18 <small>DONE</small></div></header>
 <div class="bar"><i id="bar"></i></div>
-<div class="tabs"><button data-go="AREPA">AREPA · MORNING</button><button data-go="STUDIO">STUDIO · AFTERNOON</button><span class="sp"></span><button id="nextbtn">→ NEXT</button></div></header>
-<details class="glob"><summary>ALWAYS · VIDEO SPECS</summary><ul><li>Vertical 9:16 · 3840×2160 rotated (or 1080×1920 min.)</li><li>25 fps · 50 fps for slow motion · shutter 1/50 (1/100 at 50 fps)</li><li>Standard / Rec.709 profile, not log · audio for reference only</li><li>Roll 10–15 s, 2 s before and after the action, 3+ takes</li><li>Safe zone: nothing important in the bottom 20%, right 15%, top 10%</li><li>File name = code + take, e.g. RA-V2_T3 · deliver every take</li></ul></details>
+<div class="glob" id="glob"><ul><li>Vertical 9:16 · 3840×2160 rotated (or 1080×1920 min.)</li><li>25 fps · 50 fps for slow motion · shutter 1/50 (1/100 at 50 fps)</li><li>Standard / Rec.709 profile, not log · audio for reference only</li><li>Roll 10–15 s, 2 s before and after the action, 3+ takes</li><li>Safe zone: nothing important in the bottom 20%, right 15%, top 10%</li><li>File name = code + take, e.g. RA-V2_T3 · deliver every take</li></ul></div>
 <main id="app"></main>
-<button class="reset" id="reset">RESET ALL</button>
-<div class="sheet" id="sheet"><div class="sbox" id="sbox"></div></div>
 <script>
-const DATA = [{"loc": "AREPA", "t": "07:40", "who": "STEVIE", "col": "#2FE3C6", "items": [{"code": "ST-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "92", "col": "#2FE3C6"}, {"code": "ST-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "19 Apr Stevie’s Voice Note", "ref": "b-clones", "col": "#2FE3C6"}]}, {"loc": "AREPA", "t": "08:20", "who": "LOLA", "col": "#2FE3C6", "items": [{"code": "LO-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "82", "col": "#2FE3C6"}, {"code": "LO-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "w-mouth", "col": "#2FE3C6"}]}, {"loc": "AREPA", "t": "09:00", "who": "RAFA", "col": "#2FE3C6", "items": [{"code": "RA-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "13 Apr Rafa In Motion", "ref": "93", "col": "#2FE3C6"}, {"code": "RA-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "13 Apr Rafa In Motion", "ref": "71", "col": "#2FE3C6"}]}, {"loc": "AREPA", "t": "09:35", "who": "STEVIE + LOLA + RAFA", "col": "#2FE3C6", "items": [{"code": "I03-V", "title": "The walk-in", "kind": "VIDEO", "spec": "Walk-In reel (6 Apr) · final 6–8 s · 9:16 · three walk towards the camera → each fixes her band → close shared portrait · 3+ takes", "used": "6 Apr The Walk-In", "ref": "75", "col": "#2FE3C6"}]}, {"loc": "AREPA", "t": "10:05", "who": "IRIS", "col": "#FF3DA8", "items": [{"code": "IR-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "7 Feb Put It On", "ref": "83", "col": "#FF3DA8"}, {"code": "IR-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "w-nice", "col": "#FF3DA8"}]}, {"loc": "AREPA", "t": "10:25", "who": "NAÏMA", "col": "#FF3DA8", "items": [{"code": "NA-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "7 Feb Put It On", "ref": "86", "col": "#FF3DA8"}, {"code": "NA-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "b-ed3", "col": "#FF3DA8"}]}, {"loc": "AREPA", "t": "10:45", "who": "IRIS + NAÏMA", "col": "#FF3DA8", "items": [{"code": "I01-V", "title": "Putting it on together", "kind": "VIDEO", "spec": "Put It On reel (7 Feb) · 9:16 · band in hand → on → hair → look change by a simple cut · a short section each, then both together · 3+ takes", "used": "7 Feb Put It On", "ref": "17c", "col": "#FF3DA8"}]}, {"loc": "AREPA", "t": "11:05", "who": "JADE", "col": "#1BB7FF", "items": [{"code": "JA-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "7 Mar Getting Ready · 14 Mar Voice Note", "ref": "87", "col": "#1BB7FF"}, {"code": "JA-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "69", "col": "#1BB7FF"}]}, {"loc": "AREPA", "t": "11:25", "who": "RUBY", "col": "#1BB7FF", "items": [{"code": "RU-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "7 Mar Getting Ready", "ref": "40", "col": "#1BB7FF"}, {"code": "RU-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "37", "col": "#1BB7FF"}]}, {"loc": "AREPA", "t": "11:40", "who": "JADE + RUBY", "col": "#1BB7FF", "items": [{"code": "I02-V", "title": "Getting ready at the mirror", "kind": "VIDEO", "spec": "Getting Ready reel (7 Mar) · final 8–12 s · 9:16 · Jade eyeliner, Ruby earrings + jacket → both look into the mirror · bands visible throughout · 3+ takes", "used": "7 Mar Getting Ready", "ref": "b-grp1", "col": "#1BB7FF"}]}, {"loc": "STUDIO", "t": "14:05", "who": "HERO · SEGMENTS, GIRL BY GIRL", "col": "#FF3DA8", "items": [{"code": "HERO-NA", "title": "Hero · Naïma segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#FF3DA8"}, {"code": "HERO-JA", "title": "Hero · Jade segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#1BB7FF"}, {"code": "HERO-RU", "title": "Hero · Ruby segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#1BB7FF"}, {"code": "HERO-IR", "title": "Hero · Iris segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#FF3DA8"}]}, {"loc": "STUDIO", "t": "15:45", "who": "HERO · SEGMENTS, GIRL BY GIRL", "col": "#2FE3C6", "items": [{"code": "HERO-ST", "title": "Hero · Stevie segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#2FE3C6"}, {"code": "HERO-LO", "title": "Hero · Lola segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#2FE3C6"}, {"code": "HERO-RA", "title": "Hero · Rafa segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#2FE3C6"}]}, {"loc": "STUDIO", "t": "16:40", "who": "HERO · ALL FOUR", "col": "#2FE3C6", "items": [{"code": "HERO", "title": "Hero video · everyone", "kind": "VIDEO", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Launch · pinned", "ref": "b-wannabe", "col": "#2FE3C6"}]}];
-const KEY = 'nya-pad-video-v1';
+const DATA = [{"loc": "AREPA", "t": "07:40", "who": "STEVIE", "col": "#2FE3C6", "items": [{"code": "ST-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "92", "col": "#2FE3C6"}, {"code": "ST-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "19 Apr Stevie’s Voice Note", "ref": "b-clones", "col": "#2FE3C6"}]}, {"loc": "AREPA", "t": "08:20", "who": "LOLA", "col": "#2FE3C6", "items": [{"code": "LO-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "82", "col": "#2FE3C6"}, {"code": "LO-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "w-mouth", "col": "#2FE3C6"}]}, {"loc": "AREPA", "t": "09:00", "who": "RAFA", "col": "#2FE3C6", "items": [{"code": "RA-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "13 Apr Rafa In Motion", "ref": "93", "col": "#2FE3C6"}, {"code": "RA-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "13 Apr Rafa In Motion", "ref": "71", "col": "#2FE3C6"}]}, {"loc": "AREPA", "t": "09:35", "who": "STEVIE + LOLA + RAFA", "col": "#2FE3C6", "items": [{"code": "I03-V", "title": "The walk-in", "kind": "VIDEO", "spec": "Walk-In reel (6 Apr) · final 6–8 s · 9:16 · three walk towards the camera → each fixes her band → close shared portrait · 3+ takes", "used": "6 Apr The Walk-In", "ref": "75", "col": "#2FE3C6"}]}, {"loc": "AREPA", "t": "10:05", "who": "IRIS", "col": "#FF3DA8", "items": [{"code": "IR-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "7 Feb Put It On", "ref": "83", "col": "#FF3DA8"}, {"code": "IR-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "w-nice", "col": "#FF3DA8"}]}, {"loc": "AREPA", "t": "10:25", "who": "NAÏMA", "col": "#FF3DA8", "items": [{"code": "NA-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "7 Feb Put It On", "ref": "86", "col": "#FF3DA8"}, {"code": "NA-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "b-ed3", "col": "#FF3DA8"}]}, {"loc": "AREPA", "t": "10:45", "who": "IRIS + NAÏMA", "col": "#FF3DA8", "items": [{"code": "I01-V", "title": "Putting it on together", "kind": "VIDEO", "spec": "Put It On reel (7 Feb) · 9:16 · band in hand → on → hair → look change by a simple cut · a short section each, then both together · 3+ takes", "used": "7 Feb Put It On", "ref": "17c", "col": "#FF3DA8"}]}, {"loc": "AREPA", "t": "11:05", "who": "JADE", "col": "#1BB7FF", "items": [{"code": "JA-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "7 Mar Getting Ready · 14 Mar Voice Note", "ref": "87", "col": "#1BB7FF"}, {"code": "JA-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "69", "col": "#1BB7FF"}]}, {"loc": "AREPA", "t": "11:25", "who": "RUBY", "col": "#1BB7FF", "items": [{"code": "RU-V1", "title": "Putting it on", "kind": "VIDEO", "spec": "9:16 · 25 fps (50 fps for slow motion) · band in hand → on → hair fixed → look into the lens · roll 10–15 s · 3+ takes", "used": "7 Mar Getting Ready", "ref": "40", "col": "#1BB7FF"}, {"code": "RU-V2", "title": "In motion", "kind": "VIDEO", "spec": "9:16 · 25 fps · full body always in frame · band visible the whole clip · roll 10–15 s · 3+ takes", "used": "Stories · TikTok", "ref": "37", "col": "#1BB7FF"}]}, {"loc": "AREPA", "t": "11:40", "who": "JADE + RUBY", "col": "#1BB7FF", "items": [{"code": "I02-V", "title": "Getting ready at the mirror", "kind": "VIDEO", "spec": "Getting Ready reel (7 Mar) · final 8–12 s · 9:16 · Jade eyeliner, Ruby earrings + jacket → both look into the mirror · bands visible throughout · 3+ takes", "used": "7 Mar Getting Ready", "ref": "b-grp1", "col": "#1BB7FF"}]}, {"loc": "STUDIO", "t": "13:45", "who": "HERO · SEGMENTS, GIRL BY GIRL", "col": "#FF3DA8", "items": [{"code": "HERO-NA", "title": "Hero · Naïma segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#FF3DA8"}, {"code": "HERO-JA", "title": "Hero · Jade segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#1BB7FF"}, {"code": "HERO-RU", "title": "Hero · Ruby segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#1BB7FF"}, {"code": "HERO-IR", "title": "Hero · Iris segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#FF3DA8"}]}, {"loc": "STUDIO", "t": "15:15", "who": "HERO · SEGMENTS, GIRL BY GIRL", "col": "#2FE3C6", "items": [{"code": "HERO-ST", "title": "Hero · Stevie segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#2FE3C6"}, {"code": "HERO-LO", "title": "Hero · Lola segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#2FE3C6"}, {"code": "HERO-RA", "title": "Hero · Rafa segment", "kind": "SEG", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Hero video", "ref": null, "col": "#2FE3C6"}]}, {"loc": "STUDIO", "t": "16:00", "who": "HERO · ALL FOUR", "col": "#2FE3C6", "items": [{"code": "HERO", "title": "Hero video · everyone", "kind": "VIDEO", "spec": "60 s final edit · 9:16 · 25 fps · one segment per girl, then all four together · band visible in every segment", "used": "Launch · pinned", "ref": "b-wannabe", "col": "#2FE3C6"}]}];
+const KEY = 'nya-pad-video-v2';
 let st = {}; try { st = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e) {}
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch(e) {} };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const WORD = 'IN THE CAN';
-const app = document.getElementById('app');
 let html = '', last = '';
 DATA.forEach((b, bi) => {
-  if (b.loc !== last) { html += `<div class="loc" id="loc-${b.loc}">${b.loc === 'AREPA' ? 'AREPA QUEER' : 'STUDIO'}<small>${b.loc === 'AREPA' ? 'MORNING · UNTIL 12:00' : 'AFTERNOON · FROM 13:30'}</small></div>`; last = b.loc; }
-  html += `<section class="block" id="b${bi}" style="--col:${b.col}"><div class="bh"><span class="t">${b.t}</span><h2>${esc(b.who)}</h2><span class="now">NOW</span><span class="n" id="n${bi}"></span></div><div class="row">`;
+  if (b.loc !== last) {
+    html += `<section class="screen locs" id="loc-${b.loc}"><div><h2>${b.loc === 'AREPA' ? 'AREPA QUEER' : 'STUDIO'}</h2><p>${b.loc === 'AREPA' ? 'MORNING · UNTIL 12:00' : 'AFTERNOON · FROM 13:00'}</p></div></section>`; last = b.loc; }
+  const n = b.items.length, cols = n > 4 ? 4 : n, dense = n > 4 ? ' dense' : '';
+  html += `<section class="screen" style="--col:${b.col}"><div class="bh"><span class="t">${b.t}</span><h2>${esc(b.who)}</h2><span class="loc">${b.loc}</span><span class="n" id="n${bi}"></span></div><div class="row${dense}" style="--cols:${cols}">`;
   b.items.forEach(x => {
-    const pic = x.ref ? `<img src="img/${x.ref}.jpg" alt="">` : `<div class="noref">${esc(x.title.toUpperCase())}</div>`;
-    html += `<div class="card" data-c="${x.code}" data-b="${bi}" style="--col:${x.col}"><div class="pic">${pic}<div class="stamp"><span>${WORD} ✓<small class="tm"></small></span></div></div>
-      <div class="chk" data-t="${x.code}">✓</div><div class="meta"><div class="code">${x.code}</div><div class="tt">${esc(x.title)}</div><div class="sp">${esc(x.spec)}</div></div></div>`;
+    const pic = x.ref ? `<img src="img/${x.ref}.jpg" alt="" draggable="false">` : `<div class="noref">${esc(x.title.toUpperCase())}</div>`;
+    const specs = x.spec.split(' · ').map(s => `<li>${esc(s)}</li>`).join('');
+    html += `<div class="card${n === 1 ? ' solo' : ''}" data-c="${x.code}" style="--col:${x.col}"><div class="pic">${pic}<div class="stamp"><span>IN THE CAN ✓<small class="tm"></small></span></div></div>
+      <div class="meta"><div class="code">${x.code}</div><div class="tt">${esc(x.title)}</div><ul class="specs">${specs}</ul></div></div>`;
   });
   html += `</div></section>`;
 });
-app.innerHTML = html;
+html += `<section class="screen locs end"><div><h2>WRAP</h2><p>DOUBLE BACKUP BEFORE ANYONE LEAVES</p><button class="pill reset" id="reset">RESET ALL</button></div></section>`;
+document.getElementById('app').innerHTML = html;
 const cards = [...document.querySelectorAll('.card')];
 const items = {}; DATA.forEach(b => b.items.forEach(x => items[x.code] = x));
-const counted = c => items[c].kind !== 'SEG';
 function render() {
-  let d = 0, firstOpen = null;
-  cards.forEach(c => { const on = !!st[c.dataset.c]; c.classList.toggle('done', on); c.classList.remove('next');
-    c.querySelector('.tm').textContent = on ? st[c.dataset.c] : ''; if (on && counted(c.dataset.c)) d++; if (!on && !firstOpen) firstOpen = c; });
-  if (firstOpen) firstOpen.classList.add('next');
+  let d = 0;
+  cards.forEach(c => { const on = !!st[c.dataset.c]; c.classList.toggle('done', on); c.querySelector('.tm').textContent = on ? st[c.dataset.c] : '';
+    if (on && items[c.dataset.c].kind !== 'SEG') d++; });
   document.getElementById('d').textContent = d;
   document.getElementById('bar').style.width = (100 * d / 18) + '%';
-  DATA.forEach((b, bi) => { const n = b.items.filter(x => st[x.code]).length; document.getElementById('n' + bi).textContent = n + '/' + b.items.length;
-    const el = document.getElementById('b' + bi); el.classList.toggle('wrapped', n === b.items.length);
-    el.classList.toggle('current', firstOpen && +firstOpen.dataset.b === bi); });
+  DATA.forEach((b, bi) => { document.getElementById('n' + bi).textContent = b.items.filter(x => st[x.code]).length + '/' + b.items.length; });
 }
-function toggle(code) { if (st[code]) delete st[code]; else { const t = new Date(); st[code] = String(t.getHours()).padStart(2,'0') + ':' + String(t.getMinutes()).padStart(2,'0'); } save(); render(); }
-const sheet = document.getElementById('sheet'), sbox = document.getElementById('sbox');
-function open(code) {
-  const x = items[code];
-  const specs = x.spec.split(' · ').map(s => `<li>${esc(s)}</li>`).join('');
-  sbox.style.setProperty('--col', x.col);
-  sbox.innerHTML = `<div class="big">${x.ref ? `<img src="img/${x.ref}.jpg" alt="">` : `<div class="noref" style="font-size:28px;font-weight:900;padding:30px">${esc(x.title.toUpperCase())}</div>`}</div>
-   <div class="txt"><span class="tag">${x.kind === 'SEG' ? 'HERO SEGMENT' : x.kind} · ${x.code}</span><h3>${esc(x.title)}</h3>
-   <h4>SPECS</h4><ul>${specs}</ul><h4>USED IN</h4><p>${esc(x.used)}</p>
-   <div class="acts"><button class="x" id="sx">CLOSE</button><button class="go ${st[code] ? 'undo' : ''}" id="sgo">${st[code] ? 'UNDO' : 'DONE ✓'}</button></div></div>`;
-  sheet.classList.add('open');
-  document.getElementById('sx').onclick = () => sheet.classList.remove('open');
-  document.getElementById('sgo').onclick = () => { toggle(code); sheet.classList.remove('open'); };
-}
-sheet.addEventListener('click', e => { if (e.target === sheet) sheet.classList.remove('open'); });
-cards.forEach(c => c.addEventListener('click', e => { if (e.target.closest('.chk')) { toggle(c.dataset.c); return; } open(c.dataset.c); }));
-document.querySelectorAll('[data-go]').forEach(b => b.onclick = () => { const el = document.getElementById('loc-' + b.dataset.go); if (el) window.scrollTo({ top: el.offsetTop - document.querySelector('header').offsetHeight, behavior: 'smooth' }); });
-document.getElementById('nextbtn').onclick = () => { const n = document.querySelector('.card.next'); if (n) { const blk = n.closest('.block'); window.scrollTo({ top: blk.offsetTop - document.querySelector('header').offsetHeight - 8, behavior: 'smooth' }); n.scrollIntoView({ inline:'center', block:'nearest', behavior:'smooth' }); } };
+cards.forEach(c => c.addEventListener('click', () => { const k = c.dataset.c;
+  if (st[k]) delete st[k]; else { const t = new Date(); st[k] = String(t.getHours()).padStart(2,'0') + ':' + String(t.getMinutes()).padStart(2,'0'); }
+  save(); render(); }));
+document.querySelectorAll('[data-go]').forEach(b => b.onclick = () => document.getElementById('loc-' + b.dataset.go).scrollIntoView({ behavior: 'smooth' }));
+document.getElementById('gb').onclick = () => document.getElementById('glob').classList.toggle('open');
 document.getElementById('reset').onclick = () => { if (confirm('Reset everything back to TO DO?')) { st = {}; save(); render(); } };
 render();
 </script></body></html>
